@@ -1,0 +1,297 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A4A66A021555E44100AED3AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4A66A011555E44100AED3AF /* UIKit.framework */; };
+		A4A66A041555E44100AED3AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4A66A031555E44100AED3AF /* Foundation.framework */; };
+		A4A66A061555E44100AED3AF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4A66A051555E44100AED3AF /* CoreGraphics.framework */; };
+		A4A66A0C1555E44100AED3AF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A4A66A0A1555E44100AED3AF /* InfoPlist.strings */; };
+		A4A66A0E1555E44100AED3AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A66A0D1555E44100AED3AF /* main.m */; };
+		A4A66A121555E44100AED3AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A66A111555E44100AED3AF /* AppDelegate.m */; };
+		A4A66A151555E44100AED3AF /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A66A141555E44100AED3AF /* MasterViewController.m */; };
+		A4A66A181555E44100AED3AF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A66A171555E44100AED3AF /* DetailViewController.m */; };
+		A4A66A1B1555E44100AED3AF /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4A66A191555E44100AED3AF /* MasterViewController.xib */; };
+		A4A66A1E1555E44100AED3AF /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4A66A1C1555E44100AED3AF /* DetailViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A4A669FD1555E44100AED3AF /* DLNASample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DLNASample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4A66A011555E44100AED3AF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A4A66A031555E44100AED3AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A4A66A051555E44100AED3AF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A4A66A091555E44100AED3AF /* DLNASample-Info.plist */ = {isa = PBXFileReference; path = "DLNASample-Info.plist"; sourceTree = "<group>"; };
+		A4A66A0B1555E44100AED3AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A4A66A0D1555E44100AED3AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A4A66A0F1555E44100AED3AF /* DLNASample-Prefix.pch */ = {isa = PBXFileReference; path = "DLNASample-Prefix.pch"; sourceTree = "<group>"; };
+		A4A66A101555E44100AED3AF /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		A4A66A111555E44100AED3AF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A4A66A131555E44100AED3AF /* MasterViewController.h */ = {isa = PBXFileReference; path = MasterViewController.h; sourceTree = "<group>"; };
+		A4A66A141555E44100AED3AF /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		A4A66A161555E44100AED3AF /* DetailViewController.h */ = {isa = PBXFileReference; path = DetailViewController.h; sourceTree = "<group>"; };
+		A4A66A171555E44100AED3AF /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		A4A66A1A1555E44100AED3AF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController.xib; sourceTree = "<group>"; };
+		A4A66A1D1555E44100AED3AF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A4A669FA1555E44100AED3AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4A66A021555E44100AED3AF /* UIKit.framework in Frameworks */,
+				A4A66A041555E44100AED3AF /* Foundation.framework in Frameworks */,
+				A4A66A061555E44100AED3AF /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A4A669F21555E44100AED3AF = {
+			isa = PBXGroup;
+			children = (
+				A4A66A071555E44100AED3AF /* DLNASample */,
+				A4A66A001555E44100AED3AF /* Frameworks */,
+				A4A669FE1555E44100AED3AF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A4A669FE1555E44100AED3AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A4A669FD1555E44100AED3AF /* DLNASample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A4A66A001555E44100AED3AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4A66A011555E44100AED3AF /* UIKit.framework */,
+				A4A66A031555E44100AED3AF /* Foundation.framework */,
+				A4A66A051555E44100AED3AF /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A4A66A071555E44100AED3AF /* DLNASample */ = {
+			isa = PBXGroup;
+			children = (
+				A4A66A101555E44100AED3AF /* AppDelegate.h */,
+				A4A66A111555E44100AED3AF /* AppDelegate.m */,
+				A4A66A131555E44100AED3AF /* MasterViewController.h */,
+				A4A66A141555E44100AED3AF /* MasterViewController.m */,
+				A4A66A161555E44100AED3AF /* DetailViewController.h */,
+				A4A66A171555E44100AED3AF /* DetailViewController.m */,
+				A4A66A191555E44100AED3AF /* MasterViewController.xib */,
+				A4A66A1C1555E44100AED3AF /* DetailViewController.xib */,
+				A4A66A081555E44100AED3AF /* Supporting Files */,
+			);
+			path = DLNASample;
+			sourceTree = "<group>";
+		};
+		A4A66A081555E44100AED3AF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A4A66A091555E44100AED3AF /* DLNASample-Info.plist */,
+				A4A66A0A1555E44100AED3AF /* InfoPlist.strings */,
+				A4A66A0D1555E44100AED3AF /* main.m */,
+				A4A66A0F1555E44100AED3AF /* DLNASample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A4A669FC1555E44100AED3AF /* DLNASample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4A66A211555E44100AED3AF /* Build configuration list for PBXNativeTarget "DLNASample" */;
+			buildPhases = (
+				A4A669F91555E44100AED3AF /* Sources */,
+				A4A669FA1555E44100AED3AF /* Frameworks */,
+				A4A669FB1555E44100AED3AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DLNASample;
+			productName = DLNASample;
+			productReference = A4A669FD1555E44100AED3AF /* DLNASample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A4A669F41555E44100AED3AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = A4A669F71555E44100AED3AF /* Build configuration list for PBXProject "DLNASample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A4A669F21555E44100AED3AF;
+			productRefGroup = A4A669FE1555E44100AED3AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A4A669FC1555E44100AED3AF /* DLNASample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A4A669FB1555E44100AED3AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4A66A0C1555E44100AED3AF /* InfoPlist.strings in Resources */,
+				A4A66A1B1555E44100AED3AF /* MasterViewController.xib in Resources */,
+				A4A66A1E1555E44100AED3AF /* DetailViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A4A669F91555E44100AED3AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4A66A0E1555E44100AED3AF /* main.m in Sources */,
+				A4A66A121555E44100AED3AF /* AppDelegate.m in Sources */,
+				A4A66A151555E44100AED3AF /* MasterViewController.m in Sources */,
+				A4A66A181555E44100AED3AF /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A4A66A0A1555E44100AED3AF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A4A66A0B1555E44100AED3AF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A4A66A191555E44100AED3AF /* MasterViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A4A66A1A1555E44100AED3AF /* en */,
+			);
+			name = MasterViewController.xib;
+			sourceTree = "<group>";
+		};
+		A4A66A1C1555E44100AED3AF /* DetailViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A4A66A1D1555E44100AED3AF /* en */,
+			);
+			name = DetailViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A4A66A1F1555E44100AED3AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A4A66A201555E44100AED3AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A4A66A221555E44100AED3AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DLNASample/DLNASample-Prefix.pch";
+				INFOPLIST_FILE = "DLNASample/DLNASample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A4A66A231555E44100AED3AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DLNASample/DLNASample-Prefix.pch";
+				INFOPLIST_FILE = "DLNASample/DLNASample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A4A669F71555E44100AED3AF /* Build configuration list for PBXProject "DLNASample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4A66A1F1555E44100AED3AF /* Debug */,
+				A4A66A201555E44100AED3AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4A66A211555E44100AED3AF /* Build configuration list for PBXNativeTarget "DLNASample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4A66A221555E44100AED3AF /* Debug */,
+				A4A66A231555E44100AED3AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A4A669F41555E44100AED3AF /* Project object */;
+}
