@@ -1,0 +1,5 @@
+#!/bin/sh
+cd src; rm -f upnpclock.c.lnk; ln -sf ../../../unix/clock_main.c upnpclock.c; cd ..
+cd sh7727; rm -f Makefile.lnk; ln -fs ../src/Makefile Makefile; cd ..
+cd sh7727.debug; rm -f Makefile.lnk; ln -fs ../src/Makefile Makefile; cd ..
+cd sh7727.dl; rm -f Makefile.lnk; ln -fs ../src/Makefile Makefile; cd ..

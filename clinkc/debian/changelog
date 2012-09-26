@@ -1,0 +1,625 @@
+clinkc (2.0-0) unstable; urgency=low
+
+  * Removed (debug) printfs from ip_changed routine.
+  * Fixed memory leak from cg_libxml2_parsewrapper
+  * Fixed memory leak from cg_net_selectaddr
+  * Fixed memory leak from cg_net_url_getupnpbasepath
+  * Fixed crash when using DUN IAP
+  * Added API calls to query and set user agent field in http
+    requests. 
+
+ --  Mikael Saarenpää <ext-mikael.saarenpaa@nokia.com>  Tue,  3 Oct 2006 13:48:41 +0300
+
+clinkc (1.0-29) unstable; urgency=low
+
+  * Applied a patch from Rafael to fix locking problem in
+    cg_upnp_device_unsubscriptionrecieved. Fixes: NB#38099
+  * Fixed url base generation from location string. Fixes: NB#37017
+  * Fixed curl delay issue when CP is shutting down. Fixes: NB#34454
+  * Implemented fallback routine into XML parser for unknown
+    character errors. Fixes: NB#29846
+  * Applied a patch from Rafael to fix list node initialization.
+    Fixes: NB#34144
+  * Applied a patch from Rafael which adds missing free into new subscription
+    routine. Fixes: NB#34248
+  * Applied a patch from Rafael which frees subscriber variable correctly
+    from cg_upnp_service_removesubscriber. Fixes: NB#34258
+  * Fixed a case where service lock was not held when it should have
+    been, fix was based on a patch by Rafael. Fixes: NB#34259
+  * Applied a patch from Aapo to change cg_upnp_controlpoint_search to
+    return false in case of clear failure situation instead of always
+    returning true. Fixes: NB#36225
+  * Changed cg_file_load to don't do a fread past the end of the file
+
+ --  Mikael Saarenpää <ext-mikael.saarenpaa@nokia.com>  Tue, 22 Aug 2006 09:14:18 +0300
+
+clinkc (1.0-28) unstable; urgency=low
+
+  * Applied a patch by Aapo Makela to fix some deadlocking problem
+    in controlpoint stop.
+  * Fixed a memory leak in cg_http_persistentconnection_put function
+  * Added cg_list_node_init() in cg_upnp_eventlistenerlist_add()
+    for list_node, fixing at least a memory leak, and probably some
+    other random behavior (otherwise headFlag would be uninitialized).
+
+ -- Visa Smolander <visa.smolander@nokia.com>  Wed, 28 Jun 2006 12:06:55 +0300
+
+clinkc (1.0-27) unstable; urgency=low
+
+  * Fixed from 2006-05-30 to 2006-06-16.
+  * Added Nokia legal text into modified files
+  * Re-enabled doxygen doc generation from makefile
+  * Added 309 doxygen comments.
+  * Moved SERVICE_DESCRIPTION to common.h
+  * Removed setstatevar.c
+  * Cleanup the tests by centralizing the device description
+  * Test bad xml by sending it to the control point instead of using
+    stand alone devices
+
+ -- Mikael Saarenpää <ext-mikael.saarenpaa@nokia.com>  Fri, 16 Jun 2006 17:14:08 +0100
+
+clinkc (1.0-26) unstable; urgency=low
+
+  * Fixed from 2006-05-18 to 2006-05-26.
+  * Fixed the annoying thing that ctrl-c cannot be used to kill 
+    the program using stack.
+  * Fixed bug 30399 During normal operation duplicate M-SEARCHES 
+    are not sent correctly.
+  * Applied patch from Aapo to fix the remaining lintian warnings.
+  * Documented the http server in tests/regression/README
+  * Documented cp_add_device and msearch in tests/regression/README
+  * Removed the host and port parameters of mseach in
+    tests/regression/test.py
+  * Updated tests/regression/README
+  * Cleaned some tests
+  * Updated tests/regression/README
+  * [testing] SOAP action messages with wrong XML schema
+  * Applied patch from bug #26068 (Opening ports via UPnP does
+    not work with D-Link DI-824VUP+)
+  * Modified the http server to send a "valid" response to a post 
+    method.
+  * Modified the tests to cover more of the API
+  * Fixed an endless loop in cg_socket_write() and changed the 
+    whopping 0-1000msec random wait to 20msecs.
+
+ -- Mikael Saarenpää <ext-mikael.saarenpaa@nokia.com>  Fri, 26 May 2006 12:30:08 +0100
+
+clinkc (1.0-25) unstable; urgency=low
+
+  * Fixes from 2006-05-16 to 2006-05-18.
+  * Fixed xml string escape routines to handle " correctly.
+  * Modified regression/mini_service.c and regression/mini_cp.c to
+    test more API functions
+  * Added more tests to tests/regression
+  * Added a test for valgrind availability in tests/regression/test.py
+
+ -- Mikael Saarenpää <ext-mikael.saarenpaa@nokia.com>  Thu, 18 May 2006 15:48:32 +0300
+
+clinkc (1.0-24) unstable; urgency=low
+
+  * Fixes from 2006-05-08 to 2006-05-15.
+  * Changed 20ms wait to happen right after each _notifyfrom, not after
+    each _announcefrom.
+  * Fixed bug 26472 SSDP Response Server on Control Point loops forever
+    (Patch by Rosfran)
+  * Rolled back fix for bug 28806.
+  * Added cg_net_uri_isequivalent to check if a relative and an
+    absolute URLs are equivalent.
+  * Changed cg_upnp_service_isscpdurl. Now it is a function and uses
+    cg_net_uri_isequivalent instead of cg_strstr
+  * Fixed bug 26520 HTTP server doesn't respond to requests which
+    use chunked transfer encoding.
+  * Fix to cg_upnp_device_getservicebyscpdurl function,
+    used by HTTP Server (Device) to solve the case when the
+    service was unparsed, but device contains a valid
+    SCPDURL to the service description file (Bug 28806)
+  * Added more tests
+  * Removed unused include/cybergarage/upnp/callowedvalue.h
+  * Removed unused src/cybergarage/upnp/callowedvalue.c
+  * Removed unused src/cybergarage/upnp/callowedvalue_list.c
+  * Removed unused src/cybergarage/upnp/callowedvaluerange.c
+  * Replaced unused elements of the _CgUpnpStateVariable structure
+    with dummy ones with the same size.
+  * Removed commented code from src/cybergarage/upnp/cstatevariable.c
+  * Modified how a test gets the host address
+  * Added a README in tests/regression
+  * Added some tests
+  * Modified the regression tests to aways wait for the sync string
+  * Added a service to tests/regression/mini_dev.xml
+  * Fixed a problem with erroneous action responses and nonstandard namespaces
+  * Added an xml function to get childnode with or without the namespace prefix.
+  * Added some NULL checkings to string functions. TODO: Must do that forall...
+  * Fixed a bug in cg_strdup. Now it returns NULL, if input argument was NULL.
+  * Modified test_http.py to fetch a service description url
+  * Modified cp_subscribe.c to print service information
+  * Modified test.py to wait longer before killing a test
+  * Added some M-SEARCH tests
+  * Fixed a bug in cg_upnp_ssdp_packet_new. ssdpPkt->initialized was
+    not initialized.
+
+ -- Mikael Saarenpää <ext-mikael.saarenpaa@nokia.com>  Mon, 15 May 2006 18:04:33 +0300
+
+clinkc (1.0-23) unstable; urgency=low
+
+  * Fixes from 2006-04-26 to 2006-05-08.
+  * Changed multiplecp to printout action invoke results when
+    generating action invoke bursts.
+  * Changed the usage of cg_strncpy to better match the underlying
+    strncpy. NOTE: This is an API change since now cg_strncpy do not
+    terminate strings automatically.
+  * Fixed a bug in chttp_request. When sending a request without body
+    it sometimes sent corrupted data from a previous transmission...
+  * Propagate some important Device advertisement data from the root
+    device, to its embedded sub-devices (such as description URIs and HTTP
+    port); NOTIFY were sent with wrong Location URIs
+  * Removed duplicated code from src/cybergarage/upnp/cservice.c and
+    src/cybergarage/upnp/cservice_ssdp_server.c
+  * Added a sample stress test case using --enable-coverage, which sends a lot of NOTIFY
+    datagrams to a clinkc's Control Point
+  * Modified cp_subscribe.c to cover a greater part of the API
+  * Modified utils.py and coverage.py so that they don't use the
+    subprocess module
+  * Added test_cp_readd_device2.py
+  * Modified Makefile.am to run test_cp_readd_device2.py
+  * Removed tests/regression/statever.c. Use mini_service.c instead.
+  * Modified Makefile.am to run test_dev_query.py and test_dev_query2.py
+  * Modified test.py to remove mini_service from used_ports
+  * Fixed missing imports in test_igd_dev_parsing.py and test_igd_dev_parsing_by_fd.py
+  * Modified mini_service.c to add an state variable
+  * Added test_dev_query.py test_dev_query2.py
+  * Modified test_unsubscribe.py to run an http server
+  * Modified http_server.py to accept NOTIFY methods
+  * Fixed bug 28592 using clinkc-test-tools and sending HTTP request to server causes
+    killing of application
+  * Fixed bug 28484 invalid memory access in clinkc's
+    cg_upnp_event_notify_request_getpropertylist (Patch by Rafael)
+  * Modified some device descriptions absolute paths, in the
+    tests/regression/
+  * Added the SYNC_STRING in some tests that now threats with Control
+    Point's device discovery
+  * Modified tests/regression/test_cp_notify2.py to use a real
+    variable name
+  * Added tests/regression/test_cp_badrequest.py
+  * Modified tests/regression/cp_subscribe.c to include a device
+    listener
+  * Modified tests/regression/Makefile.am to run
+    tests/regression/test_cp_badrequest.py
+  * Fixed compiler warnings from stack code.
+  * Modified tests/regression/test_cp_notify2.py to send a dummy
+    property in the notify message
+  * Added some suppressions to tests/regression/suppressions
+  * Modified cg_upnp_usn_getudn to always initialize undBuf
+    (fixes bug #28087)
+  * Modified cg_socket_recv to zero ancillaryBuf before using it
+    (fixes bug #28086)
+  * Fixed a problem in debian/control --> now deb -packages
+    can be installed with S+ Application manager
+  * Modified tests/regression/test.py to don't use the subprocess
+    module
+  * Modified tests/regression/Makefile.am to disable http proxies
+    during test run
+  * Modified the regression tests to automate the waiting for port
+    availability
+  * Removed the duplicated
+    cg_upnp_controlpoint_geteventsubcallbackurl implementation from
+    ccontrolpoint_event.c
+  * Changes in the NOTIFY message manipulation for the python test
+    scripts (sending SSDP - multicast)
+  * More UPnP network stress tests python scripts added to the SVN, checking
+    them with the --enable-coverage
+  * Added some of the UPnP network stress tests python scripts, to be used with the
+    --enable-coverage, on tests/regression/stress
+  * Added a small http server in python to make it easier to write some tests
+  * Modified the device add, readd, and remove tests to use the http server
+  * Modified the regression tests to factor some common code
+  * Fixed thread synchronization problem in duplicate M-SEARCH
+    filtering code.
+  * Changed advertizer thread shutdown routine to not send alive
+    messages after thread termination has been started, advertizer
+    thread is now also shut down before byebye is sent.
+  * Reset action status code to 0 in case of success (caction_ctrl.c).
+
+ -- Mikael Saarenpää <ext-mikael.saarenpaa@nokia.com>  Mon,  8 May 2006 14:42:00 +0300
+
+clinkc (1.0-22) unstable; urgency=low
+
+  * Fixes from 2006-04-10 to 2006-04-25.
+  * Added more subscription and notification tests
+  * Added some tests with invalid subscription requests
+  * Fixed bug 25169 Lease time value (on Cache-Control header) doesn't 
+    propagate to child-devices (Patch by Rosfran Borges)
+  * Fixed bug 26058 cg_upnp_controlpoint_search() returns no value
+  * Applied patch which enables building object files into other than
+    source directory.
+  * Fixed HTTP client thread deletion routine (threads were deleted twice)
+  * Modified the regression tests synchronization process to be more robust
+  * Added  tests/regression/test_subscribe.py
+  * Added  tests/regression/test_bad_request.py
+  * Modified tests/regression/Makefile.am to run the new tests
+  * Fixed bug 24013 Memory leak by not freeing the data before the thread
+    is destroyed.
+  * Fixed bug 24014 Memory leak on cssdp_server.c:143 of clinkc.
+  * Removed obsoleted 8bit characters from debian/control.
+  * Added tests/regression/test_bad_action.py
+  * Fixed test data 21, 43 and 52.
+  * Fixed bug 25014 Absolute url handling is broken.
+  * Changed tests/regression/test.py and tests/regression/Makefile.am to
+    work inside scratchbox.
+
+ -- Mikael Saarenpää <ext-mikael.saarenpaa@nokia.com>  Wed, 26 Apr 2006 10:15:56 +0300
+
+clinkc (1.0-21) unstable; urgency=low
+
+  * Fixes from 2006-03-27 to 2006-04-07.
+  * Added --enable-configure-warnings to configure script and
+    enabling them as default.
+  * Added some tests scripts for multiple embedded devices in tests/regression/
+  * Added an action handler to tests/regression/mini_service.c
+  * Changed the request url in tests/regression/test_exec_action.py
+  * Changed tests/regression/coverage.py to work with cvs gcov
+  * Fixed bug 25456 cg_xml_nodelist_clear used instead of cg_xml_nodelist_delete
+    in clinkc.
+  * Fixed bug 24866 memory leak in cg_upnp_argumentlist_delete in clinkc
+    (patch by Rafael Espindola)
+  * Fixed bug 25296 buffer overflow in cg_net_uri_isescapedstring.
+  * Fixed bug 25193 HTTP server in device closes persistent connections
+    too early.
+  * Fixed test data 41 and 5. Added test data 1
+  * Added the tests/regression directory
+  * Added query handlers for multipleembedded test application.
+    (This fixes issue found in testing "1. Multiple embedded devices
+    support ID 26144 - action invoke query fails on embedded devices")
+  * Changed clog to use strdup instead of cg_strdup. (cg_strdup uses
+    clog api...)
+  * Fixed bug 25324 Not all malloc return values are checked in clinkc code
+  * Fixed bug 25130 clinkc defines cg_strdup but uses strdup in some
+    places (patch by Rafael Espindola)
+  * Fixed bug 24865 memory leak in cg_socket_recv in clinkc (pathc
+    by Rafael Espindola)
+  * Fixed bug 24558 (30 second timeout to action responses)
+  * Modified the connection establishment timeout from 5 to 2 sec
+  * Fixed bug 24653 (Handling subscription expiration in devices)
+  * Fixed bug 24654 (Unsubscribe with SID, NT and CALLBACK)
+  * Fixed bug 24601 (Subscribe with SID, NT and CALLBACK)
+  * Fixed bug 24603 (Empty CALLBACK in subscribe)
+  * Fixed bug 24648 (SUBSCRIBE NT != upnp:event)
+  * Fixed bug 24651 (Resubscribe with SID, NT and CALLBACK and correct SID)
+  * Fixed test data 26/c
+  * Fixed bug 24665 (Unknown XML elements in action invokes)
+  * Fixed test data 46/a
+  * Added ipchanged feature to eventapp
+  * Fixed test data 50/a
+  * Added the --enable-mudflap-debug option to configure
+  * Fixed bug 24591 (Device doesn't filter duplicate M-SEARCH messages.)
+  * Fixed bug 24673 - persistent connection cache was not initialized
+    at device startup. 
+
+ -- Mikael Saarenpää <ext-mikael.saarenpaa@nokia.com>  Mon, 10 Apr 2006 08:31:37 +0300
+
+clinkc (1.0-20) unstable; urgency=low
+
+  * Fixes from 2006-03-22 to 2006-03-24
+  * Fixed couple of while(true); errors from ipchanged
+    (low level) routines.
+  * Added the --enable-coverage option to configure
+  * Added ipchanged feature to multiplecp
+  * Fixed (Bugzilla) bugs: 24100, 24386, 24662, (24663), 24664
+  * Fixed bug when device responded to M-SEARH, embedded
+    devices were not correctly looped through.
+  * Rolled back M-SEARCH response changes from 6240 revision. For some
+    reason this caused stack to loop forever when sending ssdp:all 
+    M-SEARCH.
+  * Added/fixed test data for cases 24, 54 and 19.
+  * Added and corrected test data.
+
+ -- Mikael Saarenpää <ext-mikael.saarenpaa@nokia.com>  Mon, 27 Mar 2006 09:10:52 +0300
+
+clinkc (1.0-19) unstable; urgency=low
+
+  * Fixes from 2006-03-13 to 2006-03-21
+  * Changed cupnp.h to be generated from cupnp.h.in so that the file always
+    contains the latest version number from configure.in
+  * Removed CLOG_DEBUG_STACK from chttp.h which caused an error during compile.
+  * Created release 1.0-19
+  * Included patch attached to Bugzilla. Fixes: NB#24202
+  * M-SEARCH response delay changed to spread response packets more
+    evenly and to guarantee that all response packets leave before
+    time specified in MX record.
+  * Added missing description file for multipleroot test application.
+  * Fixes for test data (76a, 67a, 68a)
+  * Added general service description file.
+  * Exended multiplecp to allow controlling of embedded devices.
+
+ -- Heikki Junnila <ext-heikki.junnila@nokia.com>  Tue, 21 Mar 2006 09:18:35 +0200
+
+clinkc (1.0-18) unstable; urgency=low
+
+  * Fixes from 2006-02-13 to 2006-03-10  
+  * Fixed ancillary data parsing routine to check the message type
+    before fetching the data.
+  * Modified interface id -> ip address mapping routines to give
+    valid ip address if interface id can't be found from the interface
+    list.
+  * Fixed small memory leak according to patch by Rafaelo Espindola
+  * Bug fixes for tests 28884, 29625, 29629
+  * Fixed eventapp to correctly set the cache value.
+  * Support for setting local address based on UDP packet incoming
+    interface finalized.
+  * Changed setting of socket id to use setter function instead of directly
+    manipulating the id value.
+  * Removed old command line parsing routines from eventapp.
+  * Removed unsubscribing in controlpoint_stop because of performance
+    problems (in case we don't have network access any more).
+  * Added more debug printouts to stack.
+  * Added commandline option parsing to eventapp.
+  * Experimental support for setting local address by using
+    ancillary data from udp packets.
+  * TTL fix for NOTIFY messages.
+  * HTTP response fix (now content length header is always included).
+  * Changed multiplecp application to install correctly into bin.
+  * Removed comments from doxygen rules in top Makefile.am
+
+ -- Mikael Saarenpää <ext-mikael.saarenpaa@nokia.com>  Mon, 13 Mar 2006 09:47:01 +0200
+
+clinkc (1.0-17) unstable; urgency=low
+
+  * Fixes from 2006-02-13 to 2006-02-24
+  * Removed comments from doxygen rules in top Makefile.am
+  * TTL bug fixed
+  * Two new log levels and debug prints for function entry
+    (and leaving) points.
+  * "--enable-clog-debug*" options default to "no"
+  * Fixed SOAP encoding definition to "encodingStyle" in csoap.h
+  * Fixed to send right URLBase as a device.
+  * Fixed action invoke to work with devices, which have path in URLBase.
+  * Fixed HTTP server client thread removal.
+
+ -- Heikki Junnila <ext-heikki.junnila@nokia.com>  Mon, 27 Feb 2006 08:31:01 +0200
+
+clinkc (1.0-16) unstable; urgency=low
+
+  * Fixes from 2006-01-30 to 2006-02-06
+  * Added the CG_HTTP_USE_PERSISTENT_CONNECTIONS configure
+    option to configure.in and made it enabled by default
+  * Added some data for test cases under tests/test_data.
+  * Also included a script which concatenates all test data
+    + descriptions into one big document.
+  * Fixed a bug: NOTIFY messages were changed into post messages at
+    csoap_request.c:cg_soap_request_post(), I guess this is not needed
+    since the default http request type for soap message is POST.
+  * Fixed top Makefile.am to include all necessary files under debian
+    as well as Doxyfile.
+  * Fixed to compile stack by default in optimized CP and
+    use anyaddr modes (in debian/rules).
+  * Fixed compiling with optimized CP mode enabled.
+  * Fixed segmentation fault when stopping control point
+  * Corrected test data (76)
+  * Added test data for test 5
+  * Added new log/debug interface and removed old cdebug interface.
+  * Changed stack and applications to use new debug interface.
+  * Added configure options for new debug interface.
+  * Added test data for tests 19, 50, 52, 67, 76
+
+ -- Heikki Junnila <ext-heikki.junnila@nokia.com>  Fri, 10 Feb 2006 10:16:57 +0200
+
+clinkc (1.0-15) unstable; urgency=low
+
+  * Fixes from 2006-01-25 to 2006-01-27
+  * Added new packages clinkcmaemo-tests and clinkc-tests
+  * Changed XMLdesrcription test app to use new API and to accept
+    file spesifications etc. from command line. It is not tested
+    yet so it could be broken.
+  * Fixed control point to remove cached devices when stopped and
+    notify also appropriate listeners.
+  * Added a test application which can load any XML device and
+    service description
+  * Changed cg_upnp_controlpoint_expirationhandler() to use
+    cg_upnp_controlpoint_removedevicebyssdppacket() instead of just
+    cg_upnp_device_remove() so that the control point's device listener
+    gets called.
+  * Added control point unlock before _removedevicebyssdppacket() and
+    lock after the call.o
+  * Changed cg_http_statuscode2reasonphrase() to use static const chars
+    instead of local variables.
+  * Extended multiplecp app to cover test cases 11. "Indication to user
+    about service/device unavailability ID 28790" and 12. "Indication to
+    user about subscription unavailability ID 28792".
+  * New test application (multiplecp). Initially creates two
+    controlpoints and later these control points can be used separately
+    from UI.
+  * Added searching for a service from device based on service ID.
+  * Added functionality for test 38. Search timing and duplicates ID 29311
+    it can be done with command "'a' : Do all searches four times in a loop."
+  * Added command "'o' : Control (multiple actions)" to upnpdump, this ca$
+    used when stress testing devices. (Sends action requests in a loop.)
+  * Modified eventapp to allow multiple events to be generated in busy loop.
+  * Added IP-changed notify functionality for control point.
+  * Many small fixes
+  * Extended multipleroot test program with one more rootdevice, it was
+    decided that this would then be enough to execute test 9. Responding
+    with random delay to a discovery request ID 28787.
+  * Extended eventapp test program to include three testcases: 45. GENA
+    event byte limit ID 29429, 44. SOAP response byte limit ID 29427 and
+    43. SOAP request byte limit ID 29426
+  * Fixed three bugs that were caused by the removal of CgString.freeFlag
+    in csoap_request.c csoap_response.c and chttp_packet.c.
+    -> Changed all of them to use cg_*_*_appendncontent().
+  * Removed CG_HTTP_SUPPORT_NO_CONTENTLENGTH_REQUEST checking because it
+    is not an optional feature, but a necessary fix.
+
+ -- Heikki Junnila <hjunnila@users.sf.net>  Mon, 30 Jan 2006 10:35:34 +0200
+
+clinkc (1.0-14) unstable; urgency=low
+
+  * Changes from 2006-01-24 to 2006-01-24
+  * Added commas between build dependencies in debian/control
+  * Changed cg_string_naddvalue to do a realloc every time. Otherwise it
+    will never free its memory unless cg_string_clear is called (and it
+    is called quite rarely unless the string is being deleted).
+  * Removed freeFlag from struct CgString and changed cg_string_replace
+    to use cg_string_setvalue instead of cg_string_setpointervalue
+    because it would consume huge amounts of memory over time.
+
+ -- Heikki Junnila <hjunnila@users.sf.net>  Tue, 24 Jan 2006 16:21:19 +0200
+
+clinkc (1.0-13) unstable; urgency=low
+
+  * Changes from 2006-01-20 to 2006-01-24  
+  * Changed libxml2 dependency to 2.6.0 and libcurl to 7.13.0
+  * Changed the control point's device listener callback prototype
+    to use UDN instead of CgUpnpDevice* and also to pass a status
+    enum describing a bit more what will be done to the device.
+  * Changed to limit requested subscription time.
+  * Fixed device not to send more than 10 SSDPs in 200ms.
+  * When a device advertises from a new location, new device (and
+    service) description documents are reloaded from the new location.
+  * Changed to handle multiple devices on one machine.
+  * Fixed device HTTP server to answer 404 Invalid Var for invalid
+    query invokes.
+  * Fixed some macros.
+  * Added HTTP/1.1 request validity checking for HTTP server
+  * Added general socket timeout functionality (cg_socket_settimeout)
+  * Added Chunked Transfer Encoding support for reading HTTP packets
+  * Added asynchronous expiration handling for devices and
+    subscriptions
+  * Added HTTP HEAD-method support (required by HTTP/1.1 spec)
+  * Added devicelistener support
+  * Fixed control point to unsubscribe all subscribed services when
+    stopped.
+  * Fixed to handle escaped URIs when receiving HTTP requests
+  * Fixed not to crash when receiving malformed HTTP request
+  * Fixed to handle NOT FOUND case for GET-method
+  * Fixed to retry SOAP POST with M-POST (required by UPnP spec)
+  * Fixed to unsubscribe and subscribe when event is missed
+
+ -- Heikki Junnila <hjunnila@users.sf.net>  Tue, 24 Jan 2006 13:36:56 +0200
+
+clinkc (1.0-12) unstable; urgency=low
+
+  * Removed xml2-config from configure.in
+  * Changed libxml2 and libcurl presence checks to use AC_CHECK_LIB
+
+ -- Heikki Junnila <hjunnila@users.sf.net>  Fri, 20 Jan 2006 11:10:45 +0200
+
+clinkc (1.0-11) unstable; urgency=low
+
+  * Changed libxml2 dependency to libxml2-dev in debian/control
+
+ -- Heikki Junnila <hjunnila@users.sf.net>  Wed, 18 Jan 2006 12:25:53 +0200
+
+clinkc (1.0-10) unstable; urgency=low
+
+  * Added libxml2 to debian builddeps
+
+ -- Heikki Junnila <hjunnila@users.sf.net>  Tue, 17 Jan 2006 16:15:49 +0200
+
+clinkc (1.0-9) unstable; urgency=low
+
+  * Fixes from 2006-01-09 to 2006-01-16
+  * Added HTTP-header parsing for curl
+  * Added state variable updating thru events
+  * Added NULL checks to cg_strcasecmp, cg_streq, cg_strcaseeq and cg_strtrim
+  * Changed event key to unsigned int instead of long to better fulfill 
+    specifications
+  * Added API comments to csubscriber.[c|h]
+  * Added API comments to ceventlistener_list.c
+  * Fixed a typo: cg_http_request_isnotiryrequest ->
+    cg_http_request_isnotifyrequest
+  * Fixed a typo: cg_upnp_controlpoint_httprequestrecieved ->
+    cg_upnp_controlpoint_httprequestreceived
+  * Added device type parsing functions:
+    cg_upnp_devicetype_getidentifier, _geturn, _getdevice,_gettype and
+    _getversion
+  * Added cg_upnp_device_getdevicebytype(),
+          cg_upnp_device_getdevicebyexacttype(),
+          cg_upnp_controlpoint_getdevicebytype() and
+          cg_upnp_controlpoint_getdevicebyexacttype()
+    to enable searching for devices with/without version information.
+  * Removed *_getdevicebyname() and *_device_isname() functions because
+    UPnP specs don't specify UDN, type nor friendly name as being the
+    device's "name" attribute.
+  * Added cg_upnp_controlpoint_getdevicebyudn() and
+    cg_upnp_device_getdevicebyudn() functions to make up for the loss
+    of *_getdevicebyname()
+  * Removed *_getservicebyname() and *_service_isname() functions and
+    changed them to *_getservicebyexacttype in tests & samples.
+  * Removed the automatic search from cg_upnp_controlpoint_start().
+  * Renamed cg_upnp_device_getservicebyname to
+    cg_upnp_device_getservicebyexacttype
+  * Added cg_upnp_servicetype_getschematype()
+  * Fixed existing cg_upnp_servicetype_ functions to accept
+    1-character strings as well.
+  * Added service type parsing functions:
+    cg_upnp_servicetype_getidentifier, _geturn, _getservice,_gettype and
+    _getversion
+  * Added cg_upnp_device_getservicebytype() to enable searching for
+    services without version information.
+
+ -- Heikki Junnila <hjunnila@users.sf.net>  Tue, 17 Jan 2006 13:54:46 +0200
+
+clinkc (1.0-8) unstable; urgency=low
+
+  * Fixes from 28-Dec-2005 to 04-Jan-2006:
+  * Added configure option for CG_HTTP_SUPPORT_NO_CONTENTLENGTH_REQUEST
+  * Set configure defaults: libcurl=yes, libxml2=yes, libtool=yes,
+			    nolength_http=yes
+  * Changed configure option descriptions to use AS_HELP_STRING
+  * Fixed chttp_request.c to add content to other than just POST requests
+  * Changed cg_http_response_issuccessful to accept all 2xx codes as successful
+  * chttp_request:c:334 had a newline after #ifdef without "\". Fixed.
+  * Added CACHE-CONTROL command line parameter to clock sample device
+    (for testing purposes).
+  * Fixed CURL transfer to timeout, if connection is disconnected.
+  * AC_ARG_WITH's option-if-set was used incorrectly in configure.in
+  * Added doxygen documentation to clinkc-dev package
+
+ -- Heikki Junnila <hjunnila@users.sf.net>  Thu,  5 Jan 2006 17:36:32 +0200
+
+clinkc (1.0-7) unstable; urgency=low
+
+  * Built new release for testing. Release includes patches created between
+    07-Dec-2005 and 14-Dec-2005, see ChangeLog.
+
+ -- Heikki Junnila <hjunnila@users.sf.net>  Wed, 14 Dec 2005 21:57:51 +0200
+
+clinkc (1.0-6) unstable; urgency=low
+
+  * Built new release for testing. Release includes patches created between
+    22-Nov-2005 and 02-Dec-2005, see ChangeLog.
+
+ -- Heikki Junnila <hjunnila@users.sf.net>  Wed, 14 Dec 2005 21:55:50 +0200
+
+clinkc (1.0-5) unstable; urgency=low
+
+  * Built new release for testing. Release includes patches created between
+    09-Nov-2005 and 18-Nov-2005, see ChangeLog.
+  * 
+
+ -- Heikki Junnila <hjunnila@users.sf.net>  Tue, 22 Nov 2005 10:02:39 +0200
+
+clinkc (1.0-4) unstable; urgency=low
+
+  * Added libcurl switch to configure scripts
+  * Built new release for testing
+
+ -- Heikki Junnila <hjunnila@users.sf.net>  Thu,  3 Nov 2005 09:56:28 +0200
+
+clinkc (1.0-3) unstable; urgency=low
+
+  * Added to sf.net CVS
+  * Created debian package 
+
+ -- Heikki Junnila <hjunnila@users.sf.net>  Tue,  1 Nov 2005 16:04:24 +0200
+
+clinkc (1.0-2) unstable; urgency=low
+
+  * Fixed Debian building.
+
+ -- Aapo Makela <aapo.makela@nokia.com>  Wed,  5 Oct 2005 12:57:28 +0300
+
+clinkc (1.0-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Aapo Makela <aapo.makela@nokia.com>  Mon, 22 Aug 2005 14:25:06 +0300
+

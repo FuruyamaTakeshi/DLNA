@@ -1,0 +1,169 @@
+\hypertarget{interface_c_g_upnp_service}{\section{C\-G\-Upnp\-Service Class Reference}
+\label{interface_c_g_upnp_service}\index{C\-G\-Upnp\-Service@{C\-G\-Upnp\-Service}}
+}
+
+
+{\ttfamily \#import $<$C\-G\-Upnp\-Service.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+(id) -\/ \hyperlink{interface_c_g_upnp_service_a829255e6fa49142d1bea213e69c5463d}{init\-With\-C\-Object\-:}
+\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_c_g_upnp_service_a3278a41cf403c61f3bbafb12f236985a}{parse\-X\-M\-L\-Description\-:}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_c_g_upnp_service_a847ab60141c97c9ea5d24838e776b1ee}{service\-Id}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_c_g_upnp_service_aecb7a1a1fea8ede53ba6f287c72eaa8c}{service\-Type}
+\item 
+(N\-S\-Array $\ast$) -\/ \hyperlink{interface_c_g_upnp_service_a9c261921fc4e896b650988f78162d683}{actions}
+\item 
+(N\-S\-Array $\ast$) -\/ \hyperlink{interface_c_g_upnp_service_ab322496ca0cd5d8cf577fa9abca89450}{state\-Variables}
+\item 
+(\hyperlink{interface_c_g_upnp_action}{C\-G\-Upnp\-Action} $\ast$) -\/ \hyperlink{interface_c_g_upnp_service_a549760c8cc9f1d6c042f0e100fa9c0bf}{get\-Action\-For\-Name\-:}
+\item 
+(\hyperlink{interface_c_g_upnp_state_variable}{C\-G\-Upnp\-State\-Variable} $\ast$) -\/ \hyperlink{interface_c_g_upnp_service_a7fa3b89f728050c534d7f9970a7002cd}{get\-State\-Variable\-For\-Name\-:}
+\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_c_g_upnp_service_aecb173b092e8e6b9871d34addf2326ce}{is\-State\-Variable\-Impemented\-:}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{interface_c_g_upnp_service_a172cdfd30c178602737695cac7c1e087}{Cg\-Upnp\-Service $\ast$ {\bfseries c\-Object}}\label{interface_c_g_upnp_service_a172cdfd30c178602737695cac7c1e087}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{interface_c_g_upnp_service}{C\-G\-Upnp\-Service} class is a wrapper class for Cg\-Upnp\-Service of Cyber\-Link for C. 
+
+\subsection{Member Function Documentation}
+\hypertarget{interface_c_g_upnp_service_a9c261921fc4e896b650988f78162d683}{\index{C\-G\-Upnp\-Service@{C\-G\-Upnp\-Service}!actions@{actions}}
+\index{actions@{actions}!CGUpnpService@{C\-G\-Upnp\-Service}}
+\subsubsection[{actions}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-Array $\ast$) actions 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_service_a9c261921fc4e896b650988f78162d683}
+Get all actions in the service as a N\-S\-Array object. The array has the actions as instances of \hyperlink{interface_c_g_upnp_action}{C\-G\-Upnp\-Action}.
+
+\begin{DoxyReturn}{Returns}
+N\-S\-Array of \hyperlink{interface_c_g_upnp_action}{C\-G\-Upnp\-Action}. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_service_a549760c8cc9f1d6c042f0e100fa9c0bf}{\index{C\-G\-Upnp\-Service@{C\-G\-Upnp\-Service}!get\-Action\-For\-Name\-:@{get\-Action\-For\-Name\-:}}
+\index{get\-Action\-For\-Name\-:@{get\-Action\-For\-Name\-:}!CGUpnpService@{C\-G\-Upnp\-Service}}
+\subsubsection[{get\-Action\-For\-Name\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf C\-G\-Upnp\-Action} $\ast$) get\-Action\-For\-Name\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{name}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_service_a549760c8cc9f1d6c042f0e100fa9c0bf}
+Get a action in the service by the specified name.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & A name string of the action.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \hyperlink{interface_c_g_upnp_action}{C\-G\-Upnp\-Action} if the specified action is found; otherwise nil. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_service_a7fa3b89f728050c534d7f9970a7002cd}{\index{C\-G\-Upnp\-Service@{C\-G\-Upnp\-Service}!get\-State\-Variable\-For\-Name\-:@{get\-State\-Variable\-For\-Name\-:}}
+\index{get\-State\-Variable\-For\-Name\-:@{get\-State\-Variable\-For\-Name\-:}!CGUpnpService@{C\-G\-Upnp\-Service}}
+\subsubsection[{get\-State\-Variable\-For\-Name\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf C\-G\-Upnp\-State\-Variable} $\ast$) get\-State\-Variable\-For\-Name\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{name}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_service_a7fa3b89f728050c534d7f9970a7002cd}
+Get a state variables in the service by the specified name.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & A name string of the state variable.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \hyperlink{interface_c_g_upnp_state_variable}{C\-G\-Upnp\-State\-Variable} if the specified state variable is found; otherwise nil. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_service_a829255e6fa49142d1bea213e69c5463d}{\index{C\-G\-Upnp\-Service@{C\-G\-Upnp\-Service}!init\-With\-C\-Object\-:@{init\-With\-C\-Object\-:}}
+\index{init\-With\-C\-Object\-:@{init\-With\-C\-Object\-:}!CGUpnpService@{C\-G\-Upnp\-Service}}
+\subsubsection[{init\-With\-C\-Object\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init\-With\-C\-Object\-: 
+\begin{DoxyParamCaption}
+\item[{(Cg\-Upnp\-Service $\ast$)}]{cobj}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_service_a829255e6fa49142d1bea213e69c5463d}
+Create a new U\-Pn\-P service with the C instance.
+
+\begin{DoxyReturn}{Returns}
+New instance if successfull; otherwise nil. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_service_aecb173b092e8e6b9871d34addf2326ce}{\index{C\-G\-Upnp\-Service@{C\-G\-Upnp\-Service}!is\-State\-Variable\-Impemented\-:@{is\-State\-Variable\-Impemented\-:}}
+\index{is\-State\-Variable\-Impemented\-:@{is\-State\-Variable\-Impemented\-:}!CGUpnpService@{C\-G\-Upnp\-Service}}
+\subsubsection[{is\-State\-Variable\-Impemented\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) is\-State\-Variable\-Impemented\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String$\ast$)}]{name}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_service_aecb173b092e8e6b9871d34addf2326ce}
+Checks whether state variable is implemented
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & A name string of the state variable.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Y\-E\-S if implemented 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_service_a3278a41cf403c61f3bbafb12f236985a}{\index{C\-G\-Upnp\-Service@{C\-G\-Upnp\-Service}!parse\-X\-M\-L\-Description\-:@{parse\-X\-M\-L\-Description\-:}}
+\index{parse\-X\-M\-L\-Description\-:@{parse\-X\-M\-L\-Description\-:}!CGUpnpService@{C\-G\-Upnp\-Service}}
+\subsubsection[{parse\-X\-M\-L\-Description\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) parse\-X\-M\-L\-Description\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{xml\-Desc}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_service_a3278a41cf403c61f3bbafb12f236985a}
+Parse the specified X\-M\-L description.
+
+\begin{DoxyReturn}{Returns}
+Y\-E\-S if successfull; otherwise nui. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_service_a847ab60141c97c9ea5d24838e776b1ee}{\index{C\-G\-Upnp\-Service@{C\-G\-Upnp\-Service}!service\-Id@{service\-Id}}
+\index{service\-Id@{service\-Id}!CGUpnpService@{C\-G\-Upnp\-Service}}
+\subsubsection[{service\-Id}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) service\-Id 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_service_a847ab60141c97c9ea5d24838e776b1ee}
+Get the service I\-D of the service.
+
+\begin{DoxyReturn}{Returns}
+The service I\-D. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_service_aecb7a1a1fea8ede53ba6f287c72eaa8c}{\index{C\-G\-Upnp\-Service@{C\-G\-Upnp\-Service}!service\-Type@{service\-Type}}
+\index{service\-Type@{service\-Type}!CGUpnpService@{C\-G\-Upnp\-Service}}
+\subsubsection[{service\-Type}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) service\-Type 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_service_aecb7a1a1fea8ede53ba6f287c72eaa8c}
+Get the service type of the service.
+
+\begin{DoxyReturn}{Returns}
+The service type. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_service_ab322496ca0cd5d8cf577fa9abca89450}{\index{C\-G\-Upnp\-Service@{C\-G\-Upnp\-Service}!state\-Variables@{state\-Variables}}
+\index{state\-Variables@{state\-Variables}!CGUpnpService@{C\-G\-Upnp\-Service}}
+\subsubsection[{state\-Variables}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-Array $\ast$) state\-Variables 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_service_ab322496ca0cd5d8cf577fa9abca89450}
+Get all state variables in the service as a N\-S\-Array object. The array has the state variables as instances of \hyperlink{interface_c_g_upnp_state_variable}{C\-G\-Upnp\-State\-Variable}.
+
+\begin{DoxyReturn}{Returns}
+N\-S\-Array of \hyperlink{interface_c_g_upnp_state_variable}{C\-G\-Upnp\-State\-Variable}. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+C\-G\-Upnp\-Service.\-h\item 
+C\-G\-Upnp\-Service.\-m\end{DoxyCompactItemize}

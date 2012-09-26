@@ -1,0 +1,390 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 44;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2164696C0E5FEBD90056DA88 /* CGUpnpAvContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 216469560E5FEBD90056DA88 /* CGUpnpAvContainer.m */; };
+		2164696D0E5FEBD90056DA88 /* CGUpnpAvContentDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = 216469580E5FEBD90056DA88 /* CGUpnpAvContentDirectory.m */; };
+		2164696E0E5FEBD90056DA88 /* CGUpnpAvContentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164695A0E5FEBD90056DA88 /* CGUpnpAvContentManager.m */; };
+		2164696F0E5FEBD90056DA88 /* CGUpnpAvController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164695C0E5FEBD90056DA88 /* CGUpnpAvController.m */; };
+		216469700E5FEBD90056DA88 /* CGUpnpAvItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164695E0E5FEBD90056DA88 /* CGUpnpAvItem.m */; };
+		216469710E5FEBD90056DA88 /* CGUpnpAvObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 216469600E5FEBD90056DA88 /* CGUpnpAvObject.m */; };
+		216469720E5FEBD90056DA88 /* CGUpnpAvResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 216469620E5FEBD90056DA88 /* CGUpnpAvResource.m */; };
+		216469730E5FEBD90056DA88 /* CGUpnpAvRoot.m in Sources */ = {isa = PBXBuildFile; fileRef = 216469640E5FEBD90056DA88 /* CGUpnpAvRoot.m */; };
+		216469740E5FEBD90056DA88 /* CGUpnpAvServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 216469660E5FEBD90056DA88 /* CGUpnpAvServer.m */; };
+		216469750E5FEBD90056DA88 /* CGXml.m in Sources */ = {isa = PBXBuildFile; fileRef = 216469680E5FEBD90056DA88 /* CGXml.m */; };
+		216469760E5FEBD90056DA88 /* CGXmlNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164696A0E5FEBD90056DA88 /* CGXmlNode.m */; };
+		2170A71F0E1056CE00BFDD01 /* DLNAController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2170A71E0E1056CE00BFDD01 /* DLNAController.m */; };
+		2179A5D10E5481E000AD736C /* DLNAImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2179A5D00E5481E000AD736C /* DLNAImageView.m */; };
+		21B7D9460E61537700AC5AC0 /* CyberLink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B7D9450E61537700AC5AC0 /* CyberLink.framework */; };
+		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		216469540E5FEBD90056DA88 /* CGUpnpAvConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGUpnpAvConstants.h; sourceTree = "<group>"; };
+		216469550E5FEBD90056DA88 /* CGUpnpAvContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGUpnpAvContainer.h; sourceTree = "<group>"; };
+		216469560E5FEBD90056DA88 /* CGUpnpAvContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGUpnpAvContainer.m; sourceTree = "<group>"; };
+		216469570E5FEBD90056DA88 /* CGUpnpAvContentDirectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGUpnpAvContentDirectory.h; sourceTree = "<group>"; };
+		216469580E5FEBD90056DA88 /* CGUpnpAvContentDirectory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGUpnpAvContentDirectory.m; sourceTree = "<group>"; };
+		216469590E5FEBD90056DA88 /* CGUpnpAvContentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGUpnpAvContentManager.h; sourceTree = "<group>"; };
+		2164695A0E5FEBD90056DA88 /* CGUpnpAvContentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGUpnpAvContentManager.m; sourceTree = "<group>"; };
+		2164695B0E5FEBD90056DA88 /* CGUpnpAvController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGUpnpAvController.h; sourceTree = "<group>"; };
+		2164695C0E5FEBD90056DA88 /* CGUpnpAvController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGUpnpAvController.m; sourceTree = "<group>"; };
+		2164695D0E5FEBD90056DA88 /* CGUpnpAvItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGUpnpAvItem.h; sourceTree = "<group>"; };
+		2164695E0E5FEBD90056DA88 /* CGUpnpAvItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGUpnpAvItem.m; sourceTree = "<group>"; };
+		2164695F0E5FEBD90056DA88 /* CGUpnpAvObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGUpnpAvObject.h; sourceTree = "<group>"; };
+		216469600E5FEBD90056DA88 /* CGUpnpAvObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGUpnpAvObject.m; sourceTree = "<group>"; };
+		216469610E5FEBD90056DA88 /* CGUpnpAvResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGUpnpAvResource.h; sourceTree = "<group>"; };
+		216469620E5FEBD90056DA88 /* CGUpnpAvResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGUpnpAvResource.m; sourceTree = "<group>"; };
+		216469630E5FEBD90056DA88 /* CGUpnpAvRoot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGUpnpAvRoot.h; sourceTree = "<group>"; };
+		216469640E5FEBD90056DA88 /* CGUpnpAvRoot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGUpnpAvRoot.m; sourceTree = "<group>"; };
+		216469650E5FEBD90056DA88 /* CGUpnpAvServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGUpnpAvServer.h; sourceTree = "<group>"; };
+		216469660E5FEBD90056DA88 /* CGUpnpAvServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGUpnpAvServer.m; sourceTree = "<group>"; };
+		216469670E5FEBD90056DA88 /* CGXml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGXml.h; sourceTree = "<group>"; };
+		216469680E5FEBD90056DA88 /* CGXml.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGXml.m; sourceTree = "<group>"; };
+		216469690E5FEBD90056DA88 /* CGXmlNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGXmlNode.h; sourceTree = "<group>"; };
+		2164696A0E5FEBD90056DA88 /* CGXmlNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGXmlNode.m; sourceTree = "<group>"; };
+		2164696B0E5FEBD90056DA88 /* UPnPAV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPnPAV.h; sourceTree = "<group>"; };
+		2170A71D0E1056CE00BFDD01 /* DLNAController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLNAController.h; sourceTree = "<group>"; };
+		2170A71E0E1056CE00BFDD01 /* DLNAController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLNAController.m; sourceTree = "<group>"; };
+		2179A5CF0E5481E000AD736C /* DLNAImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLNAImageView.h; sourceTree = "<group>"; };
+		2179A5D00E5481E000AD736C /* DLNAImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLNAImageView.m; sourceTree = "<group>"; };
+		21B7D9450E61537700AC5AC0 /* CyberLink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CyberLink.framework; path = ../../../../../../lib/macosx/xcode30/build/Release/CyberLink.framework; sourceTree = SOURCE_ROOT; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* upnpavplayer_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = upnpavplayer_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* upnpavplayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = upnpavplayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				21B7D9460E61537700AC5AC0 /* CyberLink.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2179A5CF0E5481E000AD736C /* DLNAImageView.h */,
+				2179A5D00E5481E000AD736C /* DLNAImageView.m */,
+				2170A71D0E1056CE00BFDD01 /* DLNAController.h */,
+				2170A71E0E1056CE00BFDD01 /* DLNAController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21B7D9450E61537700AC5AC0 /* CyberLink.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* upnpavplayer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		216469530E5FEBD90056DA88 /* CyberLink */ = {
+			isa = PBXGroup;
+			children = (
+				216469540E5FEBD90056DA88 /* CGUpnpAvConstants.h */,
+				216469550E5FEBD90056DA88 /* CGUpnpAvContainer.h */,
+				216469560E5FEBD90056DA88 /* CGUpnpAvContainer.m */,
+				216469570E5FEBD90056DA88 /* CGUpnpAvContentDirectory.h */,
+				216469580E5FEBD90056DA88 /* CGUpnpAvContentDirectory.m */,
+				216469590E5FEBD90056DA88 /* CGUpnpAvContentManager.h */,
+				2164695A0E5FEBD90056DA88 /* CGUpnpAvContentManager.m */,
+				2164695B0E5FEBD90056DA88 /* CGUpnpAvController.h */,
+				2164695C0E5FEBD90056DA88 /* CGUpnpAvController.m */,
+				2164695D0E5FEBD90056DA88 /* CGUpnpAvItem.h */,
+				2164695E0E5FEBD90056DA88 /* CGUpnpAvItem.m */,
+				2164695F0E5FEBD90056DA88 /* CGUpnpAvObject.h */,
+				216469600E5FEBD90056DA88 /* CGUpnpAvObject.m */,
+				216469610E5FEBD90056DA88 /* CGUpnpAvResource.h */,
+				216469620E5FEBD90056DA88 /* CGUpnpAvResource.m */,
+				216469630E5FEBD90056DA88 /* CGUpnpAvRoot.h */,
+				216469640E5FEBD90056DA88 /* CGUpnpAvRoot.m */,
+				216469650E5FEBD90056DA88 /* CGUpnpAvServer.h */,
+				216469660E5FEBD90056DA88 /* CGUpnpAvServer.m */,
+				216469670E5FEBD90056DA88 /* CGXml.h */,
+				216469680E5FEBD90056DA88 /* CGXml.m */,
+				216469690E5FEBD90056DA88 /* CGXmlNode.h */,
+				2164696A0E5FEBD90056DA88 /* CGXmlNode.m */,
+				2164696B0E5FEBD90056DA88 /* UPnPAV.h */,
+			);
+			name = CyberLink;
+			path = ../../../../wrapper/objc/CyberLink;
+			sourceTree = SOURCE_ROOT;
+		};
+		21735AD40E5C5AB6009FB816 /* CyberLinkAV */ = {
+			isa = PBXGroup;
+			children = (
+				216469530E5FEBD90056DA88 /* CyberLink */,
+			);
+			name = CyberLinkAV;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* upnpavplayer */ = {
+			isa = PBXGroup;
+			children = (
+				21735AD40E5C5AB6009FB816 /* CyberLinkAV */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = upnpavplayer;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* upnpavplayer_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* upnpavplayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "upnpavplayer" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = upnpavplayer;
+			productInstallPath = "$(HOME)/Applications";
+			productName = upnpavplayer;
+			productReference = 8D1107320486CEB800E47090 /* upnpavplayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "upnpavplayer" */;
+			compatibilityVersion = "Xcode 3.0";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* upnpavplayer */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* upnpavplayer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				2170A71F0E1056CE00BFDD01 /* DLNAController.m in Sources */,
+				2179A5D10E5481E000AD736C /* DLNAImageView.m in Sources */,
+				2164696C0E5FEBD90056DA88 /* CGUpnpAvContainer.m in Sources */,
+				2164696D0E5FEBD90056DA88 /* CGUpnpAvContentDirectory.m in Sources */,
+				2164696E0E5FEBD90056DA88 /* CGUpnpAvContentManager.m in Sources */,
+				2164696F0E5FEBD90056DA88 /* CGUpnpAvController.m in Sources */,
+				216469700E5FEBD90056DA88 /* CGUpnpAvItem.m in Sources */,
+				216469710E5FEBD90056DA88 /* CGUpnpAvObject.m in Sources */,
+				216469720E5FEBD90056DA88 /* CGUpnpAvResource.m in Sources */,
+				216469730E5FEBD90056DA88 /* CGUpnpAvRoot.m in Sources */,
+				216469740E5FEBD90056DA88 /* CGUpnpAvServer.m in Sources */,
+				216469750E5FEBD90056DA88 /* CGXml.m in Sources */,
+				216469760E5FEBD90056DA88 /* CGXmlNode.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../lib/macosx/xcode30/build/Release\"",
+					"\"$(SRCROOT)/../../../../../../lib/macosx/xcode30/build/Release\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = upnpavplayer_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = upnpavplayer;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../lib/macosx/xcode30/build/Release\"",
+					"\"$(SRCROOT)/../../../../../../lib/macosx/xcode30/build/Release\"",
+				);
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = upnpavplayer_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = upnpavplayer;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../../../../wrapper/objc;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../../../../wrapper/objc;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "upnpavplayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "upnpavplayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

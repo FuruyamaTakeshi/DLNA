@@ -1,0 +1,12 @@
+#!/bin/sh
+if [ ! -d config ]; then
+    mkdir config
+fi
+if [ ! -d autom4te.cache ]; then
+	rm -rf autom4te.cache/*
+fi
+libtoolize --automake --force --copy
+aclocal
+autoheader
+automake --foreign --add-missing --copy
+autoconf 

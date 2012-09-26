@@ -1,0 +1,554 @@
+\hypertarget{interface_c_g_upnp_device}{\section{C\-G\-Upnp\-Device Class Reference}
+\label{interface_c_g_upnp_device}\index{C\-G\-Upnp\-Device@{C\-G\-Upnp\-Device}}
+}
+
+
+{\ttfamily \#import $<$C\-G\-Upnp\-Device.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+(id) -\/ \hyperlink{interface_c_g_upnp_device_aa0351efbdcee98c85687861faab2d372}{init}
+\item 
+(id) -\/ \hyperlink{interface_c_g_upnp_device_a4f3984ff48e69ce3c113f960e8a189f6}{init\-With\-C\-Object\-:}
+\item 
+(id) -\/ \hyperlink{interface_c_g_upnp_device_a0ee734df1783cd9025e7f0efcf3e133f}{init\-With\-X\-M\-L\-Description\-:}
+\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_c_g_upnp_device_ac86396c6f776f9436e2b0f92dea8ea03}{parse\-X\-M\-L\-Description\-:}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_c_g_upnp_device_ae15d569f7de9cbc9aa751d380e2fd8f1}{friendly\-Name}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_c_g_upnp_device_a626b42555e6122b8ec08877981a9b515}{device\-Type}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_c_g_upnp_device_ad55f10ba9d5f371835148797fcebfd36}{udn}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_c_g_upnp_device_a5f496c54e490738ac1d2aac0b1907ca8}{manufacturer}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_c_g_upnp_device_af1bcb76a0ddf6530179f224802fdab2f}{model\-Number}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_c_g_upnp_device_ae4b4ac9f466da8f9e7d5567a1f7ac9f2}{model\-Name}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_c_g_upnp_device_a080173980569b451fafa717eec9fe820}{url\-Base}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_c_g_upnp_device_ad4f3c7440fb4d70fd945bac3f1aebda9}{description\-U\-R\-L}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_c_g_upnp_device_ad6e2f119b0959e65781c42359ca35f6c}{location\-U\-R\-L}
+\item 
+(void) -\/ \hyperlink{interface_c_g_upnp_device_af37ea8d866eef20a842ad9851fb344e2}{set\-Device\-Type\-:}
+\item 
+(void) -\/ \hyperlink{interface_c_g_upnp_device_a93bab5af0d18a16def3c6f28da0c0113}{set\-Friendly\-Name\-:}
+\item 
+(void) -\/ \hyperlink{interface_c_g_upnp_device_aefe84b6ec3ff5bfb66f55f77030aee25}{set\-Udn\-:}
+\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_c_g_upnp_device_a1d3676929cd328898f5cc4a0d61a28d5}{is\-Device\-Type\-:}
+\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_c_g_upnp_device_a864f6672963128d131de7d1043e3062d}{is\-U\-D\-N\-:}
+\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_c_g_upnp_device_a24ade9bc19cea4b1f196cbcb71a38b09}{is\-Friendly\-Name\-:}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_c_g_upnp_device_a666a4fa9ff6394de2f0d976e0d17e1b1}{presentation\-U\-R\-L}
+\item 
+(N\-S\-Array $\ast$) -\/ \hyperlink{interface_c_g_upnp_device_aed4255e525589b24cbb5afdafc474a0b}{services}
+\item 
+(\hyperlink{interface_c_g_upnp_service}{C\-G\-Upnp\-Service} $\ast$) -\/ \hyperlink{interface_c_g_upnp_device_a07313c7563ddfe3a542c5a549c9b04f0}{get\-Service\-For\-I\-D\-:}
+\item 
+(\hyperlink{interface_c_g_upnp_service}{C\-G\-Upnp\-Service} $\ast$) -\/ \hyperlink{interface_c_g_upnp_device_a977d489370f0fa5178cb545ae8995310}{get\-Service\-For\-Type\-:}
+\item 
+(N\-S\-Array $\ast$) -\/ \hyperlink{interface_c_g_upnp_device_aaef110b3cda7e7018bc164a250c942b3}{icons}
+\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_c_g_upnp_device_a02a6aa8bc0369d945b75d1c41cc1df94}{start}
+\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_c_g_upnp_device_a55b4f61f61c7cffe432c4e7ec126bf04}{stop}
+\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_c_g_upnp_device_a14abb6994533e4f40b63e3c5da441ffb}{is\-Running}
+\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_c_g_upnp_device_a8f0e3b8b65be9ba67f9fb90ccd3ee447}{announce}
+\item 
+(void) -\/ \hyperlink{interface_c_g_upnp_device_ae42f2a0fa13ff0c7997d70f2630606b2}{set\-User\-Data\-:}
+\item 
+(void $\ast$) -\/ \hyperlink{interface_c_g_upnp_device_a420fd4621ae036b53494d35339261285}{user\-Data}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_c_g_upnp_device_a75221973da0bd5ce9926e452e880a82d}{ipaddress}
+\item 
+(\hyperlink{interface_c_g_upnp_icon}{C\-G\-Upnp\-Icon} $\ast$) -\/ \hyperlink{interface_c_g_upnp_device_a150cb5a442d785934313013f0728e3b5}{smallest\-Icon}
+\item 
+(\hyperlink{interface_c_g_upnp_icon}{C\-G\-Upnp\-Icon} $\ast$) -\/ \hyperlink{interface_c_g_upnp_device_a12a4dc65083fe126e790d2a95a80e51f}{smallest\-Icon\-With\-Mime\-Type\-:}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_c_g_upnp_device_a0212353e65464c7549bf084a2dd7f7a8}{absolute\-Icon\-Url\-:}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{interface_c_g_upnp_device_aec91a483ed32fefce1f00872ec9222e3}{B\-O\-O\-L {\bfseries is\-C\-Object\-Created}}\label{interface_c_g_upnp_device_aec91a483ed32fefce1f00872ec9222e3}
+
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{interface_c_g_upnp_device_a5bca421cef09c2c3c5345c2f047001b9}{Cg\-Upnp\-Device $\ast$ {\bfseries c\-Object}}\label{interface_c_g_upnp_device_a5bca421cef09c2c3c5345c2f047001b9}
+
+\item 
+\hypertarget{interface_c_g_upnp_device_ad1a85a2d4d616c87c3a6f51795b05a7a}{id$<$ \hyperlink{protocol_c_g_upnp_device_delegate-p}{C\-G\-Upnp\-Device\-Delegate} $>$ {\bfseries delegate}}\label{interface_c_g_upnp_device_ad1a85a2d4d616c87c3a6f51795b05a7a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{interface_c_g_upnp_device}{C\-G\-Upnp\-Device} class is a wrapper class for Cg\-Upnp\-Device of Cyber\-Link for C. 
+
+\subsection{Member Function Documentation}
+\hypertarget{interface_c_g_upnp_device_a0212353e65464c7549bf084a2dd7f7a8}{\index{C\-G\-Upnp\-Device@{C\-G\-Upnp\-Device}!absolute\-Icon\-Url\-:@{absolute\-Icon\-Url\-:}}
+\index{absolute\-Icon\-Url\-:@{absolute\-Icon\-Url\-:}!CGUpnpDevice@{C\-G\-Upnp\-Device}}
+\subsubsection[{absolute\-Icon\-Url\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) absolute\-Icon\-Url\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf C\-G\-Upnp\-Icon} $\ast$)}]{an\-Icon}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_device_a0212353e65464c7549bf084a2dd7f7a8}
+Return a absolute url of the specified icon.
+
+
+\begin{DoxyParams}{Parameters}
+{\em an\-Icon} & Icon.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Absolute url of the specified icon. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_device_a8f0e3b8b65be9ba67f9fb90ccd3ee447}{\index{C\-G\-Upnp\-Device@{C\-G\-Upnp\-Device}!announce@{announce}}
+\index{announce@{announce}!CGUpnpDevice@{C\-G\-Upnp\-Device}}
+\subsubsection[{announce}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) announce 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_device_a8f0e3b8b65be9ba67f9fb90ccd3ee447}
+Announce the device.
+
+\begin{DoxyReturn}{Returns}
+Y\-E\-S if the device is started normally, otherwise N\-O. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_device_ad4f3c7440fb4d70fd945bac3f1aebda9}{\index{C\-G\-Upnp\-Device@{C\-G\-Upnp\-Device}!description\-U\-R\-L@{description\-U\-R\-L}}
+\index{description\-U\-R\-L@{description\-U\-R\-L}!CGUpnpDevice@{C\-G\-Upnp\-Device}}
+\subsubsection[{description\-U\-R\-L}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) description\-U\-R\-L 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_device_ad4f3c7440fb4d70fd945bac3f1aebda9}
+Return a descrition U\-R\-L
+
+\begin{DoxyReturn}{Returns}
+Descripton U\-R\-L of the device. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_device_a626b42555e6122b8ec08877981a9b515}{\index{C\-G\-Upnp\-Device@{C\-G\-Upnp\-Device}!device\-Type@{device\-Type}}
+\index{device\-Type@{device\-Type}!CGUpnpDevice@{C\-G\-Upnp\-Device}}
+\subsubsection[{device\-Type}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) device\-Type 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_device_a626b42555e6122b8ec08877981a9b515}
+Get the device type of the device.
+
+\begin{DoxyReturn}{Returns}
+Device Type. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_device_ae15d569f7de9cbc9aa751d380e2fd8f1}{\index{C\-G\-Upnp\-Device@{C\-G\-Upnp\-Device}!friendly\-Name@{friendly\-Name}}
+\index{friendly\-Name@{friendly\-Name}!CGUpnpDevice@{C\-G\-Upnp\-Device}}
+\subsubsection[{friendly\-Name}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) friendly\-Name 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_device_ae15d569f7de9cbc9aa751d380e2fd8f1}
+Get the friendly name of the device.
+
+\begin{DoxyReturn}{Returns}
+Friendly name. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_device_a07313c7563ddfe3a542c5a549c9b04f0}{\index{C\-G\-Upnp\-Device@{C\-G\-Upnp\-Device}!get\-Service\-For\-I\-D\-:@{get\-Service\-For\-I\-D\-:}}
+\index{get\-Service\-For\-I\-D\-:@{get\-Service\-For\-I\-D\-:}!CGUpnpDevice@{C\-G\-Upnp\-Device}}
+\subsubsection[{get\-Service\-For\-I\-D\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf C\-G\-Upnp\-Service} $\ast$) get\-Service\-For\-I\-D\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{service\-Id}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_device_a07313c7563ddfe3a542c5a549c9b04f0}
+Get a service in the device by the specified service I\-D.
+
+
+\begin{DoxyParams}{Parameters}
+{\em service\-Id} & A service I\-D string of the service.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \hyperlink{interface_c_g_upnp_service}{C\-G\-Upnp\-Service} if the specified service is found; otherwise nil. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_device_a977d489370f0fa5178cb545ae8995310}{\index{C\-G\-Upnp\-Device@{C\-G\-Upnp\-Device}!get\-Service\-For\-Type\-:@{get\-Service\-For\-Type\-:}}
+\index{get\-Service\-For\-Type\-:@{get\-Service\-For\-Type\-:}!CGUpnpDevice@{C\-G\-Upnp\-Device}}
+\subsubsection[{get\-Service\-For\-Type\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf C\-G\-Upnp\-Service} $\ast$) get\-Service\-For\-Type\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{service\-Type}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_device_a977d489370f0fa5178cb545ae8995310}
+Get a service in the device by the specified service type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em service\-Type} & A service type string of the service.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \hyperlink{interface_c_g_upnp_service}{C\-G\-Upnp\-Service} if the specified service is found; otherwise nil. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_device_aaef110b3cda7e7018bc164a250c942b3}{\index{C\-G\-Upnp\-Device@{C\-G\-Upnp\-Device}!icons@{icons}}
+\index{icons@{icons}!CGUpnpDevice@{C\-G\-Upnp\-Device}}
+\subsubsection[{icons}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-Array $\ast$) icons 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_device_aaef110b3cda7e7018bc164a250c942b3}
+Get all icons in the device as a N\-S\-Array object. The array has the services as instances of C\-G\-Upnp\-Icon\-Icon.
+
+\begin{DoxyReturn}{Returns}
+N\-S\-Array of \hyperlink{interface_c_g_upnp_icon}{C\-G\-Upnp\-Icon}. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_device_aa0351efbdcee98c85687861faab2d372}{\index{C\-G\-Upnp\-Device@{C\-G\-Upnp\-Device}!init@{init}}
+\index{init@{init}!CGUpnpDevice@{C\-G\-Upnp\-Device}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_device_aa0351efbdcee98c85687861faab2d372}
+Create a new U\-Pn\-P device.
+
+\begin{DoxyReturn}{Returns}
+New instance if successfull; otherwise nil. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_device_a4f3984ff48e69ce3c113f960e8a189f6}{\index{C\-G\-Upnp\-Device@{C\-G\-Upnp\-Device}!init\-With\-C\-Object\-:@{init\-With\-C\-Object\-:}}
+\index{init\-With\-C\-Object\-:@{init\-With\-C\-Object\-:}!CGUpnpDevice@{C\-G\-Upnp\-Device}}
+\subsubsection[{init\-With\-C\-Object\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init\-With\-C\-Object\-: 
+\begin{DoxyParamCaption}
+\item[{(Cg\-Upnp\-Device $\ast$)}]{cobj}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_device_a4f3984ff48e69ce3c113f960e8a189f6}
+Create a new U\-Pn\-P device with the C instance.
+
+\begin{DoxyReturn}{Returns}
+New instance if successfull; otherwise nil. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_device_a0ee734df1783cd9025e7f0efcf3e133f}{\index{C\-G\-Upnp\-Device@{C\-G\-Upnp\-Device}!init\-With\-X\-M\-L\-Description\-:@{init\-With\-X\-M\-L\-Description\-:}}
+\index{init\-With\-X\-M\-L\-Description\-:@{init\-With\-X\-M\-L\-Description\-:}!CGUpnpDevice@{C\-G\-Upnp\-Device}}
+\subsubsection[{init\-With\-X\-M\-L\-Description\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init\-With\-X\-M\-L\-Description\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{xml\-Desc}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_device_a0ee734df1783cd9025e7f0efcf3e133f}
+Create a new U\-Pn\-P device with the X\-M\-L descriptioin.
+
+\begin{DoxyReturn}{Returns}
+New instance if successfull; otherwise nil. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_device_a75221973da0bd5ce9926e452e880a82d}{\index{C\-G\-Upnp\-Device@{C\-G\-Upnp\-Device}!ipaddress@{ipaddress}}
+\index{ipaddress@{ipaddress}!CGUpnpDevice@{C\-G\-Upnp\-Device}}
+\subsubsection[{ipaddress}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) ipaddress 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_device_a75221973da0bd5ce9926e452e880a82d}
+Return a I\-P address.
+
+\begin{DoxyReturn}{Returns}
+I\-P address of the device. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_device_a1d3676929cd328898f5cc4a0d61a28d5}{\index{C\-G\-Upnp\-Device@{C\-G\-Upnp\-Device}!is\-Device\-Type\-:@{is\-Device\-Type\-:}}
+\index{is\-Device\-Type\-:@{is\-Device\-Type\-:}!CGUpnpDevice@{C\-G\-Upnp\-Device}}
+\subsubsection[{is\-Device\-Type\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) is\-Device\-Type\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{a\-Type}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_device_a1d3676929cd328898f5cc4a0d61a28d5}
+Check whether the device type is the specified type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-Type} & A type string of the device.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Y\-E\-S if the specified type is same as the device type; otherwise N\-O. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_device_a24ade9bc19cea4b1f196cbcb71a38b09}{\index{C\-G\-Upnp\-Device@{C\-G\-Upnp\-Device}!is\-Friendly\-Name\-:@{is\-Friendly\-Name\-:}}
+\index{is\-Friendly\-Name\-:@{is\-Friendly\-Name\-:}!CGUpnpDevice@{C\-G\-Upnp\-Device}}
+\subsubsection[{is\-Friendly\-Name\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) is\-Friendly\-Name\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{a\-Friendly\-Name}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_device_a24ade9bc19cea4b1f196cbcb71a38b09}
+Check whether the device's friendly name is the specified name.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-Friendly\-Name} & A friendly name string of the device.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Y\-E\-S if the specified friendly name is same as the device' friendly name; otherwise N\-O. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_device_a14abb6994533e4f40b63e3c5da441ffb}{\index{C\-G\-Upnp\-Device@{C\-G\-Upnp\-Device}!is\-Running@{is\-Running}}
+\index{is\-Running@{is\-Running}!CGUpnpDevice@{C\-G\-Upnp\-Device}}
+\subsubsection[{is\-Running}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) is\-Running 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_device_a14abb6994533e4f40b63e3c5da441ffb}
+Check if the controll point is running.
+
+\begin{DoxyReturn}{Returns}
+Y\-E\-S if the device is started normally, otherwise N\-O. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_device_a864f6672963128d131de7d1043e3062d}{\index{C\-G\-Upnp\-Device@{C\-G\-Upnp\-Device}!is\-U\-D\-N\-:@{is\-U\-D\-N\-:}}
+\index{is\-U\-D\-N\-:@{is\-U\-D\-N\-:}!CGUpnpDevice@{C\-G\-Upnp\-Device}}
+\subsubsection[{is\-U\-D\-N\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) is\-U\-D\-N\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{a\-U\-D\-N}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_device_a864f6672963128d131de7d1043e3062d}
+Check whether the device's U\-D\-N is the specified U\-D\-N.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-U\-D\-N} & A U\-D\-N string of the device.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Y\-E\-S if the specified U\-D\-N is same as the device' U\-D\-N; otherwise N\-O. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_device_ad6e2f119b0959e65781c42359ca35f6c}{\index{C\-G\-Upnp\-Device@{C\-G\-Upnp\-Device}!location\-U\-R\-L@{location\-U\-R\-L}}
+\index{location\-U\-R\-L@{location\-U\-R\-L}!CGUpnpDevice@{C\-G\-Upnp\-Device}}
+\subsubsection[{location\-U\-R\-L}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) location\-U\-R\-L 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_device_ad6e2f119b0959e65781c42359ca35f6c}
+Return a location U\-R\-L
+
+\begin{DoxyReturn}{Returns}
+Location U\-R\-L of the device. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_device_a5f496c54e490738ac1d2aac0b1907ca8}{\index{C\-G\-Upnp\-Device@{C\-G\-Upnp\-Device}!manufacturer@{manufacturer}}
+\index{manufacturer@{manufacturer}!CGUpnpDevice@{C\-G\-Upnp\-Device}}
+\subsubsection[{manufacturer}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) manufacturer 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_device_a5f496c54e490738ac1d2aac0b1907ca8}
+Return a manufacture.
+
+\begin{DoxyReturn}{Returns}
+Manufacture of the device. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_device_ae4b4ac9f466da8f9e7d5567a1f7ac9f2}{\index{C\-G\-Upnp\-Device@{C\-G\-Upnp\-Device}!model\-Name@{model\-Name}}
+\index{model\-Name@{model\-Name}!CGUpnpDevice@{C\-G\-Upnp\-Device}}
+\subsubsection[{model\-Name}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) model\-Name 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_device_ae4b4ac9f466da8f9e7d5567a1f7ac9f2}
+Return a model name.
+
+\begin{DoxyReturn}{Returns}
+Model name of the device. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_device_af1bcb76a0ddf6530179f224802fdab2f}{\index{C\-G\-Upnp\-Device@{C\-G\-Upnp\-Device}!model\-Number@{model\-Number}}
+\index{model\-Number@{model\-Number}!CGUpnpDevice@{C\-G\-Upnp\-Device}}
+\subsubsection[{model\-Number}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) model\-Number 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_device_af1bcb76a0ddf6530179f224802fdab2f}
+Return a model number.
+
+\begin{DoxyReturn}{Returns}
+Model number of the device. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_device_ac86396c6f776f9436e2b0f92dea8ea03}{\index{C\-G\-Upnp\-Device@{C\-G\-Upnp\-Device}!parse\-X\-M\-L\-Description\-:@{parse\-X\-M\-L\-Description\-:}}
+\index{parse\-X\-M\-L\-Description\-:@{parse\-X\-M\-L\-Description\-:}!CGUpnpDevice@{C\-G\-Upnp\-Device}}
+\subsubsection[{parse\-X\-M\-L\-Description\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) parse\-X\-M\-L\-Description\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{xml\-Desc}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_device_ac86396c6f776f9436e2b0f92dea8ea03}
+Parse the specified X\-M\-L description.
+
+\begin{DoxyReturn}{Returns}
+Y\-E\-S if successfull; otherwise nui. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_device_a666a4fa9ff6394de2f0d976e0d17e1b1}{\index{C\-G\-Upnp\-Device@{C\-G\-Upnp\-Device}!presentation\-U\-R\-L@{presentation\-U\-R\-L}}
+\index{presentation\-U\-R\-L@{presentation\-U\-R\-L}!CGUpnpDevice@{C\-G\-Upnp\-Device}}
+\subsubsection[{presentation\-U\-R\-L}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) presentation\-U\-R\-L 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_device_a666a4fa9ff6394de2f0d976e0d17e1b1}
+Return a presentation\-U\-R\-L
+
+\begin{DoxyReturn}{Returns}
+presentation\-U\-R\-L of the device. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_device_aed4255e525589b24cbb5afdafc474a0b}{\index{C\-G\-Upnp\-Device@{C\-G\-Upnp\-Device}!services@{services}}
+\index{services@{services}!CGUpnpDevice@{C\-G\-Upnp\-Device}}
+\subsubsection[{services}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-Array $\ast$) services 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_device_aed4255e525589b24cbb5afdafc474a0b}
+Get all services in the device as a N\-S\-Array object. The array has the services as instances of \hyperlink{interface_c_g_upnp_service}{C\-G\-Upnp\-Service}.
+
+\begin{DoxyReturn}{Returns}
+N\-S\-Array of \hyperlink{interface_c_g_upnp_service}{C\-G\-Upnp\-Service}. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_device_af37ea8d866eef20a842ad9851fb344e2}{\index{C\-G\-Upnp\-Device@{C\-G\-Upnp\-Device}!set\-Device\-Type\-:@{set\-Device\-Type\-:}}
+\index{set\-Device\-Type\-:@{set\-Device\-Type\-:}!CGUpnpDevice@{C\-G\-Upnp\-Device}}
+\subsubsection[{set\-Device\-Type\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Device\-Type\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{a\-Type}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_device_af37ea8d866eef20a842ad9851fb344e2}
+Set a device type of the device.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-Type} & Device type to set. \\
+\hline
+\end{DoxyParams}
+\hypertarget{interface_c_g_upnp_device_a93bab5af0d18a16def3c6f28da0c0113}{\index{C\-G\-Upnp\-Device@{C\-G\-Upnp\-Device}!set\-Friendly\-Name\-:@{set\-Friendly\-Name\-:}}
+\index{set\-Friendly\-Name\-:@{set\-Friendly\-Name\-:}!CGUpnpDevice@{C\-G\-Upnp\-Device}}
+\subsubsection[{set\-Friendly\-Name\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Friendly\-Name\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{a\-Name}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_device_a93bab5af0d18a16def3c6f28da0c0113}
+Set a friendly name of the device.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-Name} & Friendly name to set. \\
+\hline
+\end{DoxyParams}
+\hypertarget{interface_c_g_upnp_device_aefe84b6ec3ff5bfb66f55f77030aee25}{\index{C\-G\-Upnp\-Device@{C\-G\-Upnp\-Device}!set\-Udn\-:@{set\-Udn\-:}}
+\index{set\-Udn\-:@{set\-Udn\-:}!CGUpnpDevice@{C\-G\-Upnp\-Device}}
+\subsubsection[{set\-Udn\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Udn\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{a\-Udn}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_device_aefe84b6ec3ff5bfb66f55f77030aee25}
+Set a udn of the device.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-Udn} & U\-D\-N to set. \\
+\hline
+\end{DoxyParams}
+\hypertarget{interface_c_g_upnp_device_ae42f2a0fa13ff0c7997d70f2630606b2}{\index{C\-G\-Upnp\-Device@{C\-G\-Upnp\-Device}!set\-User\-Data\-:@{set\-User\-Data\-:}}
+\index{set\-User\-Data\-:@{set\-User\-Data\-:}!CGUpnpDevice@{C\-G\-Upnp\-Device}}
+\subsubsection[{set\-User\-Data\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-User\-Data\-: 
+\begin{DoxyParamCaption}
+\item[{(void $\ast$)}]{a\-User\-Data}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_device_ae42f2a0fa13ff0c7997d70f2630606b2}
+Set a user data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-User\-Data} & A user data to set.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \hyperlink{interface_c_g_upnp_service}{C\-G\-Upnp\-Service} if the specified service is found; otherwise nil. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_device_a150cb5a442d785934313013f0728e3b5}{\index{C\-G\-Upnp\-Device@{C\-G\-Upnp\-Device}!smallest\-Icon@{smallest\-Icon}}
+\index{smallest\-Icon@{smallest\-Icon}!CGUpnpDevice@{C\-G\-Upnp\-Device}}
+\subsubsection[{smallest\-Icon}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf C\-G\-Upnp\-Icon} $\ast$) smallest\-Icon 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_device_a150cb5a442d785934313013f0728e3b5}
+Return a most smallest icon.
+
+\begin{DoxyReturn}{Returns}
+Smallest Icon. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_device_a12a4dc65083fe126e790d2a95a80e51f}{\index{C\-G\-Upnp\-Device@{C\-G\-Upnp\-Device}!smallest\-Icon\-With\-Mime\-Type\-:@{smallest\-Icon\-With\-Mime\-Type\-:}}
+\index{smallest\-Icon\-With\-Mime\-Type\-:@{smallest\-Icon\-With\-Mime\-Type\-:}!CGUpnpDevice@{C\-G\-Upnp\-Device}}
+\subsubsection[{smallest\-Icon\-With\-Mime\-Type\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf C\-G\-Upnp\-Icon} $\ast$) smallest\-Icon\-With\-Mime\-Type\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{mime\-Type}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_device_a12a4dc65083fe126e790d2a95a80e51f}
+Return a most smallest icon with a specified mime type.
+
+\begin{DoxyReturn}{Returns}
+Smallest Icon. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_device_a02a6aa8bc0369d945b75d1c41cc1df94}{\index{C\-G\-Upnp\-Device@{C\-G\-Upnp\-Device}!start@{start}}
+\index{start@{start}!CGUpnpDevice@{C\-G\-Upnp\-Device}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) start 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_device_a02a6aa8bc0369d945b75d1c41cc1df94}
+Start the device.
+
+\begin{DoxyReturn}{Returns}
+Y\-E\-S if the device is started normally, otherwise N\-O. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_device_a55b4f61f61c7cffe432c4e7ec126bf04}{\index{C\-G\-Upnp\-Device@{C\-G\-Upnp\-Device}!stop@{stop}}
+\index{stop@{stop}!CGUpnpDevice@{C\-G\-Upnp\-Device}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) stop 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_device_a55b4f61f61c7cffe432c4e7ec126bf04}
+Stop the device.
+
+\begin{DoxyReturn}{Returns}
+Y\-E\-S if the device is started normally, otherwise N\-O. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_device_ad55f10ba9d5f371835148797fcebfd36}{\index{C\-G\-Upnp\-Device@{C\-G\-Upnp\-Device}!udn@{udn}}
+\index{udn@{udn}!CGUpnpDevice@{C\-G\-Upnp\-Device}}
+\subsubsection[{udn}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) udn 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_device_ad55f10ba9d5f371835148797fcebfd36}
+Get the U\-D\-N of the device.
+
+\begin{DoxyReturn}{Returns}
+U\-D\-N of the specified device. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_device_a080173980569b451fafa717eec9fe820}{\index{C\-G\-Upnp\-Device@{C\-G\-Upnp\-Device}!url\-Base@{url\-Base}}
+\index{url\-Base@{url\-Base}!CGUpnpDevice@{C\-G\-Upnp\-Device}}
+\subsubsection[{url\-Base}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) url\-Base 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_device_a080173980569b451fafa717eec9fe820}
+Return a url\-Base
+
+\begin{DoxyReturn}{Returns}
+U\-R\-L\-Base of the device. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_device_a420fd4621ae036b53494d35339261285}{\index{C\-G\-Upnp\-Device@{C\-G\-Upnp\-Device}!user\-Data@{user\-Data}}
+\index{user\-Data@{user\-Data}!CGUpnpDevice@{C\-G\-Upnp\-Device}}
+\subsubsection[{user\-Data}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void $\ast$) user\-Data 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_device_a420fd4621ae036b53494d35339261285}
+Get a stored user data.
+
+\begin{DoxyReturn}{Returns}
+A stored user data. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+C\-G\-Upnp\-Device.\-h\item 
+C\-G\-Upnp\-Device.\-m\end{DoxyCompactItemize}

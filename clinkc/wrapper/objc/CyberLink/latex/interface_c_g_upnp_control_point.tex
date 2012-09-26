@@ -1,0 +1,155 @@
+\hypertarget{interface_c_g_upnp_control_point}{\section{C\-G\-Upnp\-Control\-Point Class Reference}
+\label{interface_c_g_upnp_control_point}\index{C\-G\-Upnp\-Control\-Point@{C\-G\-Upnp\-Control\-Point}}
+}
+
+
+{\ttfamily \#import $<$C\-G\-Upnp\-Control\-Point.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{interface_c_g_upnp_control_point_a1bff5a9263d6e3e26a9d76dea838ac22}{(Cg\-Upnp\-Control\-Point $\ast$) -\/ {\bfseries c\-Object}}\label{interface_c_g_upnp_control_point_a1bff5a9263d6e3e26a9d76dea838ac22}
+
+\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_c_g_upnp_control_point_a2fa0d2fe4287bf9e6596d634ae800683}{start}
+\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_c_g_upnp_control_point_ace4a1a10baa3f893752a9f18b1d24cc5}{stop}
+\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_c_g_upnp_control_point_a52e1f9d239f219773ee44275371cad77}{is\-Running}
+\item 
+(void) -\/ \hyperlink{interface_c_g_upnp_control_point_aa2ecd4b95780704d69b82012edce7672}{search}
+\item 
+(void) -\/ \hyperlink{interface_c_g_upnp_control_point_a766273ced74e85a91375d387ae90150f}{search\-With\-S\-T\-:}
+\item 
+(void) -\/ \hyperlink{interface_c_g_upnp_control_point_a5b4385e5396b29cd66cca675e6bd652b}{set\-Ssdp\-Search\-M\-X\-:}
+\item 
+(N\-S\-Integer) -\/ \hyperlink{interface_c_g_upnp_control_point_a4307ef982016c001f7ba065cbe2f04a9}{ssdp\-Search\-M\-X}
+\item 
+(N\-S\-Array $\ast$) -\/ \hyperlink{interface_c_g_upnp_control_point_ae344dfa94337e21f1f1e4bb9c4004fbc}{devices}
+\item 
+(\hyperlink{interface_c_g_upnp_device}{C\-G\-Upnp\-Device} $\ast$) -\/ \hyperlink{interface_c_g_upnp_control_point_a7547ad1c5da99994b87498e9f845498c}{device\-For\-U\-D\-N\-:}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{interface_c_g_upnp_control_point_a0ed90a1d7119f833295e540475d56f72}{Cg\-Upnp\-Control\-Point $\ast$ {\bfseries c\-Object}}\label{interface_c_g_upnp_control_point_a0ed90a1d7119f833295e540475d56f72}
+
+\item 
+\hypertarget{interface_c_g_upnp_control_point_a5aabce13d286ffdd4d1da4a34e7d552c}{id$<$ \hyperlink{protocol_c_g_upnp_control_point_delegate-p}{C\-G\-Upnp\-Control\-Point\-Delegate} $>$ {\bfseries delegate}}\label{interface_c_g_upnp_control_point_a5aabce13d286ffdd4d1da4a34e7d552c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{interface_c_g_upnp_control_point}{C\-G\-Upnp\-Control\-Point} class is a wrapper class for Cg\-Upnp\-Control\-Point of Cyber\-Link for C to program using only Objective-\/\-C directly on Mac\-O\-S\-X. Currently, the only basic methods are wrapped to control U\-Pn\-P devices. 
+
+\subsection{Member Function Documentation}
+\hypertarget{interface_c_g_upnp_control_point_a7547ad1c5da99994b87498e9f845498c}{\index{C\-G\-Upnp\-Control\-Point@{C\-G\-Upnp\-Control\-Point}!device\-For\-U\-D\-N\-:@{device\-For\-U\-D\-N\-:}}
+\index{device\-For\-U\-D\-N\-:@{device\-For\-U\-D\-N\-:}!CGUpnpControlPoint@{C\-G\-Upnp\-Control\-Point}}
+\subsubsection[{device\-For\-U\-D\-N\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf C\-G\-Upnp\-Device} $\ast$) device\-For\-U\-D\-N\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{udn}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_control_point_a7547ad1c5da99994b87498e9f845498c}
+Get a specified U\-Pn\-P devices by the U\-D\-N. \begin{DoxyReturn}{Returns}
+\hyperlink{interface_c_g_upnp_device}{C\-G\-Upnp\-Device} when the specified device is found, otherwise nil. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_control_point_ae344dfa94337e21f1f1e4bb9c4004fbc}{\index{C\-G\-Upnp\-Control\-Point@{C\-G\-Upnp\-Control\-Point}!devices@{devices}}
+\index{devices@{devices}!CGUpnpControlPoint@{C\-G\-Upnp\-Control\-Point}}
+\subsubsection[{devices}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-Array $\ast$) devices 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_control_point_ae344dfa94337e21f1f1e4bb9c4004fbc}
+Get all U\-Pn\-P devices which the control point found as a N\-S\-Array object. The array has the devices as instances of \hyperlink{interface_c_g_upnp_device}{C\-G\-Upnp\-Device}. \begin{DoxyReturn}{Returns}
+N\-S\-Array of \hyperlink{interface_c_g_upnp_device}{C\-G\-Upnp\-Device}. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_control_point_a52e1f9d239f219773ee44275371cad77}{\index{C\-G\-Upnp\-Control\-Point@{C\-G\-Upnp\-Control\-Point}!is\-Running@{is\-Running}}
+\index{is\-Running@{is\-Running}!CGUpnpControlPoint@{C\-G\-Upnp\-Control\-Point}}
+\subsubsection[{is\-Running}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) is\-Running 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_control_point_a52e1f9d239f219773ee44275371cad77}
+Check if the controll point is running.
+
+\begin{DoxyReturn}{Returns}
+Y\-E\-S if the device is started normally, otherwise N\-O. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_control_point_aa2ecd4b95780704d69b82012edce7672}{\index{C\-G\-Upnp\-Control\-Point@{C\-G\-Upnp\-Control\-Point}!search@{search}}
+\index{search@{search}!CGUpnpControlPoint@{C\-G\-Upnp\-Control\-Point}}
+\subsubsection[{search}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) search 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_control_point_aa2ecd4b95780704d69b82012edce7672}
+Send a M-\/\-S\-E\-A\-R\-C\-H request to find for the all U\-Pn\-P devices of U\-Pn\-P in the network. The method waits for the specified M\-X time. Use \hyperlink{interface_c_g_upnp_control_point_a5b4385e5396b29cd66cca675e6bd652b}{set\-Ssdp\-Search\-M\-X\-:}a\-M\-X to change the time. The method is same as search\-With\-S\-T() when the S\-T parameter is \char`\"{}ssdp\-:all\char`\"{}. \hypertarget{interface_c_g_upnp_control_point_a766273ced74e85a91375d387ae90150f}{\index{C\-G\-Upnp\-Control\-Point@{C\-G\-Upnp\-Control\-Point}!search\-With\-S\-T\-:@{search\-With\-S\-T\-:}}
+\index{search\-With\-S\-T\-:@{search\-With\-S\-T\-:}!CGUpnpControlPoint@{C\-G\-Upnp\-Control\-Point}}
+\subsubsection[{search\-With\-S\-T\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) search\-With\-S\-T\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{a\-S\-T}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_control_point_a766273ced74e85a91375d387ae90150f}
+Send a M-\/\-S\-E\-A\-R\-C\-H request to find for the specified U\-Pn\-P devices by a S\-T parameter in the network. The method waits for the specified M\-X time. Use \hyperlink{interface_c_g_upnp_control_point_a5b4385e5396b29cd66cca675e6bd652b}{set\-Ssdp\-Search\-M\-X\-:}a\-M\-X to change the time.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-S\-T} & The Search Target parameter (ex. \char`\"{}ssdp\-:all\char`\"{}) \\
+\hline
+\end{DoxyParams}
+\hypertarget{interface_c_g_upnp_control_point_a5b4385e5396b29cd66cca675e6bd652b}{\index{C\-G\-Upnp\-Control\-Point@{C\-G\-Upnp\-Control\-Point}!set\-Ssdp\-Search\-M\-X\-:@{set\-Ssdp\-Search\-M\-X\-:}}
+\index{set\-Ssdp\-Search\-M\-X\-:@{set\-Ssdp\-Search\-M\-X\-:}!CGUpnpControlPoint@{C\-G\-Upnp\-Control\-Point}}
+\subsubsection[{set\-Ssdp\-Search\-M\-X\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Ssdp\-Search\-M\-X\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-Integer)}]{a\-M\-X}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_control_point_a5b4385e5396b29cd66cca675e6bd652b}
+Set a M\-X parameter used for S\-S\-D\-P searches in seconds. The parameter is used to wait for M-\/\-S\-E\-A\-R\-C\-H responses in \hyperlink{interface_c_g_upnp_control_point_aa2ecd4b95780704d69b82012edce7672}{search} and \hyperlink{interface_c_g_upnp_control_point_a766273ced74e85a91375d387ae90150f}{search\-With\-S\-T\-:}a\-S\-T.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\-M\-X} & Time to wait \\
+\hline
+\end{DoxyParams}
+\hypertarget{interface_c_g_upnp_control_point_a4307ef982016c001f7ba065cbe2f04a9}{\index{C\-G\-Upnp\-Control\-Point@{C\-G\-Upnp\-Control\-Point}!ssdp\-Search\-M\-X@{ssdp\-Search\-M\-X}}
+\index{ssdp\-Search\-M\-X@{ssdp\-Search\-M\-X}!CGUpnpControlPoint@{C\-G\-Upnp\-Control\-Point}}
+\subsubsection[{ssdp\-Search\-M\-X}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-Integer) ssdp\-Search\-M\-X 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_control_point_a4307ef982016c001f7ba065cbe2f04a9}
+Get a M\-X parameter used for S\-S\-D\-P searches in seconds. The parameter is used to wait for M-\/\-S\-E\-A\-R\-C\-H responses in \hyperlink{interface_c_g_upnp_control_point_aa2ecd4b95780704d69b82012edce7672}{search} and \hyperlink{interface_c_g_upnp_control_point_a766273ced74e85a91375d387ae90150f}{search\-With\-S\-T\-:}a\-S\-T.
+
+\begin{DoxyReturn}{Returns}
+Time to wait 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_control_point_a2fa0d2fe4287bf9e6596d634ae800683}{\index{C\-G\-Upnp\-Control\-Point@{C\-G\-Upnp\-Control\-Point}!start@{start}}
+\index{start@{start}!CGUpnpControlPoint@{C\-G\-Upnp\-Control\-Point}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) start 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_control_point_a2fa0d2fe4287bf9e6596d634ae800683}
+Activate some background threads of the control point such as S\-S\-D\-P and H\-T\-T\-P servers to listen messages and events of U\-Pn\-P. You must call this method before you can actually use a control point.
+
+\begin{DoxyReturn}{Returns}
+T\-R\-U\-E if successful; otherwise F\-A\-L\-S\-E 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_control_point_ace4a1a10baa3f893752a9f18b1d24cc5}{\index{C\-G\-Upnp\-Control\-Point@{C\-G\-Upnp\-Control\-Point}!stop@{stop}}
+\index{stop@{stop}!CGUpnpControlPoint@{C\-G\-Upnp\-Control\-Point}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) stop 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_control_point_ace4a1a10baa3f893752a9f18b1d24cc5}
+Stop some background threads of the control point such as S\-S\-D\-P and H\-T\-T\-P servers to listen messages and events of U\-Pn\-P.
+
+\begin{DoxyReturn}{Returns}
+T\-R\-U\-E if successful; otherwise F\-A\-L\-S\-E 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+C\-G\-Upnp\-Control\-Point.\-h\item 
+C\-G\-Upnp\-Control\-Point.\-m\end{DoxyCompactItemize}

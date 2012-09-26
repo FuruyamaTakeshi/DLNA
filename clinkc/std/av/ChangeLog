@@ -1,0 +1,95 @@
+2011-09-007  Satoshi Konno <skonno@cybergarage.org>
+    * Changed CGUpnpAvServer::searchByBrowse:objectId to search by breadth-first search.
+	* Fixed some warnings on XCode4.
+    
+2010-06-03  Satoshi Konno <skonno@cybergarage.org>
+    * Fixed cg_upnpav_dms_new() to set a title into the root node.
+
+2011-05-09 Jorgen Lundman
+    * Fixed cg_upnp_dms_filesys_updatecontentlist() not to abort when the state variable is null.
+
+2010-09-02  Satoshi Konno <skonno@cybergarage.org>
+	* Changed CGUpnpAvServer::browseDirectChildren to get contents from non standard UPnP/AV media servers.
+
+2010-08-20  Satoshi Konno <skonno@cybergarage.org>
+	* Changed CGUpnpAvServer::browseDirectChildren to get contents from non standard UPnP/AV media servers.
+	* Changed CGUpnpAvServer:browse:browseFlag:withRequestedCount to support Philips WAC7500 based on TwonkyMedia UPnP SDK/1.1.
+	* Added CGUpnpAvServer::lock and unlock.
+
+2009-05-18  Satoshi Konno <skonno@cybergarage.org>
+	* Added cg_upnp_dms_condir_getsystemupdateid() and cg_upnp_dms_condir_setsystemupdateid().
+	* Added a XML namespaces and schemas of DLNA into the device desctiption and the DIDL node.
+	* Changed cg_upnp_media_content_settype() to set "object.container" when the specified type is contaier.
+
+2009-04-20  Satoshi Konno <skonno@cybergarage.org>
+	* Added CGUpnpAvItem:isMovieClass(), isVideoClass(), isAudioClass() and isImageClass().
+	* Added CGUpnpAvServer:browseMetadata() and browseDirectChildren().
+
+2009-04-15  Satoshi Konno <skonno@cybergarage.org>
+	* Added CGUpnpAvServer:browseMetadata(), browseDirectChildren().
+
+2009-01-29  Satoshi Konno <skonno@cybergarage.org>
+	* Added CGUpnpAvResource:isImage(), isMovie() and is Audio().
+	* Added CGUpnpAvResource:hasImageResource(), hasMovieResource() and is hasAudioResource().
+	* Added CGUpnpAvResource:imageResource(), movieResource() and is audioResource().
+	
+2008-12-04  Satoshi Konno <skonno@cybergarage.org>
+	* Fixed CGUpnpAvServer::browse() to set the RequestedCount parameter correctly when the specified parameter is zero and the NumberReturned parameter is less than the TotalMaches parameter for XMBC.
+	* Addded the following methods
+	  CGUpnpAvResource::isSmallImage
+	  CGUpnpAvResource::isMediumImage
+	  CGUpnpAvResource::isLargeImage
+	  CGUpnpAvItem::smallImageResource;
+	  CGUpnpAvItem::mediumImageResource;
+	  CGUpnpAvItem::largeImageResource;
+	  CGUpnpAvItem::lowestImageResource;
+	  CGUpnpAvItem::smallImageUrl;
+	  CGUpnpAvItem::mediumImageUrl;
+	  CGUpnpAvItem::largeImageUrl;
+	  CGUpnpAvItem::lowestImageUrl;
+	  
+2008-10-31  Satoshi Konno <skonno@cybergarage.org>
+	* v2.3
+	* Added UPnP/AV package in std/av of CyberLink for C as a sample implementation.
+	* Added the following classes of Objective-C for MacOSX and iPhone
+	  CGUpnpAvContainer
+	  CGUpnpAvContentDirectory
+	  CGUpnpAvContentManager
+	  CGUpnpAvController
+	  CGUpnpAvItem
+	  CGUpnpAvObject
+	  CGUpnpAvRenderer
+	  CGUpnpAvResource
+	  CGUpnpAvRoot
+	  CGUpnpAvServer
+
+2007-05-26 Satoshi Konno <skonno@cybergarage.org>
+	* v1.2
+	* Added installer projects for the WIN32 samples.
+
+2007-05-08 Satoshi Konno <skonno@cybergarage.org>
+	* Added the following functions to set attributes of DLNA.
+	  cg_upnp_media_resource_setdlnaattribute()
+	  cg_upnp_media_resource_getdlnaattribute()
+	  cg_upnp_media_resource_getdlnapnfrommimetype()
+	* Updated cg_upnp_dms_filesys_updatecontentlist() to set the attributes of DLNA.
+	* Updated cg_upnp_dms_youtube_updaterootcontentlist() to set the attributes of DLNA.
+	* Added <dlna:X_DLNADOC> to the device description as default.
+	* Changed the device description to set a static UDN as default.
+
+2007-02-25 Satoshi Konno <skonno@cybergarage.org>
+	* Changed cg_upnp_media_resource_setsize() not to set the attribute when the specified value less than zero.
+
+2007-02-13 Satoshi Konno <skonno@cybergarage.org>
+	* Release v1.1
+	* Fixed to the query actions normally such as SystemUpdateID and SearchCapabilities.
+	* Fixed to update SystemUpdateID normally.
+
+2007-01-31 Satoshi Konno <skonno@cybergarage.org>
+	* Added a sample of DMS on Windows Mobile.
+
+2007-01-13  Satoshi Konno <skonno@cybergarage.org>
+	* Added a sample of DMS using Youtube on Windowss.
+
+2005-10-13 Satoshi Konno <skonno@cybergarage.org>
+    * The first release.

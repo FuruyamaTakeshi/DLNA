@@ -1,0 +1,28 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "upnpavdump", "upnpavdump.vcproj", "{43F876F0-AEB9-4F77-A3B7-E2171F6C2295}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D550D099-9F69-4F30-864C-504D02F72774} = {D550D099-9F69-4F30-864C-504D02F72774}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CyberLinkC", "..\..\..\..\lib\win32\vs2005\CyberLinkC.vcproj", "{D550D099-9F69-4F30-864C-504D02F72774}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43F876F0-AEB9-4F77-A3B7-E2171F6C2295}.Debug|Win32.ActiveCfg = Debug|Win32
+		{43F876F0-AEB9-4F77-A3B7-E2171F6C2295}.Debug|Win32.Build.0 = Debug|Win32
+		{43F876F0-AEB9-4F77-A3B7-E2171F6C2295}.Release|Win32.ActiveCfg = Release|Win32
+		{43F876F0-AEB9-4F77-A3B7-E2171F6C2295}.Release|Win32.Build.0 = Release|Win32
+		{D550D099-9F69-4F30-864C-504D02F72774}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D550D099-9F69-4F30-864C-504D02F72774}.Debug|Win32.Build.0 = Debug|Win32
+		{D550D099-9F69-4F30-864C-504D02F72774}.Release|Win32.ActiveCfg = Release|Win32
+		{D550D099-9F69-4F30-864C-504D02F72774}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

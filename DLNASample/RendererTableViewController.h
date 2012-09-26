@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RendererTableViewController : UITableViewController
+@class CGUpnpAvController;
 
+@interface RendererTableViewController : UITableViewController
+@property (nonatomic, retain)NSArray* dataSource;
+
+- (id)initWithAvController:(CGUpnpAvController*)aController;
 @end

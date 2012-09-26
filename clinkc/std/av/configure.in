@@ -1,0 +1,79 @@
+#############################################################################
+#
+#	CyberLink for C
+#
+#	Copyright (C) Satoshi Konno 2005
+#
+#	11/04/05
+#		- first release.
+#
+#############################################################################
+
+AC_INIT(include/cybergarage/upnp/std/av/cmediaserver.h)
+AC_CONFIG_AUX_DIR(config)
+
+AM_INIT_AUTOMAKE(clinkcav, 2.3)
+AM_CONFIG_HEADER(config.h)
+
+##############################
+# Constants
+##############################
+
+# CyberLink version.
+CLINKC_VERSION=1.7
+
+##############################
+# Checks for programs.
+##############################
+cdms_filesyscdms_filesys
+AC_PROG_CC
+AC_PROG_INSTALL
+AC_PROG_AWK
+AC_PROG_LIBTOOL
+AC_PROG_RANLIB
+AC_LANG_CPLUSPLUS
+
+#############################################################################
+# Checks for CYGWIN an MinGW
+#############################################################################
+
+#AC_CYGWIN
+#if [ test $CYGWIN = yes || test $MINGW = yes ]; then
+  #AC_LIBTOOL_WIN32_DLL
+  #AM_DISABLE_STATIC
+  AC_CHECK_LIB([ws2_32],[main])
+  #AC_CHECK_LIB([iphlpapi],[main])
+#fi
+
+#############################################################################
+# Check whether libtool should be used
+#############################################################################
+
+AC_ARG_WITH(libtool,
+	AS_HELP_STRING([--with-libtool],
+		       [use libtool to build the library (default = yes)]),
+		       [with_libtool=no],
+		       [with_libtool=yes])
+AM_CONDITIONAL(HAVE_LIBTOOL, test $with_libtool = yes)
+
+##############################
+# Checks for CyberLink
+##############################
+
+AC_CHECK_HEADERS([cybergarage/cupnp.h])
+AC_CHECK_LIB([clinkc],[cg_upnp_controlpoint_new],,[AC_MSG_ERROR(CyberLink/AV needs CyberLink >= $CLINKC_VERSION)])
+
+##############################
+# Makefiles
+##############################
+
+AC_OUTPUT([
+Makefile
+include/Makefile
+lib/Makefile
+lib/unix/Makefile
+sample/Makefile
+sample/upnpavserver/Makefile
+sample/upnpavserver/filesystem/Makefile
+sample/upnpavserver/filesystem/unix/Makefile
+])

@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import <CyberLink/CGUpnpDevice.h>
 
 @interface DetailViewController ()
 - (void)configureView;
@@ -16,7 +17,7 @@
 
 @synthesize detailItem = _detailItem;
 @synthesize detailDescriptionLabel = _detailDescriptionLabel;
-
+@synthesize ipAddressLable = ipAddressLabel_;
 - (void)dealloc
 {
     [_detailItem release];
@@ -42,7 +43,13 @@
     // Update the user interface for the detail item.
 
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+        //self.detailDescriptionLabel.text = [self.detailItem description];
+        self.detailDescriptionLabel.text = [(CGUpnpDevice*)(self.detailItem) friendlyName];
+        self.ipAddressLable.text = [(CGUpnpDevice*)(self.detailItem) ipaddress];
+#if 0
+        ((CGUpnpAvServer*)self.detailItem).delegate = self;
+        [(CGUpnpAvServer*)self.detailItem browse:@"0" browseFlag:@"browseMetaData" options:nil];
+#endif
     }
 }
 
@@ -58,6 +65,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.ipAddressLable = [[UILabel alloc] initWithFrame:CGRectMake(self.view.center.x, self.view.center.y -10, 120, 20)];
+    [self.view addSubview:self.ipAddressLable];
     [self configureView];
 }
 
@@ -101,6 +110,9 @@
         self.title = NSLocalizedString(@"Detail", @"Detail");
     }
     return self;
+}
+- (void)upnpAvServer:(CGUpnpAvServer *)upnpAvServer browse:(CGUpnpAction *)browseAction avObject:(CGUpnpAvObject *)avObject{
+    NSLog(@"Delegate");
 }
 							
 @end

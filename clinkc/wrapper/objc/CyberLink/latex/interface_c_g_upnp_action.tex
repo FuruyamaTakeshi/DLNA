@@ -1,0 +1,147 @@
+\hypertarget{interface_c_g_upnp_action}{\section{C\-G\-Upnp\-Action Class Reference}
+\label{interface_c_g_upnp_action}\index{C\-G\-Upnp\-Action@{C\-G\-Upnp\-Action}}
+}
+
+
+{\ttfamily \#import $<$C\-G\-Upnp\-Action.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{interface_c_g_upnp_action_a00e2781861f80c1a825cfbcae2ca029e}{(id) -\/ {\bfseries init\-With\-C\-Object\-:}}\label{interface_c_g_upnp_action_a00e2781861f80c1a825cfbcae2ca029e}
+
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_c_g_upnp_action_a2346d614e2444c496af06c7a36fb76c4}{name}
+\item 
+(N\-S\-Dictionary $\ast$) -\/ \hyperlink{interface_c_g_upnp_action_af6de7e0e090933412570a448ad76a23d}{arguments}
+\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_c_g_upnp_action_a00b84e0f87a1779d64d730aae84afd8a}{set\-Argument\-Value\-:for\-Name\-:}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_c_g_upnp_action_a907d7fa75697852f78360c9aadd812bf}{argument\-Value\-For\-Name\-:}
+\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_c_g_upnp_action_acfe2d4938cf192b5f8a21056cc7bc2b8}{post}
+\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_c_g_upnp_action_ac9b7461e9d2c234013d6aab8ede880e3}{post\-With\-Arguments\-:}
+\item 
+(N\-S\-Integer) -\/ \hyperlink{interface_c_g_upnp_action_a7aede2e0802cbb86cace48a9061d378b}{status\-Code}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{interface_c_g_upnp_action_af3e57bb15e4094597d5415d55cb903e3}{Cg\-Upnp\-Action $\ast$ {\bfseries c\-Object}}\label{interface_c_g_upnp_action_af3e57bb15e4094597d5415d55cb903e3}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{interface_c_g_upnp_action}{C\-G\-Upnp\-Action} class is a wrapper class for Cg\-Upnp\-Action of Cyber\-Link for C. 
+
+\subsection{Member Function Documentation}
+\hypertarget{interface_c_g_upnp_action_af6de7e0e090933412570a448ad76a23d}{\index{C\-G\-Upnp\-Action@{C\-G\-Upnp\-Action}!arguments@{arguments}}
+\index{arguments@{arguments}!CGUpnpAction@{C\-G\-Upnp\-Action}}
+\subsubsection[{arguments}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-Dictionary $\ast$) arguments 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_action_af6de7e0e090933412570a448ad76a23d}
+Get all arguments in the action as a N\-S\-Dictionary object.
+
+\begin{DoxyReturn}{Returns}
+N\-S\-Dictionary of the arguments. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_action_a907d7fa75697852f78360c9aadd812bf}{\index{C\-G\-Upnp\-Action@{C\-G\-Upnp\-Action}!argument\-Value\-For\-Name\-:@{argument\-Value\-For\-Name\-:}}
+\index{argument\-Value\-For\-Name\-:@{argument\-Value\-For\-Name\-:}!CGUpnpAction@{C\-G\-Upnp\-Action}}
+\subsubsection[{argument\-Value\-For\-Name\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) argument\-Value\-For\-Name\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{name}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_action_a907d7fa75697852f78360c9aadd812bf}
+Get a value of the specified argument from the action by the argument's name directly.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the argument to look for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The target value if successfull; otherwise N\-U\-L\-L 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_action_a2346d614e2444c496af06c7a36fb76c4}{\index{C\-G\-Upnp\-Action@{C\-G\-Upnp\-Action}!name@{name}}
+\index{name@{name}!CGUpnpAction@{C\-G\-Upnp\-Action}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) name 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_action_a2346d614e2444c496af06c7a36fb76c4}
+Get the name of the action.
+
+\begin{DoxyReturn}{Returns}
+The name. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_action_acfe2d4938cf192b5f8a21056cc7bc2b8}{\index{C\-G\-Upnp\-Action@{C\-G\-Upnp\-Action}!post@{post}}
+\index{post@{post}!CGUpnpAction@{C\-G\-Upnp\-Action}}
+\subsubsection[{post}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) post 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_action_acfe2d4938cf192b5f8a21056cc7bc2b8}
+Send action
+
+\begin{DoxyReturn}{Returns}
+Y\-E\-S if successfull; otherwise N\-O 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_action_ac9b7461e9d2c234013d6aab8ede880e3}{\index{C\-G\-Upnp\-Action@{C\-G\-Upnp\-Action}!post\-With\-Arguments\-:@{post\-With\-Arguments\-:}}
+\index{post\-With\-Arguments\-:@{post\-With\-Arguments\-:}!CGUpnpAction@{C\-G\-Upnp\-Action}}
+\subsubsection[{post\-With\-Arguments\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) post\-With\-Arguments\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-Dictionary $\ast$)}]{arguments}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_action_ac9b7461e9d2c234013d6aab8ede880e3}
+Send action
+
+
+\begin{DoxyParams}{Parameters}
+{\em arguments} & Arguments to set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Y\-E\-S if successfull; otherwise N\-O 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_action_a00b84e0f87a1779d64d730aae84afd8a}{\index{C\-G\-Upnp\-Action@{C\-G\-Upnp\-Action}!set\-Argument\-Value\-:for\-Name\-:@{set\-Argument\-Value\-:for\-Name\-:}}
+\index{set\-Argument\-Value\-:for\-Name\-:@{set\-Argument\-Value\-:for\-Name\-:}!CGUpnpAction@{C\-G\-Upnp\-Action}}
+\subsubsection[{set\-Argument\-Value\-:for\-Name\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) set\-Argument\-Value\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{value}
+\item[{forName:(N\-S\-String $\ast$)}]{name}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_action_a00b84e0f87a1779d64d730aae84afd8a}
+Set a value of the specified argument from the action by the argument's name directly.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to set \\
+\hline
+{\em name} & The name of the argument to look for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Y\-E\-S if successfull; otherwise N\-O 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_action_a7aede2e0802cbb86cace48a9061d378b}{\index{C\-G\-Upnp\-Action@{C\-G\-Upnp\-Action}!status\-Code@{status\-Code}}
+\index{status\-Code@{status\-Code}!CGUpnpAction@{C\-G\-Upnp\-Action}}
+\subsubsection[{status\-Code}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-Integer) status\-Code 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_action_a7aede2e0802cbb86cace48a9061d378b}
+Get a states code of the last post.
+
+\begin{DoxyReturn}{Returns}
+The status code 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+C\-G\-Upnp\-Action.\-h\item 
+C\-G\-Upnp\-Action.\-m\end{DoxyCompactItemize}

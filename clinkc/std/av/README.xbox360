@@ -1,0 +1,44 @@
+
+Requirements for Microsoft XBox 360 UPNP Support.
+
+
+*
+UPNP Friendly Name (cg_upnpav_dms_setfriendlyname) must be of the form:
+   XXXX (MediaServer) : 1
+
+For example, "Cyberlink for C Media Server (MediaServer) : 1"
+
+*
+The ModelName (cg_upnp_device_setmodelname) must be one of:
+
+    * Windows Media Connect
+    * Windows Media Player
+
+*
+Device must have service X_MS_MediaReceiverRegistrar and 3 methods.
+
+
+More information can be found:
+
+[http://code.google.com/p/jems/wiki/XBox360Notes]
+X_MS_MediaReceiverRegistrar Service
+
+This service is required to a certain extent. It must be listed,
+however all requests to the service can be safely denied and the
+description can be empty or even blank. The XBox will periodically
+make queries to the non-existent service, but never actually complain
+about it not working. If the service is not present in the device
+description, the device will still show up, however upon connection,
+it will timeout and complain about network connectivity problems, or
+something equally generic.
+
+
+Affected files, see
+"urn:microsoft.com:service:X_MS_MediaReceiverRegistrar" portion of the
+CG_UPNPAV_DMS_DEVICE_DESCRIPTION definition in cmediaserver_device.c:15
+
+Service handler, cg_upnpav_dms_medrec_actionreceived in ccontendir_service.c
+
+
+
+

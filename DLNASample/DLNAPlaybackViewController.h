@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CyberLink/UPnP.h>
+@class CGUpnpAvItem;
+@class CGUpnpAvRenderer;
 
-@interface DLNAPlaybackViewController : UIViewController
 
+@interface DLNAPlaybackViewController : UIViewController <CGUpnpDeviceDelegate>
+@property(nonatomic, retain)CGUpnpAvItem* avItem;
+@property(nonatomic, retain)CGUpnpAvRenderer* renderer;
+@property(nonatomic) BOOL isPlay;
+
+- (id)initWithAvItem:(CGUpnpAvItem*)anAvItem;
 @end

@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@class CGUpnpAvServer;
 
 @interface ServerContentViewController : UITableViewController
-
+@property (nonatomic, retain)CGUpnpAvServer *server;
+@property (nonatomic, retain)NSArray* dataSource;
+/**
+ * コンストラクタ
+ */
+- (id)initWithAvServer:(CGUpnpAvServer*)aServer atIndexPath:(NSIndexPath*)aIndexPath objectId:(NSString*)anObjectId;
 @end

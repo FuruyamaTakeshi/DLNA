@@ -1,0 +1,45 @@
+Source: clinkc
+Section: libs
+Priority: optional
+Maintainer: Mikael Saarenpää <ext-mikael.saarenpaa@nokia.com>
+Build-Depends: debhelper (>= 4.0.0), libcurl3-dev (>= 7.13.0), libxml2-dev (>= 2.6.0)
+Standards-Version: 3.6.0
+
+Package: clinkc-dev
+Section: devel
+Architecture: any
+Depends: clinkc0, libcurl3-dev (>= 7.13.0), libxml2-dev (>= 2.6.0)
+Description: Development files for CyberLink for C UPnP library
+ CyberLink for C is a toolkit for creating UPnP devices and control points. 
+ Main features are automatic discovery, search, expiration handling and 
+ different controlling methods for UPnP control points and advertizing and 
+ eventing for UPnP devices.
+ .
+ This package contains header files and API documentation which are needed 
+ for developing UPnP applications with CyberLink for C.
+
+Package: clinkc0
+Section: libs
+Architecture: any
+Depends: libcurl3 (>= 7.13.0), libxml2 (>= 2.6.0)
+Description: CyberLink for C UPnP library
+ CyberLink for C is a toolkit for creating UPnP devices and control points. 
+ Main features are automatic discovery, search, expiration handling and 
+ different controlling methods for UPnP control points and advertizing and 
+ eventing for UPnP devices.
+ .
+ This package contains the dynamically loadable library needed by 
+ applications which use CyberLinkC for C.
+
+Package: clinkc0-dbg
+Section: libs
+Architecture: any
+Depends: clinkc0 (= ${Source-Version}), ${shlibs:Depends}, ${misc:Depends}
+Description: CyberLink for C UPnP library
+ CyberLink for C is a toolkit for creating UPnP devices and control points. 
+ Main features are automatic discovery, search, expiration handling and 
+ different controlling methods for UPnP control points and advertizing and 
+ eventing for UPnP devices.
+ .
+ This package contains the debug symbols for the actual library.
+

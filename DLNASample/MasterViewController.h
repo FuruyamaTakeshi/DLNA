@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CyberLink/UPnPAV.h>
+@class ServerContentViewController;
+@class CGUpnpAvController;
 
-@class DetailViewController;
+@interface MasterViewController : UITableViewController <CGUpnpControlPointDelegate>
 
-@interface MasterViewController : UITableViewController
+@property (strong, nonatomic) ServerContentViewController *detailViewController;
+@property (nonatomic, retain) NSArray* dataSource;
+@property (nonatomic, retain) NSArray* renderers;
 
-@property (strong, nonatomic) DetailViewController *detailViewController;
-
+@property (nonatomic, retain) CGUpnpAvController* avController;
 @end

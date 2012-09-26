@@ -8,8 +8,20 @@
 
 #import "ServerContentViewController.h"
 
+#import <CyberLink/UPnPAV.h>
+#import "NDLUtility.h"
+#import "DLNAPlaybackViewController.h"
 
 @implementation ServerContentViewController
+
+@synthesize server = _server;
+@synthesize dataSource = _dataSource;
+
+- (void)dealloc 
+{
+    self.server = nil;
+    [super dealloc];
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -20,6 +32,17 @@
     return self;
 }
 
+
+- (id)initWithAvServer:(CGUpnpAvServer*)aServer atIndexPath:(NSIndexPath*)aIndexPath objectId:(NSString *)anObjectId
+{
+    self = [super init];
+    if (self) {
+        // Custom initialization
+        self.server = (CGUpnpAvServer*)aServer;
+        self.dataSource = [self.server browseDirectChildren:anObjectId];
+    }
+    return self;
+}
 - (void)didReceiveMemoryWarning
 {
     // Releases the view if it doesn't have a superview.
@@ -78,16 +101,14 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.dataSource count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -98,8 +119,18 @@
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
+    CGUpnpAvObject* avObj = [self.dataSource objectAtIndex:indexPath.row];
+    cell.textLabel.text = avObj.title;
+    //cell.imageView.image = avObj.thumbnailImage;
     
     // Configure the cell...
+    if ([avObj isItem]) {
+        CGUpnpAvItem* avItem;
+        avItem = (CGUpnpAvItem*)avObj;
+        NSURL* url = [NSURL URLWithString:avItem.thumbnailUrl];
+        NSData* imgData = [NSData dataWithContentsOfURL:url];
+        cell.imageView.image = [UIImage imageWithData:imgData];
+    }
     
     return cell;
 }
@@ -148,13 +179,24 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+    
+    CGUpnpAvObject* avObject = [self.dataSource objectAtIndex:indexPath.row];
+    UIViewController *detailViewController;
+    if ([avObject isItem]) {
+        CGUpnpAvItem* avItem = (CGUpnpAvItem*)avObject;
+        CGUpnpAvResource* avResorce = [avItem resource];
+        NSLog(@"resourceUrl=%@, resorce:%@", [avItem.resourceUrl description], [avResorce protocolInfo]);
+        NSLog(@"title1 %@", [avItem title]);
+        detailViewController = [[DLNAPlaybackViewController alloc] initWithAvItem:avItem];        
+    }
+    else {
+      detailViewController = [[ServerContentViewController alloc] initWithAvServer:self.server atIndexPath:indexPath objectId:avObject.objectId];
+    }                                                                                 
      // ...
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      [detailViewController release];
-     */
+     
 }
 
 @end

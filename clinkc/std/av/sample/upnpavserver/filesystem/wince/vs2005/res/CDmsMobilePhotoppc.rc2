@@ -1,0 +1,34 @@
+//
+// CDmsMobilePhotoPPC.RC2 - resources Microsoft Visual C++ does not edit directly
+//
+
+#ifdef APSTUDIO_INVOKED
+#error this file is not editable by Microsoft Visual C++
+#endif //APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Add manually edited resources here...
+
+/////////////////////////////////////////////////////////////////////////////
+HI_RES_AWARE CEUX {1}    // turn off the emulation layer
+            // Remove this resource to enable pixel-
+            // doubling on platforms that support it
+/////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// SHMENUBAR
+//
+
+IDR_MAINFRAME SHMENUBAR DISCARDABLE
+BEGIN
+    IDR_MAINFRAME, 
+    2,
+    
+    I_IMAGENONE, ID_FILE_NEW, TBSTATE_ENABLED, TBSTYLE_BUTTON | TBSTYLE_AUTOSIZE,
+    IDS_NEW, 0, NOMENU,
+
+    I_IMAGENONE, IDM_MENU, TBSTATE_ENABLED, TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE,
+    IDS_MENU, 0, 0,
+END

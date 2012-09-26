@@ -1,0 +1,120 @@
+\hypertarget{interface_c_g_upnp_state_variable}{\section{C\-G\-Upnp\-State\-Variable Class Reference}
+\label{interface_c_g_upnp_state_variable}\index{C\-G\-Upnp\-State\-Variable@{C\-G\-Upnp\-State\-Variable}}
+}
+
+
+{\ttfamily \#import $<$C\-G\-Upnp\-State\-Variable.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{interface_c_g_upnp_state_variable_a1f7c4c8a92d83d1612aeeb60f8d3f978}{(id) -\/ {\bfseries init\-With\-C\-Object\-:}}\label{interface_c_g_upnp_state_variable_a1f7c4c8a92d83d1612aeeb60f8d3f978}
+
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_c_g_upnp_state_variable_a69e4c6092d5686153daf3ca471de60ea}{name}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_c_g_upnp_state_variable_a65cc40ec260a46058fc3e7a0011c4dfc}{value}
+\item 
+(N\-S\-Array $\ast$) -\/ \hyperlink{interface_c_g_upnp_state_variable_a647b10c9e528833b2bace189f4598be9}{allowed\-Values}
+\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_c_g_upnp_state_variable_ab515de3489f9f5186192eaa5e654c3ef}{is\-Allowed\-Value\-:}
+\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_c_g_upnp_state_variable_a5a46cedaa5838d6cc8577077dc04b079}{query}
+\item 
+(N\-S\-Integer) -\/ \hyperlink{interface_c_g_upnp_state_variable_abe5e011694b2cd1c01e34129873d2a5a}{status\-Code}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{interface_c_g_upnp_state_variable_a0ca3a6ac372c44f6256374dc5ef4d5fd}{Cg\-Upnp\-State\-Variable $\ast$ {\bfseries c\-Object}}\label{interface_c_g_upnp_state_variable_a0ca3a6ac372c44f6256374dc5ef4d5fd}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{interface_c_g_upnp_state_variable}{C\-G\-Upnp\-State\-Variable} class is a wrapper class for Cg\-Upnp\-State\-Variable of Cyber\-Link for C. 
+
+\subsection{Member Function Documentation}
+\hypertarget{interface_c_g_upnp_state_variable_a647b10c9e528833b2bace189f4598be9}{\index{C\-G\-Upnp\-State\-Variable@{C\-G\-Upnp\-State\-Variable}!allowed\-Values@{allowed\-Values}}
+\index{allowed\-Values@{allowed\-Values}!CGUpnpStateVariable@{C\-G\-Upnp\-State\-Variable}}
+\subsubsection[{allowed\-Values}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-Array $\ast$) allowed\-Values 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_state_variable_a647b10c9e528833b2bace189f4598be9}
+Get an array of the allowed values for the state variable
+
+\begin{DoxyReturn}{Returns}
+The array. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_state_variable_ab515de3489f9f5186192eaa5e654c3ef}{\index{C\-G\-Upnp\-State\-Variable@{C\-G\-Upnp\-State\-Variable}!is\-Allowed\-Value\-:@{is\-Allowed\-Value\-:}}
+\index{is\-Allowed\-Value\-:@{is\-Allowed\-Value\-:}!CGUpnpStateVariable@{C\-G\-Upnp\-State\-Variable}}
+\subsubsection[{is\-Allowed\-Value\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) is\-Allowed\-Value\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String$\ast$)}]{value}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_state_variable_ab515de3489f9f5186192eaa5e654c3ef}
+Checks whether value is allowed for this state variable
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & to be checked\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Y\-E\-S if true 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_state_variable_a69e4c6092d5686153daf3ca471de60ea}{\index{C\-G\-Upnp\-State\-Variable@{C\-G\-Upnp\-State\-Variable}!name@{name}}
+\index{name@{name}!CGUpnpStateVariable@{C\-G\-Upnp\-State\-Variable}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) name 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_state_variable_a69e4c6092d5686153daf3ca471de60ea}
+Get the name of the state variable.
+
+\begin{DoxyReturn}{Returns}
+The name. 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_state_variable_a5a46cedaa5838d6cc8577077dc04b079}{\index{C\-G\-Upnp\-State\-Variable@{C\-G\-Upnp\-State\-Variable}!query@{query}}
+\index{query@{query}!CGUpnpStateVariable@{C\-G\-Upnp\-State\-Variable}}
+\subsubsection[{query}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) query 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_state_variable_a5a46cedaa5838d6cc8577077dc04b079}
+Send query
+
+\begin{DoxyReturn}{Returns}
+Y\-E\-S if successfull; otherwise N\-O 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_state_variable_abe5e011694b2cd1c01e34129873d2a5a}{\index{C\-G\-Upnp\-State\-Variable@{C\-G\-Upnp\-State\-Variable}!status\-Code@{status\-Code}}
+\index{status\-Code@{status\-Code}!CGUpnpStateVariable@{C\-G\-Upnp\-State\-Variable}}
+\subsubsection[{status\-Code}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-Integer) status\-Code 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_state_variable_abe5e011694b2cd1c01e34129873d2a5a}
+Get a states code of the last query.
+
+\begin{DoxyReturn}{Returns}
+The status code 
+\end{DoxyReturn}
+\hypertarget{interface_c_g_upnp_state_variable_a65cc40ec260a46058fc3e7a0011c4dfc}{\index{C\-G\-Upnp\-State\-Variable@{C\-G\-Upnp\-State\-Variable}!value@{value}}
+\index{value@{value}!CGUpnpStateVariable@{C\-G\-Upnp\-State\-Variable}}
+\subsubsection[{value}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) value 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_c_g_upnp_state_variable_a65cc40ec260a46058fc3e7a0011c4dfc}
+Get the value of the state variable.
+
+\begin{DoxyReturn}{Returns}
+The value. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+C\-G\-Upnp\-State\-Variable.\-h\item 
+C\-G\-Upnp\-State\-Variable.\-m\end{DoxyCompactItemize}

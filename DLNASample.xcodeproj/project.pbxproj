@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		604F37CC159B2FDC00FF1F91 /* ServerContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 604F37CB159B2FDC00FF1F91 /* ServerContentViewController.m */; };
+		60CAD287159C304100B7E28C /* NDLUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CAD286159C304100B7E28C /* NDLUtility.m */; };
+		60CAD2A4159C461300B7E28C /* UPnPDeviceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CAD2A1159C461300B7E28C /* UPnPDeviceTableViewCell.m */; };
+		60CAD2A5159C461300B7E28C /* UPnPTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CAD2A3159C461300B7E28C /* UPnPTableViewCell.m */; };
+		A43ACCDA1555E653007DE9B0 /* libclinkc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A43ACCD91555E653007DE9B0 /* libclinkc.a */; };
+		A48574B715A3155500294C34 /* DLNAPlaybackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A48574B515A3155500294C34 /* DLNAPlaybackViewController.m */; };
+		A48574B815A3155500294C34 /* DLNAPlaybackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A48574B615A3155500294C34 /* DLNAPlaybackViewController.xib */; };
+		A491FFD015B67AFA002BCAA6 /* RendererTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A491FFCF15B67AFA002BCAA6 /* RendererTableViewController.m */; };
 		A4A66A021555E44100AED3AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4A66A011555E44100AED3AF /* UIKit.framework */; };
 		A4A66A041555E44100AED3AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4A66A031555E44100AED3AF /* Foundation.framework */; };
 		A4A66A061555E44100AED3AF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4A66A051555E44100AED3AF /* CoreGraphics.framework */; };
@@ -19,21 +27,46 @@
 		A4A66A1E1555E44100AED3AF /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4A66A1C1555E44100AED3AF /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		60B4C53C159B0EB900F3BB0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60B4C535159B0EB900F3BB0C /* clinkc.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = clinkc;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		604F37CA159B2FDC00FF1F91 /* ServerContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerContentViewController.h; sourceTree = "<group>"; };
+		604F37CB159B2FDC00FF1F91 /* ServerContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerContentViewController.m; sourceTree = "<group>"; };
+		60B4C535159B0EB900F3BB0C /* clinkc.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = clinkc.xcodeproj; path = clinkc/lib/ios/xcode/clinkc.xcodeproj; sourceTree = "<group>"; };
+		60CAD285159C304100B7E28C /* NDLUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDLUtility.h; path = NDLNAUtility/NDLUtility.h; sourceTree = "<group>"; };
+		60CAD286159C304100B7E28C /* NDLUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = NDLUtility.m; path = NDLNAUtility/NDLUtility.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		60CAD2A0159C461300B7E28C /* UPnPDeviceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPnPDeviceTableViewCell.h; sourceTree = "<group>"; };
+		60CAD2A1159C461300B7E28C /* UPnPDeviceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPnPDeviceTableViewCell.m; sourceTree = "<group>"; };
+		60CAD2A2159C461300B7E28C /* UPnPTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPnPTableViewCell.h; sourceTree = "<group>"; };
+		60CAD2A3159C461300B7E28C /* UPnPTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPnPTableViewCell.m; sourceTree = "<group>"; };
+		A43ACCD91555E653007DE9B0 /* libclinkc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libclinkc.a; path = "../../../Library/Developer/Xcode/DerivedData/DLNASample-bhqiwmqslbikkebmskahgxjadenu/Build/Products/Debug-iphoneos/libclinkc.a"; sourceTree = "<group>"; };
+		A48574B415A3155500294C34 /* DLNAPlaybackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLNAPlaybackViewController.h; sourceTree = "<group>"; };
+		A48574B515A3155500294C34 /* DLNAPlaybackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLNAPlaybackViewController.m; sourceTree = "<group>"; };
+		A48574B615A3155500294C34 /* DLNAPlaybackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLNAPlaybackViewController.xib; sourceTree = "<group>"; };
+		A491FFCE15B67AFA002BCAA6 /* RendererTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RendererTableViewController.h; sourceTree = "<group>"; };
+		A491FFCF15B67AFA002BCAA6 /* RendererTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RendererTableViewController.m; sourceTree = "<group>"; };
 		A4A669FD1555E44100AED3AF /* DLNASample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DLNASample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A66A011555E44100AED3AF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A4A66A031555E44100AED3AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A4A66A051555E44100AED3AF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		A4A66A091555E44100AED3AF /* DLNASample-Info.plist */ = {isa = PBXFileReference; path = "DLNASample-Info.plist"; sourceTree = "<group>"; };
+		A4A66A091555E44100AED3AF /* DLNASample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DLNASample-Info.plist"; sourceTree = "<group>"; };
 		A4A66A0B1555E44100AED3AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A4A66A0D1555E44100AED3AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A4A66A0F1555E44100AED3AF /* DLNASample-Prefix.pch */ = {isa = PBXFileReference; path = "DLNASample-Prefix.pch"; sourceTree = "<group>"; };
-		A4A66A101555E44100AED3AF /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		A4A66A0F1555E44100AED3AF /* DLNASample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DLNASample-Prefix.pch"; sourceTree = "<group>"; };
+		A4A66A101555E44100AED3AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A4A66A111555E44100AED3AF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A4A66A131555E44100AED3AF /* MasterViewController.h */ = {isa = PBXFileReference; path = MasterViewController.h; sourceTree = "<group>"; };
-		A4A66A141555E44100AED3AF /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		A4A66A161555E44100AED3AF /* DetailViewController.h */ = {isa = PBXFileReference; path = DetailViewController.h; sourceTree = "<group>"; };
-		A4A66A171555E44100AED3AF /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		A4A66A131555E44100AED3AF /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		A4A66A141555E44100AED3AF /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MasterViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		A4A66A161555E44100AED3AF /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		A4A66A171555E44100AED3AF /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DetailViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		A4A66A1A1555E44100AED3AF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController.xib; sourceTree = "<group>"; };
 		A4A66A1D1555E44100AED3AF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -43,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A43ACCDA1555E653007DE9B0 /* libclinkc.a in Frameworks */,
 				A4A66A021555E44100AED3AF /* UIKit.framework in Frameworks */,
 				A4A66A041555E44100AED3AF /* Foundation.framework in Frameworks */,
 				A4A66A061555E44100AED3AF /* CoreGraphics.framework in Frameworks */,
@@ -52,9 +86,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		60B4C536159B0EB900F3BB0C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				60B4C53D159B0EB900F3BB0C /* libclinkc.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		60CAD284159C2FEC00B7E28C /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				60CAD285159C304100B7E28C /* NDLUtility.h */,
+				60CAD286159C304100B7E28C /* NDLUtility.m */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		60CAD29F159C461300B7E28C /* UPnPCell */ = {
+			isa = PBXGroup;
+			children = (
+				60CAD2A0159C461300B7E28C /* UPnPDeviceTableViewCell.h */,
+				60CAD2A1159C461300B7E28C /* UPnPDeviceTableViewCell.m */,
+				60CAD2A2159C461300B7E28C /* UPnPTableViewCell.h */,
+				60CAD2A3159C461300B7E28C /* UPnPTableViewCell.m */,
+			);
+			name = UPnPCell;
+			path = DLNASample/UPnPCell;
+			sourceTree = "<group>";
+		};
+		A491FFCD15B67AC3002BCAA6 /* RendererList */ = {
+			isa = PBXGroup;
+			children = (
+				A491FFCE15B67AFA002BCAA6 /* RendererTableViewController.h */,
+				A491FFCF15B67AFA002BCAA6 /* RendererTableViewController.m */,
+			);
+			name = RendererList;
+			sourceTree = "<group>";
+		};
 		A4A669F21555E44100AED3AF = {
 			isa = PBXGroup;
 			children = (
+				60B4C535159B0EB900F3BB0C /* clinkc.xcodeproj */,
+				60CAD29F159C461300B7E28C /* UPnPCell */,
+				60CAD284159C2FEC00B7E28C /* Utility */,
+				A43ACCD91555E653007DE9B0 /* libclinkc.a */,
 				A4A66A071555E44100AED3AF /* DLNASample */,
 				A4A66A001555E44100AED3AF /* Frameworks */,
 				A4A669FE1555E44100AED3AF /* Products */,
@@ -82,12 +158,18 @@
 		A4A66A071555E44100AED3AF /* DLNASample */ = {
 			isa = PBXGroup;
 			children = (
+				A491FFCD15B67AC3002BCAA6 /* RendererList */,
 				A4A66A101555E44100AED3AF /* AppDelegate.h */,
 				A4A66A111555E44100AED3AF /* AppDelegate.m */,
 				A4A66A131555E44100AED3AF /* MasterViewController.h */,
 				A4A66A141555E44100AED3AF /* MasterViewController.m */,
 				A4A66A161555E44100AED3AF /* DetailViewController.h */,
 				A4A66A171555E44100AED3AF /* DetailViewController.m */,
+				604F37CA159B2FDC00FF1F91 /* ServerContentViewController.h */,
+				604F37CB159B2FDC00FF1F91 /* ServerContentViewController.m */,
+				A48574B415A3155500294C34 /* DLNAPlaybackViewController.h */,
+				A48574B515A3155500294C34 /* DLNAPlaybackViewController.m */,
+				A48574B615A3155500294C34 /* DLNAPlaybackViewController.xib */,
 				A4A66A191555E44100AED3AF /* MasterViewController.xib */,
 				A4A66A1C1555E44100AED3AF /* DetailViewController.xib */,
 				A4A66A081555E44100AED3AF /* Supporting Files */,
@@ -144,12 +226,28 @@
 			mainGroup = A4A669F21555E44100AED3AF;
 			productRefGroup = A4A669FE1555E44100AED3AF /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 60B4C536159B0EB900F3BB0C /* Products */;
+					ProjectRef = 60B4C535159B0EB900F3BB0C /* clinkc.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A4A669FC1555E44100AED3AF /* DLNASample */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		60B4C53D159B0EB900F3BB0C /* libclinkc.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libclinkc.a;
+			remoteRef = 60B4C53C159B0EB900F3BB0C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A4A669FB1555E44100AED3AF /* Resources */ = {
@@ -159,6 +257,7 @@
 				A4A66A0C1555E44100AED3AF /* InfoPlist.strings in Resources */,
 				A4A66A1B1555E44100AED3AF /* MasterViewController.xib in Resources */,
 				A4A66A1E1555E44100AED3AF /* DetailViewController.xib in Resources */,
+				A48574B815A3155500294C34 /* DLNAPlaybackViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +272,12 @@
 				A4A66A121555E44100AED3AF /* AppDelegate.m in Sources */,
 				A4A66A151555E44100AED3AF /* MasterViewController.m in Sources */,
 				A4A66A181555E44100AED3AF /* DetailViewController.m in Sources */,
+				604F37CC159B2FDC00FF1F91 /* ServerContentViewController.m in Sources */,
+				60CAD287159C304100B7E28C /* NDLUtility.m in Sources */,
+				60CAD2A4159C461300B7E28C /* UPnPDeviceTableViewCell.m in Sources */,
+				60CAD2A5159C461300B7E28C /* UPnPTableViewCell.m in Sources */,
+				A48574B715A3155500294C34 /* DLNAPlaybackViewController.m in Sources */,
+				A491FFD015B67AFA002BCAA6 /* RendererTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,7 +316,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Takeshi Furuyama (4SQYYSZ4MB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Takeshi Furuyama (4SQYYSZ4MB)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -225,7 +331,9 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PROVISIONING_PROFILE = "CEC84FC6-99F3-4EAC-B542-EE1128823063";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CEC84FC6-99F3-4EAC-B542-EE1128823063";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -235,15 +343,18 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Takeshi Furuyama (4SQYYSZ4MB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Takeshi Furuyama (4SQYYSZ4MB)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "CEC84FC6-99F3-4EAC-B542-EE1128823063";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CEC84FC6-99F3-4EAC-B542-EE1128823063";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -252,10 +363,31 @@
 		A4A66A221555E44100AED3AF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Takeshi Furuyama (4SQYYSZ4MB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Takeshi Furuyama (4SQYYSZ4MB)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DLNASample/DLNASample-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/clinkc/std/av/include",
+					"$(SRCROOT)/clinkc/std/av/wrapper/objc",
+					"$(SDKROOT)/usr/include/libxml2",
+					"$(SRCROOT)/clinkc/include",
+					"$(SRCROOT)/clinkc/wrapper/objc",
+					"$(BUILT_PRODUCTS_DIR)/**",
+				);
 				INFOPLIST_FILE = "DLNASample/DLNASample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/DLNASample-bhqiwmqslbikkebmskahgxjadenu/Build/Products/Debug-iphoneos\"",
+				);
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -263,10 +395,31 @@
 		A4A66A231555E44100AED3AF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Takeshi Furuyama (4SQYYSZ4MB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Takeshi Furuyama (4SQYYSZ4MB)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DLNASample/DLNASample-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/clinkc/std/av/include",
+					"$(SRCROOT)/clinkc/std/av/wrapper/objc",
+					"$(SDKROOT)/usr/include/libxml2",
+					"$(SRCROOT)/clinkc/include",
+					"$(SRCROOT)/clinkc/wrapper/objc",
+					"$(BUILT_PRODUCTS_DIR)/**",
+				);
 				INFOPLIST_FILE = "DLNASample/DLNASample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/DLNASample-bhqiwmqslbikkebmskahgxjadenu/Build/Products/Debug-iphoneos\"",
+				);
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -290,6 +443,7 @@
 				A4A66A231555E44100AED3AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

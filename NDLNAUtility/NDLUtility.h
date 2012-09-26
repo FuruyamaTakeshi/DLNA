@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+@class CGUpnpDevice;
+@class CGUpnpAvObject;
 
 @interface NDLUtility : NSObject
-
++ (NSArray*)getDmsInfo:(CGUpnpDevice *)dev dmsNum:(int) dmsNum;
++ (NSArray*)getContainer:(CGUpnpAvObject*)aAvObject objectId:(NSString*)aObjectId;
 @end

@@ -1,0 +1,326 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		21AA0F0C1331226600A2338F /* ClinkTestCase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21AA0EFF1331226600A2338F /* ClinkTestCase.cpp */; };
+		21AA0F0D1331226600A2338F /* ClinkTestCaseControlPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21AA0F011331226600A2338F /* ClinkTestCaseControlPoint.cpp */; };
+		21AA0F0E1331226600A2338F /* ClinkTestCaseDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21AA0F021331226600A2338F /* ClinkTestCaseDevice.cpp */; };
+		21AA0F0F1331226600A2338F /* ClinkTestCaseDictionary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21AA0F031331226600A2338F /* ClinkTestCaseDictionary.cpp */; };
+		21AA0F101331226600A2338F /* ClinkTestCaseHttp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21AA0F041331226600A2338F /* ClinkTestCaseHttp.cpp */; };
+		21AA0F111331226600A2338F /* ClinkTestCaseNetwork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21AA0F051331226600A2338F /* ClinkTestCaseNetwork.cpp */; };
+		21AA0F121331226600A2338F /* ClinkTestCaseStateVariable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21AA0F061331226600A2338F /* ClinkTestCaseStateVariable.cpp */; };
+		21AA0F131331226600A2338F /* ClinkTestCaseSubscription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21AA0F071331226600A2338F /* ClinkTestCaseSubscription.cpp */; };
+		21AA0F141331226600A2338F /* ClinkTestCaseURI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21AA0F081331226600A2338F /* ClinkTestCaseURI.cpp */; };
+		21AA0F161331226600A2338F /* cppunitmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21AA0F0B1331226600A2338F /* cppunitmain.cpp */; };
+		21AA0F191331227300A2338F /* TestDevice.c in Sources */ = {isa = PBXBuildFile; fileRef = 21AA0F171331227300A2338F /* TestDevice.c */; };
+		21AA0F1D1331253600A2338F /* libclink.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21AA0F1C1331253600A2338F /* libclink.a */; };
+		21AA0F201331790D00A2338F /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 21AA0F1F1331790D00A2338F /* libxml2.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		21ADB3B51331A45100ED2800 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21C42078133121EB00F2428B /* clink.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 210AF4171331182E00A2EB09;
+			remoteInfo = clink;
+		};
+		21C4207F133121EC00F2428B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21C42078133121EB00F2428B /* clink.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 210AF4181331182E00A2EB09;
+			remoteInfo = clink;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2152CB8C1331206B00229C13 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2152CB8E1331206B00229C13 /* ClinkCTestUnit */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ClinkCTestUnit; sourceTree = BUILT_PRODUCTS_DIR; };
+		21AA0EFF1331226600A2338F /* ClinkTestCase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ClinkTestCase.cpp; path = ../../ClinkTestCase.cpp; sourceTree = "<group>"; };
+		21AA0F001331226600A2338F /* ClinkTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClinkTestCase.h; path = ../../ClinkTestCase.h; sourceTree = "<group>"; };
+		21AA0F011331226600A2338F /* ClinkTestCaseControlPoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ClinkTestCaseControlPoint.cpp; path = ../../ClinkTestCaseControlPoint.cpp; sourceTree = "<group>"; };
+		21AA0F021331226600A2338F /* ClinkTestCaseDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ClinkTestCaseDevice.cpp; path = ../../ClinkTestCaseDevice.cpp; sourceTree = "<group>"; };
+		21AA0F031331226600A2338F /* ClinkTestCaseDictionary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ClinkTestCaseDictionary.cpp; path = ../../ClinkTestCaseDictionary.cpp; sourceTree = "<group>"; };
+		21AA0F041331226600A2338F /* ClinkTestCaseHttp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ClinkTestCaseHttp.cpp; path = ../../ClinkTestCaseHttp.cpp; sourceTree = "<group>"; };
+		21AA0F051331226600A2338F /* ClinkTestCaseNetwork.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ClinkTestCaseNetwork.cpp; path = ../../ClinkTestCaseNetwork.cpp; sourceTree = "<group>"; };
+		21AA0F061331226600A2338F /* ClinkTestCaseStateVariable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ClinkTestCaseStateVariable.cpp; path = ../../ClinkTestCaseStateVariable.cpp; sourceTree = "<group>"; };
+		21AA0F071331226600A2338F /* ClinkTestCaseSubscription.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ClinkTestCaseSubscription.cpp; path = ../../ClinkTestCaseSubscription.cpp; sourceTree = "<group>"; };
+		21AA0F081331226600A2338F /* ClinkTestCaseURI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ClinkTestCaseURI.cpp; path = ../../ClinkTestCaseURI.cpp; sourceTree = "<group>"; };
+		21AA0F0B1331226600A2338F /* cppunitmain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cppunitmain.cpp; path = ../../cppunitmain.cpp; sourceTree = "<group>"; };
+		21AA0F171331227300A2338F /* TestDevice.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = TestDevice.c; path = ../../TestDevice.c; sourceTree = "<group>"; };
+		21AA0F181331227300A2338F /* TestDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestDevice.h; path = ../../TestDevice.h; sourceTree = "<group>"; };
+		21AA0F1C1331253600A2338F /* libclink.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libclink.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		21AA0F1F1331790D00A2338F /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		21C42078133121EB00F2428B /* clink.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = clink.xcodeproj; path = ../../../lib/macosx/xcode/clink.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2152CB8B1331206B00229C13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21AA0F201331790D00A2338F /* libxml2.dylib in Frameworks */,
+				21AA0F1D1331253600A2338F /* libclink.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2152CB831331206A00229C13 = {
+			isa = PBXGroup;
+			children = (
+				21AA0F1F1331790D00A2338F /* libxml2.dylib */,
+				21AA0F1C1331253600A2338F /* libclink.a */,
+				21AA0EFE1331224E00A2338F /* Sources */,
+				21C42077133121CA00F2428B /* Frameworks */,
+				2152CB8F1331206B00229C13 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2152CB8F1331206B00229C13 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2152CB8E1331206B00229C13 /* ClinkCTestUnit */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		21AA0EFE1331224E00A2338F /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				21AA0F171331227300A2338F /* TestDevice.c */,
+				21AA0F181331227300A2338F /* TestDevice.h */,
+				21AA0EFF1331226600A2338F /* ClinkTestCase.cpp */,
+				21AA0F001331226600A2338F /* ClinkTestCase.h */,
+				21AA0F011331226600A2338F /* ClinkTestCaseControlPoint.cpp */,
+				21AA0F021331226600A2338F /* ClinkTestCaseDevice.cpp */,
+				21AA0F031331226600A2338F /* ClinkTestCaseDictionary.cpp */,
+				21AA0F041331226600A2338F /* ClinkTestCaseHttp.cpp */,
+				21AA0F051331226600A2338F /* ClinkTestCaseNetwork.cpp */,
+				21AA0F061331226600A2338F /* ClinkTestCaseStateVariable.cpp */,
+				21AA0F071331226600A2338F /* ClinkTestCaseSubscription.cpp */,
+				21AA0F081331226600A2338F /* ClinkTestCaseURI.cpp */,
+				21AA0F0B1331226600A2338F /* cppunitmain.cpp */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		21C42077133121CA00F2428B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21C42078133121EB00F2428B /* clink.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		21C42079133121EB00F2428B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				21C42080133121EC00F2428B /* libclink.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2152CB8D1331206B00229C13 /* ClinkCTestUnit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2152CB971331206B00229C13 /* Build configuration list for PBXNativeTarget "ClinkCTestUnit" */;
+			buildPhases = (
+				2152CB8A1331206B00229C13 /* Sources */,
+				2152CB8B1331206B00229C13 /* Frameworks */,
+				2152CB8C1331206B00229C13 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				21ADB3B61331A45100ED2800 /* PBXTargetDependency */,
+			);
+			name = ClinkCTestUnit;
+			productName = ClinkCTestUnit;
+			productReference = 2152CB8E1331206B00229C13 /* ClinkCTestUnit */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2152CB851331206A00229C13 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 2152CB881331206A00229C13 /* Build configuration list for PBXProject "ClinkCTestUnit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2152CB831331206A00229C13;
+			productRefGroup = 2152CB8F1331206B00229C13 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 21C42079133121EB00F2428B /* Products */;
+					ProjectRef = 21C42078133121EB00F2428B /* clink.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				2152CB8D1331206B00229C13 /* ClinkCTestUnit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		21C42080133121EC00F2428B /* libclink.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libclink.a;
+			remoteRef = 21C4207F133121EC00F2428B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2152CB8A1331206B00229C13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21AA0F0C1331226600A2338F /* ClinkTestCase.cpp in Sources */,
+				21AA0F0D1331226600A2338F /* ClinkTestCaseControlPoint.cpp in Sources */,
+				21AA0F0E1331226600A2338F /* ClinkTestCaseDevice.cpp in Sources */,
+				21AA0F0F1331226600A2338F /* ClinkTestCaseDictionary.cpp in Sources */,
+				21AA0F101331226600A2338F /* ClinkTestCaseHttp.cpp in Sources */,
+				21AA0F111331226600A2338F /* ClinkTestCaseNetwork.cpp in Sources */,
+				21AA0F121331226600A2338F /* ClinkTestCaseStateVariable.cpp in Sources */,
+				21AA0F131331226600A2338F /* ClinkTestCaseSubscription.cpp in Sources */,
+				21AA0F141331226600A2338F /* ClinkTestCaseURI.cpp in Sources */,
+				21AA0F161331226600A2338F /* cppunitmain.cpp in Sources */,
+				21AA0F191331227300A2338F /* TestDevice.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		21ADB3B61331A45100ED2800 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = clink;
+			targetProxy = 21ADB3B51331A45100ED2800 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2152CB951331206B00229C13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		2152CB961331206B00229C13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_LDFLAGS = "";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2152CB981331206B00229C13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				HEADER_SEARCH_PATHS = (
+					/opt/local/include,
+					../../../include,
+				);
+				LIBRARY_SEARCH_PATHS = /opt/local/lib;
+				OTHER_LDFLAGS = "-lcppunit";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2152CB991331206B00229C13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				HEADER_SEARCH_PATHS = (
+					/opt/local/include,
+					../../../include,
+				);
+				LIBRARY_SEARCH_PATHS = /opt/local/lib;
+				OTHER_LDFLAGS = "-lcppunit";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2152CB881331206A00229C13 /* Build configuration list for PBXProject "ClinkCTestUnit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2152CB951331206B00229C13 /* Debug */,
+				2152CB961331206B00229C13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2152CB971331206B00229C13 /* Build configuration list for PBXNativeTarget "ClinkCTestUnit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2152CB981331206B00229C13 /* Debug */,
+				2152CB991331206B00229C13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2152CB851331206A00229C13 /* Project object */;
+}

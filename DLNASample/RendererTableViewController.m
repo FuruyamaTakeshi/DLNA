@@ -1,4 +1,4 @@
-//
+ //
 //  RendererTableViewController.m
 //  DLNASample
 //
@@ -7,12 +7,16 @@
 //
 
 #import "RendererTableViewController.h"
+#import "AppDelegate.h"
+#import <CyberLink/UPnPAV.h>
+#import "UPnPDeviceTableViewCell.h"
 
 @interface RendererTableViewController ()
 
 @end
 
 @implementation RendererTableViewController
+@synthesize dataSource = _dataSource;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -22,6 +26,17 @@
     }
     return self;
 }
+
+- (id)initWithAvController:(CGUpnpAvController*)aController
+{
+    self = [super init];
+    if (self) {
+        // Custom initialization
+        self.dataSource = [aController renderers];
+    }
+    return self;
+}
+
 
 - (void)viewDidLoad
 {
@@ -50,26 +65,35 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.dataSource count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+#if 0
+#else
+    static NSString *CELLID = @"upnprootobj";
+	
+	UPnPDeviceTableViewCell *cell = (UPnPDeviceTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CELLID];
+	if (cell == nil) {
+		cell = [[[UPnPDeviceTableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CELLID] autorelease];
+	}
+	
+	int row = [indexPath indexAtPosition:1];	
+	if (row < [self.dataSource count]) {
+		CGUpnpDevice *device = [self.dataSource objectAtIndex:row];
+		[cell setDevice:device];
+	}
     
-    // Configure the cell...
-    
-    return cell;
+	return cell;
+#endif
 }
 
 /*
@@ -115,6 +139,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    AppDelegate* appDelagete = [[UIApplication sharedApplication] delegate];
+    appDelagete.avRenderer = (CGUpnpAvRenderer*)[self.dataSource objectAtIndex:indexPath.row];
     // Navigation logic may go here. Create and push another view controller.
     /*
      <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];

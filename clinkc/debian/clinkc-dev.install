@@ -1,0 +1,6 @@
+usr/include/*
+usr/include/cybergarage/*
+usr/lib/pkgconfig/*
+usr/lib/lib*.a
+usr/lib/lib*.so
+usr/share/doc/clinkc-dev/*

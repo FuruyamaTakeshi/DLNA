@@ -1,0 +1,1645 @@
+2011-09-16 Satoshi Konno <skonno@cybergarage.org>
+	* 2.4
+
+2011-09-10 Satoshi Konno <skonno@cybergarage.org>
+	* Fixed to compile using XCode4 on MacOSX and iOS normally.
+	* Added source codes for Objective-C
+	* Removed TARGET_OS_IPHONE define from the compiler option setting.
+
+2011-03-09 Satoshi Konno <skonno@cybergarage.org>
+	* Imporved cg_log_print() to return immediately when the output target is nothing.
+	* Added cg_upnpav_content_setupnpalbumarturi() and cg_upnpav_content_getupnpalbumarturi().
+
+2011-02-23 Satoshi Konno <skonno@cybergarage.org>
+	* Added the control point parameter into CG_UPNP_DEVICE_LISTENER.
+	* Added cg_upnp_ssdprequest_print() and cg_upnp_ssdpresponse_print().
+	* Added some debug messages.
+	* Added CGUpnpDeviceDelegate (Objective-C).
+	
+2010-10-26  Satoshi Konno <skonno@cybergarage.org>
+	* Added cg_upnp_controlpoint_isrunning().
+
+2010-08-20  Satoshi Konno <skonno@cybergarage.org>
+	* Changed some source codes to compile normally using Visual Studio 2008.
+	* Added some project files for Visual Studio 2008.
+	* Added cg_upnpav_dms_updatenetworkinterfaces() and cg_upnpav_dms_getnetworkinterface();
+
+2010-08-17  Ariel Yaloz <arielyz@hotmail.com>
+	* Added support for getting the list of allowable values for a state variable
+	* Added a method for checking whether a state variable is implemented
+	* Fix compilation on MacOS X
+	
+2010-07-31 Roman Shterenzon <romanbsd@yahoo.com>
+	* Fixed autoconf warnings
+	* Don't append the original query to path when it already has a query (fixes WMP11/12 access)
+	* Fixed several memory leaks in Objective-C wrapper
+	* Proper handling of edge cases in src/cybergarage/upnp/cservice.c and
+	  std/av/src/cybergarage/upnp/std/av/cprotocolinfo.c
+	* Fix crashes caused by attempts to initialize NSString with NULL cstring
+	* Added modelNumber and modelName methods to CGUpnpDevice class
+
+2010-06-28 Christian Zuckschwerdt <Christian@Zuckschwerdt.org>
+	* Fixed CGUpnpAction::arguments() not to release temporary object.
+	
+2010-06-24  Satoshi Konno <skonno@cybergarage.org>
+	* Added cg_xml_node_print().
+
+2010-03-17  Satoshi Konno <skonno@cybergarage.org>
+	* Added cg_upnp_service_createnotifyallthread().
+	* Changed cg_upnp_device_newsubscriptionrecieved() to delay the notify message instead of cg_upnp_service_notifyall().
+	* Changed cg_upnp_event_notify_request_setpropertysetnode() to add a connection header.
+	* Changed cg_http_getservername() to use uname() on iPhone platform.
+
+2010-02-09  Satoshi Konno <skonno@cybergarage.org>
+	* Added project files for Visual Studio 2008.
+	* Disabled AC_PROG_LIBTOOL and HAVE_LIBTOOL in confugre.in and Makefile.am.
+	* Disabled libxml2 and libcurl as default in confugre.in.
+	* Added support for SO_NOSIGPIPES in configure.in.
+	* Fixed some errors to compile normally on Ubuntu 9.10.
+	* Changed CG_USE_WIN32_GETHOSTADDRESSES flag as default for Windows platform.
+	* Fixed cg_upnp_device_unsubscriptionrecieved() to unscribe normally.
+	* Fixed cg_upnp_device_ssdpmessagereceived() not to ignore IPv6 multicast.
+	* Updated cg_upnp_createuuid() to use naitive functions on Windows and Unix platforms.
+	
+2010-01-20  Satoshi Konno <skonno@cybergarage.org>
+	* Removed service mutex control from cg_upnp_service_addsubscriber() to avoid deadlock.
+
+2009-09-01  Satoshi Konno <skonno@cybergarage.org>
+	* Added cg_soap_response_getstatuscode().
+	* Added cg_upnp_event_notify_response_getstatuscode().
+
+2009-08-27  Satoshi Konno <skonno@cybergarage.org>
+	* Added cg_upnp_argument_setfloatvalue() and cg_upnp_argument_getfloatvalue().
+	* Added cg_upnp_argument_setdoublevalue() and cg_upnp_argument_getdoublevalue().
+	* Added cg_string_getfloatvalue() and cg_string_getdoublevalue().
+	* Added cg_float2str() and cg_double2str().
+	* Added cg_str2float() and cg_str2double().
+	* Added cg_upnp_device_gethttpserverlist() and cg_upnp_device_getssdpserverlist().
+	* Added cg_http_server_getsocket().
+	* Added CGUpnpDevice::isRunning().
+
+2009-06-01  Satoshi Konno <skonno@cybergarage.org>
+	* Added cg_dictionary_*();
+	* Added cg_net_uri_getquerydictionary().
+	* Fixed a buffer overrun of cg_xml_escapechars().
+	* Changed cg_socket_setid() not to raise SIGPIPE on iPhone.
+	
+2009-05-28  Satoshi Konno <skonno@cybergarage.org>
+	* Improved cg_string_*() and cg_list_*() not to abort when the specified string object is NULL.
+	* Added cg_upnp_device_getsmallesticonbymimetype().
+	* Added cg_upnp_device_addicon().
+	* Added CGUpnpDevice:setDeviceType().
+	* Added cg_http_request_postdata().
+	* Added cg_http_request_postchunkeddata() and cg_http_request_postlastchunk().
+	* Added cg_http_request_closesocket().
+	* Added cg_upnp_device_isrunning().
+
+2009-04-23  Satoshi Konno <skonno@cybergarage.org>
+	* Added DLNA-CP-version in the USER-AGENT HTTP header value as default.
+
+2009-01-29  Satoshi Konno <skonno@cybergarage.org>
+	* Added cg_net_uri_rebuild() and cg_net_url_rebuild().
+	* Fixed cg_upnp_service_mangleurl() to return correct url using cg_net_uri_rebuild() when a device has URLBase and the service's URL is relative.
+	* Changed cg_upnp_controlpoint_parsescservicescpd() to read the service description internally because the some illegal devices, such as MediaLink, don't return the specified service description.
+
+2008-12-08  Satoshi Konno <skonno@cybergarage.org>
+	* Added cg_upnp_device_getsmallesticon().
+	* Added cg_upnp_device_getabsoluteiconurl().
+	* Added cg_net_uri_setvalue() and cg_net_uri_getvalue().
+	* Deprecated cg_net_uri_set().
+	* Added CGUpnpDevice:urlBase().
+	* Added CGUpnpDevice:smallestIcon().
+	* Added CGUpnpDevice:absoluteIconUrl().
+	
+2008-11-18  Satoshi Konno <skonno@cybergarage.org>
+	* Changed cg_http_request_post_main() to write the first line at a time because SIGPIPE occurred on some HTTP server such as Flickr.
+
+2008-10-31  Satoshi Konno <skonno@cybergarage.org>
+	* v2.3
+	* Added UPnP/AV package in std/av as a sample implementation.
+
+2008-09-26 Satoshi Konno <skonno@cybergarage.org>
+	* Fixed the following methods correctly
+	  cg_upnp_device_setmanufacture() -> cg_upnp_device_setmanufacturer()
+	  cg_upnp_device_getmanufacture() -> cg_upnp_device_getmanufacturer()
+	  cg_upnp_device_setmanufactureurl() -> cg_upnp_device_setmanufacturerurl()
+	  cg_upnp_device_getmanufactureurl() -> cg_upnp_device_getmanufacturerurl()
+	* Fixed cg_net_uri_unescapestring() to compile normally on WIN32 platforms.
+	* Changed to include <TargetConditionals.h> in <typedef.h> on XCode as default.
+	* Enabled SO_REUSEPORT in cg_socket_setreuseaddress() on MacOSX and iPhone platforms.
+	* Disabled signal in cg_thread_stop_with_cond() on MacOSX and iPhone platforms.
+	* Enabled libxml2 as default using TARGET_OS_IPHONE macro on iPhone and iPhone-Simulator.
+	* Added cg_xml_node_copy().
+	* Changed cg_upnp_device_ssdpmessagereceived() to return the response more shortly.
+	* Fixed cg_net_selectaddr() to get a correct address  on iPhone and iPhone-Simulator.
+
+2008-08-21  Satoshi Konno <skonno@cybergarage.org>
+	* Fixed some warnings using GCC v4.0.1.
+	* Added the following macros.
+	  cg_string_getintvalue()
+	  cg_string_getlongvalue()
+	  cg_xml_node_getintvalue()
+	  cg_xml_node_getlongvalue()
+	  cg_xml_node_getchildnodeintvalue()
+	  cg_xml_node_getchildnodelongvalue()
+	* Changed the following functions to return an integer value instead of a string.
+	  cg_upnp_icon_getwidth()
+	  cg_upnp_icon_getheight()
+	  cg_upnp_icon_getdepth()
+	
+2008-06-06  Satoshi Konno <skonno@cybergarage.org>
+	* v2.2.
+
+2008-05-24  Satoshi Konno <skonno@cybergarage.org>
+	* Added cg_xml_nodelist_getbyname() instead of cg_xml_nodelist_get().
+	* Added cg_xml_node_getchildnodebyname() instead of cg_xml_node_getchildnode().
+	* Deprecated cg_xml_nodelist_get() and cg_xml_node_getchildnode().
+	* Added support to include <expat/expat.h>.
+	* Added a sample for UPnP/AV, upnpavdump, to parser the content lists of the media servers. 
+	* Added a sample for UPnP/IGD, upnpigddump, to show the status parser of the internet gateway devices. 
+	
+2008-05-14  Satoshi Konno <skonno@cybergarage.org>
+	* Changed typedef.h about BOOL type using Objective-C for XCode.
+	* Changed cg_cond_signal() using SetEvent() instead of WaitForSingleObject() for WIN32 platform.
+	* Fixed cg_xml_parse() not to abort when the data is null or the length less than zero.
+	* Enabled cg_net_gethostinterfaces() for MacOSX in cinterface_function.c using __APPLE_CC_ macro.
+
+2008-04-22  Satoshi Konno <skonno@cybergarage.org>
+	* Added cg_upnp_controlpoint_getdevice() to get a device by the index.
+	* Added cg_upnp_device_getnservices() and cg_upnp_device_getservice() to get a device by the index.
+
+2008-03-17  Satoshi Konno <skonno@cybergarage.org>
+	* Changed not to define BOOL type using Objective-C for XCode.
+	* Added to check IP_PKTINFO into configure.in.
+	* Changed the following functions using void parameter instead of CgService not to conflict the prototype defines.
+	   cg_upnp_event_notify_request_setpropertysetnode() and cg_upnp_subscriber_notifyall() using GCC v4.0.
+	* Fixed cg_socket_setid() to disable the IPPROTO_IP option using XCode 3.0.
+	* Fixed other errors using XCode 3.0.
+
+2007-12-24  Satoshi Konno <skonno@cybergarage.org>
+	* Added CG_UPNP_ST_URN and cg_upnp_st_isurn() to <ccontrol.h>.
+	* Changed cg_upnp_device_ssdpmessagereceived() using cg_upnp_st_isurn() instead of cg_upnp_st_isurndevice() to find non standard UPnP devices.
+	* Changed cg_upnp_service_ssdpmessagereceived() using cg_upnp_st_isurn() instead of cg_upnp_st_isurnservice() to find non standard UPnP devices.
+	* Fixed cg_upnp_device_getservicebycontrolurl() to abort when the service_url is null.
+	* Fixed cg_string_naddvalue() to comipler using other compilers normally.
+	* Added cg_upnp_statevariable_setvaluewithoutnotify() not to send the updated value for other devices which subscribe the service of the state variable.
+	* Deprecated cg_upnp_service_notifyallstatevariables(). Use cg_upnp_service_notifyall which can send the events individually or collectively.
+
+2007-12-13  Aapo Makela <aapo.makela@nokia.com>
+	* Multiple patches to fix crashes in out-of-memory situations
+	* Implemented more efficient reallocation policy in CgString
+	* Added proper control point locking in control point HTTP server
+
+2007-11-16  Satoshi Konno <skonno@cybergarage.org>
+	* Fixed cg_http_packet_read_body()not to lost data when the response packet is huge.
+
+2007-10-22  Aapo Makela <aapo.makela@nokia.com>
+	* Added deb-target to Makefile.am to build Debian packages
+	* Fixed copyright notices in source files to match the copyright defined in COPYING
+	* Added NULL check to cg_strtrimwhite()
+	* Added NULL checks and fixed memory leaks in cg_net_selectaddr() and cg_net_gethostinterfaces()
+	* Disabled "Expect" HTTP header because it causes IOP issues with some UPnP implementations.
+	* Added NULL check to cg_xml_node_getchildnode() macro
+	* Fixed Debian specific files and added debug package building
+
+2007-10-02  Satoshi Konno <skonno@cybergarage.org>
+	* Changed cg_thread_() to return FALSE when the specified object is null.
+	* Added cg_http_server_lock() and cg_http_server_unlock().
+	* Fixed cg_http_server_clientthread() to remove the thread from the thread list.
+
+2007-09-13  Satoshi Konno <skonno@cybergarage.org>
+	* Added the following functions to get MAC address.
+	* cg_net_interface_setmacaddress(), cg_net_interface_getmacaddress()
+	* Changed cg_net_gethostinterfaces() to get the MAC address using GetAdaptersInfo() as default on Windows platform.
+	* Changed cg_net_gethostinterfaces() to get the MAC address using ioctl() on Linux platform.
+	* Changed cg_net_gethostinterfaces() to get the MAC address using getifaddrs() on other UNIX platform.
+	*   Note : Other platforms might not support to get this functions yet. 
+
+2007-08-30  Satoshi Konno <skonno@cybergarage.org>
+	* Removed the patent exclusion clause from the license based on BSD.
+
+2007-08-19  Satoshi Konno <skonno@cybergarage.org>
+	* Added the following functions into <cfile.h>
+	  cg_file_setpath()
+	  cg_file_setfilename()
+
+2007-07-25  Satoshi Konno <skonno@cybergarage.org>
+	* Added the following macros into <cfile.h>
+	  cg_file_isseparatorchar()
+	  cg_file_ispathseparatorchar()
+
+2007-07-18  Satoshi Konno <skonno@cybergarage.org>
+	* Added the following functions to support more raw functions.
+	  cg_file_open()
+	  cg_file_close()
+	  cg_file_write()
+	  cg_file_read()
+	  cg_file_seek() 
+
+2007-06-26  Satoshi Konno <skonno@cybergarage.org>
+	* Added CgByte to <typedef.h>
+
+2007-06-13  Fabrice Fontaine Orange <ffontaine.ext@orange-ftgroup.com>
+	* Fixed a memory leak in cg_http_request_delete().
+	* Fixed compilation issue when using DCG_UPNP_NOUSE_CONTROLPOINT flag in cg_upnp_device_updatefromssdppacket().
+	* Fixed a memory leak in cg_upnp_device_getservicebycontrolurl().
+	* Fixed cg_thread_start(). Threads used to answer UPnP requests are created
+	  in joinable state but the main thread doesn't call pthread_join on them.
+	  So, they are kept alive until the end of the program. By creating them
+	  in detached state, they are correctly clean up.
+	* Fixed cg_thread_stop_with_cond() to wait one second for thread termination instead of using pthread_join(). 
+
+2007-06-06  Satoshi Konno <skonno@cybergarage.org>
+	* Added checking 64 bit support, long long, to the configure.in for GCC.
+	* Fixed to compile cg_str2longlong() and cg_longlong2str() using GCC.
+	* Fixed cg_longlong2str() to return the buffer using GCC or ISOC99.
+ 
+2007-03-20  Satoshi Konno <skonno@cybergarage.org>
+	* Added a parameter, CgString, to return the result safety and the implementation without curl for the following functions.
+	  cg_net_uri_unescapestring() and cg_net_uri_escapestring().
+	* Added a define, CG_USE_NET_URI_ESCAPESTRING_SKIP,in cg_net_uri_escapestring() and disabled the function not to skip only the first path.
+	* Changed cg_upnp_device_httprequestrecieved() using the new cg_net_uri_unescapestring().
+	* Added the following functions.
+	  cg_net_uri_isreservedchar()
+	  cg_net_uri_isunreservedchar()
+	  cg_net_uri_isescapechar()
+	  cg_net_uri_isalphanumchar()
+	* Fixed cg_net_uri_escapestring() to use curl_escape() instead of curl_unescape().
+	* Fixed cg_net_uri_unescapestring() to use curl_unescape() instead of curl_escape().
+
+2007-03-18  Satoshi Konno <skonno@cybergarage.org>
+	* Added CgInt64 to <typedef.h>
+	* Changed the following functions to use CgInt64.
+	  cg_longlong2str()
+	  cg_http_packet_setheaderlonglong()
+	  cg_http_packet_getheaderlonglong()
+	* Disable CG_USE_OPENSSL for Visual Studio projects as default.
+
+2007-03-11  Satoshi Konno <skonno@cybergarage.org>
+	* Added support of OpenSSL to socket functions in csocket.c.
+	* Added CG_USE_OPENSSL define and --enable-openssl option to disable the SSL functions as default.
+	* Added cg_https_request_post().
+	* Changed a compiler flag about file functions from USE_CFILE to CG_USE_CFILE.
+	* Added a framework of CppUnit.
+
+2007-03-05  Satoshi Konno <skonno@cybergarage.org>
+	* Changed cg_string_setnvalue() to use memcpy instead of strncpy().
+	* Added a parameter of the string length for cg_string_setpointervalue() and to set a binary data.
+	* Added a parameter of the string length for the following functions too. 
+	  cg_http_packet_setcontentpointer(), cg_http_request_setcontentpointer() and cg_http_response_setcontentpointer().
+	* Fixed cg_http_packet_read_body() to set the correct content length if the response has a field of the content length.
+ 
+2007-02-25  Satoshi Konno <skonno@cybergarage.org>
+	* Added cg_xml_attribute_remove().
+
+2007-02-22  Satoshi Konno <skonno@cybergarage.org>
+	* v2.1.
+
+2007-02-19  Satoshi Konno <skonno@cybergarage.org>
+	* Changed cg_http_request_post() to add a user agent, CyberGarage-HTTP/1.0, as default.
+	* Changed CG_HTTP_USERAGENT to CG_HTTP_USERAGENT_DEFAULT to add CG_HTTP_USERAGENT as the normal header define.
+	* Changed cg_http_packet_sethost() not to add the port string for lighttpd when the port number is 80.
+
+2007-02-13  Satoshi Konno <skonno@cybergarage.org>
+	* Fixed cg_str2*() to return 0 when the parameter is null.
+
+2007-02-01  Satoshi Konno <skonno@cybergarage.org>
+	* Fixed cg_http_request_post() not to hung up when the request method is HEAD.
+	* Added a onlyHeader parameter to cg_http_response_read() and cg_http_response_packet().
+	* Added CG_HTTP_USERAGENT when CyberLink doesn't use CURL.
+
+2007-01-30  Satoshi Konno <skonno@cybergarage.org>
+	* Fixed to compile normally on the release mode for Windows Mobile.
+	
+2007-01-19  Satoshi Konno <skonno@cybergarage.org>
+	* Added USE_CFILE define and --enable-cfile option to disable the file functions as default.
+	* Disabled cg_file*() as default.
+	* Disabled cg_upnp_device_loaddescriptionfile() as default.
+	* Added cg_filelist_*().
+	* Added cg_file_listfiles().
+
+2007-01-17  Satoshi Konno <skonno@cybergarage.org>
+	* Fixed to compile normally for WindowsCE platforms using Visual Studio 2005 and Windows Mobile 5.0 Pocket PC SDK.
+	* Changed WindowsCE flags from _WIN32_WCE to WINCE.
+	* Added time() and localtime() in src/cybergarage/util/ctime_win32.c only for WINCE platforms.
+	* Changed cg_log_print() for WIN32 platforms.
+	* Changed to use cg_strdup() instead of strdup() in clog.c.
+
+2007-01-13  Satoshi Konno <skonno@cybergarage.org>
+	* Added cg_http_request_settimeout() and cg_http_request_gettimeout().
+	* Added cg_http_response_settimeout() and cg_http_response_gettimeout().
+	* Added cg_http_server_settimeout() and cg_http_server_gettimeout().
+
+2006-12-06  Satoshi Konno <skonno@cybergarage.org>
+	* v2.0
+
+2006-11-13  Satoshi Konno <skonno@cybergarage.org>
+	* Added cg_net_interface_setnetmask() and cg_net_interface_getnetmask().
+
+2006-10-31  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Removed deadlock from ipchanged routine.
+	* Added rough but useful mutex debugging code.
+
+2006-10-23  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Allowing M-POST messages to be handled correctly.
+
+2006-10-18  Satoshi Konno <skonno@cybergarage.org>
+	* Added some changes for the compiler warnings.
+
+2006-10-17  Satoshi Konno <skonno@cybergarage.org>
+	* Added some changed to compile using Visual C++ 6.0 and
+	  Visual Studio 2005 normally on WindowsXP.
+	* Invalidated all functions in clog.c and ccond.c on 
+	  Windows Platform for a instance.
+
+2006-10-16  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Fixed memory leak from ipchanged routine.
+
+2006-10-12  Satoshi Konno <skonno@cybergarage.org>
+	* Changed to compile using ISO-C99 normally.
+	* Added cg_xml_node_remove() to cxml.h.
+	* Added --copy to libtoolize.
+
+2006-10-05  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Fixed a naming problem introduced by merge.
+	* Fixed notification sequence number initialization when new
+	  subscriber is created.
+	* (Version number and Debian changelog updated)
+
+2006-10-03  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Removed (debug) printfs from ip_changed routine.
+	* Fixed memory leak from cg_libxml2_parsewrapper
+	* Fixed memory leak from cg_net_selectaddr
+	* Fixed memory leak from cg_net_url_getupnpbasepath
+	* Fixed crash when using DUN IAP
+	* Added API calls to query and set user agent field in http
+	  requests.
+
+2006-09-21  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Merged internal Nokia code base with Source Forge one.
+
+2006-09-19  Satoshi Konno <skonno@cybergarage.org>
+	* Added cg_upnp_action_setargumentvaluebyname().
+
+2006-09-14  Satoshi Konno <skonno@cybergarage.org>
+	* Fixed some patches for WINCE to comiple on Unix normally.
+
+2006-09-05  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Query part taken care when parsing uris.
+	* Misc fixes to test data.
+
+2006-08-29  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Expiration handler couldn't remove device from cache if the
+	  to be removed device was not root device. Fixed by allowing
+	  also other device types to be removed from device list.
+
+2006-08-29  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Previous fix for #29846 caused problems when there was escaped 
+	  XML embedded in parsed XML document => implemented another fix,
+	  which handles the error outside libxml.
+	* Location field for M-SEARCH response is now selected based on 
+	  matching subnet. Fixes: NB#37573
+	* Misc fixes to test data.
+	* Small bug was fixed from previous fix for #37017.
+
+2006-08-21  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Applied a patch from Rafael to fix locking problem in
+	  cg_upnp_device_unsubscriptionrecieved. Fixes: NB#38099
+	* Fixed url base generation from location string. Fixes: NB#37017
+	* Fixed curl delay issue when CP is shutting down. Fixes: NB#34454
+	* Implemented fallback routine into XML parser for unknown 
+	  character errors. Fixes: NB#29846
+
+2006-08-08  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Applied a patch from Rafael to fix list node initialization.
+	  Fixes: NB#34144
+	* Applied a patch from Rafael which adds missing free into new subscription
+	  routine. Fixes: NB#34248
+	* Applied a patch from Rafael which frees subscriber variable correctly
+	  from cg_upnp_service_removesubscriber. Fixes: NB#34258
+	* Fixed a case where service lock was not held when it should have
+	  been, fix was based on a patch by Rafael. Fixes: NB#34259
+	* Applied a patch from Aapo to change cg_upnp_controlpoint_search to
+	  return false in case of clear failure situation instead of always
+	  returning true. Fixes: NB#36225
+
+2006-07-11  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Changed cg_file_load to don't do a fread past the end of the file
+
+2006-06-28  Visa Smolander <visa.smolander@nokia.com>
+	* Applied a patch by Aapo M�kel� to fix some deadlocking problem
+	  in controlpoint stop.
+
+2006-06-28  Jukka Alasalmi <jukka.alasalmi@nokia.com>
+	* Fixed a memory leak in cg_http_persistentconnection_put function
+	* Added cg_list_node_init() in cg_upnp_eventlistenerlist_add()
+	  for list_node, fixing at least a memory leak, and probably some
+	  other random behavior (otherwise headFlag would be uninitialized).
+
+2006-06-27  Satoshi Konno <skonno@cybergarage.org>
+	* Added project files for Visual Studio 2005.
+
+2006-06-22  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Fixed a bunch of doxygen issues.
+	* Chanced debian/copyright to match latest license changes.
+
+2006-06-16  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Added Nokia legal text into modified files
+	* Re-enabled doxygen doc generation from makefile
+
+2006-06-16  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Added 309 doxygen comments.
+
+2006-05-30  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Moved SERVICE_DESCRIPTION to common.h
+	* Removed setstatevar.c
+
+2006-05-30  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Cleanup the tests by centralizing the device description
+	* Test bad xml by sending it to the control point instead of using
+	stand alone devices
+
+2006-05-26  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Fixed the annoying thing that ctrl-c cannot be used to kill the
+	  program using stack.
+
+2006-05-26  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Fixed bug 30399 During normal operation duplicate M-SEARCHES are not
+	  sent correctly.
+	* Applied patch from Aapo to fix the remaining lintian warnings.
+
+2006-05-25  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Documented the http server in tests/regression/README
+
+2006-05-25  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Documented cp_add_device and msearch in tests/regression/README
+	* Removed the host and port parameters of mseach in
+	tests/regression/test.py
+
+2006-05-25  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Updated tests/regression/README
+	* Cleaned some tests
+
+2006-05-25  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Updated tests/regression/README
+
+2006-05-24  Rosfran Borges <rosfran.borges@indt.org.br>
+	* [testing] SOAP action messages with wrong XML schema
+
+2006-05-23  Aapo Makela <aapo.makela@nokia.com>
+	* Applied patch from bug #26068 (Opening ports via UPnP does 
+	  not work with D-Link DI-824VUP+)
+
+2006-05-22  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Modified the http server to send a "valid" response to a post method.
+
+2006-05-19  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Modified the tests to cover more of the API
+
+2006-05-18  Heikki Junnila <ext-heikki.junnila@nokia.com>
+	* Fixed an endless loop in cg_socket_write() and changed the whopping
+	  0-1000msec random wait to 20msecs.
+
+2006-05-18  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Fixed xml string escape routines to handle " correctly.
+
+2006-05-17  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Modified regression/mini_service.c and regression/mini_cp.c to
+	test more API functions
+
+2006-05-17  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Added more tests to tests/regression
+
+2006-05-16  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Added a test for valgrind availability in tests/regression/test.py
+
+2006-05-15  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Changed 20ms wait to happen right after each _notifyfrom, not after
+	  each _announcefrom.
+
+2006-05-15  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Added more tests to tests/regression
+
+2006-05-15  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Added a prototype for cg_file_getlength in
+	include/cybergarage/io/cfile.h
+
+2006-05-15  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Updated tests/regression/README
+
+2006-05-15  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Removed tests/regression/cp_subscribe.c. Use mini_cp.c instead.
+
+2006-05-15  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Fixed bug 26472 SSDP Response Server on Control Point loops forever
+	  (Patch by Rosfran)
+
+2006-05-12  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Rolled back fix for bug 28806.
+
+2006-05-11  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Added cg_net_uri_isequivalent to check if a relative and an
+	absolute URLs are equivalent.
+	* Changed cg_upnp_service_isscpdurl. Now it is a function and uses
+	cg_net_uri_isequivalent instead of cg_strstr
+
+2006-05-11  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Fixed bug 26520 HTTP server doesn't respond to requests which 
+	  use chunked transfer encoding.
+
+2006-05-10  Rosfran Borges <rosfran.borges@indt.org.br>
+	* Fix to cg_upnp_device_getservicebyscpdurl function,
+	used by HTTP Server (Device) to solve the case when the 
+	service was unparsed, but device contains a valid 
+	SCPDURL to the service description file (Bug 28806)
+
+2006-05-10  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Added more tests
+
+2006-05-10  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Removed unused include/cybergarage/upnp/callowedvalue.h
+
+2006-05-10  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Removed unused src/cybergarage/upnp/callowedvalue.c
+
+2006-05-10  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Removed unused src/cybergarage/upnp/callowedvalue_list.c
+
+2006-05-10  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Removed unused src/cybergarage/upnp/callowedvaluerange.c
+
+2006-05-10  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Replaced unused elements of the _CgUpnpStateVariable structure
+	with dummy ones with the same size.
+
+2006-05-10  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Removed commented code from src/cybergarage/upnp/cstatevariable.c
+
+2006-05-09  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Modified how a test gets the host address
+	* Added a README in tests/regression
+
+2006-05-09  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Added some tests
+
+2006-05-09  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Modified the regression tests to aways wait for the sync string
+	* Added a service to tests/regression/mini_dev.xml
+
+2006-05-09  Visa Smolander <visa.smolander@nokia.com>
+	* Fixed a problem with erroneous action responses and nonstandard namespaces
+	* Added an xml function to get childnode with or without the namespace prefix.
+	
+2006-05-09  Visa Smolander <visa.smolander@nokia.com>
+	* Added some NULL checkings to string functions. TODO: Must do that for all...
+	
+2006-05-09  Visa Smolander <visa.smolander@nokia.com>
+	* Fixed a bug in cg_strdup. Now it returns NULL, if input argument was NULL.
+	
+2006-05-08  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Modified test_http.py to fetch a service description url
+	* Modified cp_subscribe.c to print service information
+	* Modified test.py to wait longer before killing a test
+
+2006-05-08  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Added some M-SEARCH tests
+
+2006-05-08  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Fixed a bug in cg_upnp_ssdp_packet_new. ssdpPkt->initialized was
+	not initialized.
+
+2006-05-08  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Changed multiplecp to printout action invoke results when
+	  generating action invoke bursts.
+
+2006-05-08  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Changed the usage of cg_strncpy to better match the underlying
+	  strncpy. NOTE: This is an API change since now cg_strncpy do not 
+	  terminate strings automatically.
+
+2006-05-06  Visa Smolander <visa.smolander@nokia.com>
+	* Fixed a bug in chttp_request. When sending a request without body
+	  it sometimes sent corrupted data from a previous transmission...
+
+2006-05-05  Rosfran Borges <rosfran.borges@indt.org.br>
+	* Propagate some important Device advertisement data from the root
+	device, to its embedded sub-devices (such as description URIs and HTTP
+	port); NOTIFY were sent with wrong Location URIs
+
+2006-05-05  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Removed duplicated code from src/cybergarage/upnp/cservice.c and
+	src/cybergarage/upnp/cservice_ssdp_server.c
+
+2006-05-04  Rosfran Borges <rosfran.borges@indt.org.br>
+	* Added a sample stress test case using --enable-coverage, which sends a lot of NOTIFY
+	datagrams to a clinkc's Control Point
+
+2006-05-04  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Modified cp_subscribe.c to cover a greater part of the API
+	* Modified utils.py and coverage.py so that they don't use the
+	subprocess module
+	* Added test_cp_readd_device2.py
+	* Modified Makefile.am to run test_cp_readd_device2.py
+
+2006-05-04  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Removed tests/regression/statever.c. Use mini_service.c instead.
+	* Modified Makefile.am to run test_dev_query.py and test_dev_query2.py
+	* Modified test.py to remove mini_service from used_ports
+	* Fixed missing imports in test_igd_dev_parsing.py and test_igd_dev_parsing_by_fd.py
+	* Modified mini_service.c to add an state variable
+	* Added test_dev_query.py test_dev_query2.py
+	* Modified test_unsubscribe.py to run an http server
+	* Modified http_server.py to accept NOTIFY methods
+
+2006-05-04  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Fixed bug 28592 using clinkc-test-tools and sending HTTP request to server causes
+	killing of application
+	* Fixed bug 28484 invalid memory access in clinkc's
+	cg_upnp_event_notify_request_getpropertylist (Patch by Rafael)
+
+2006-05-03  Rosfran Borges <rosfran.borges@indt.org.br>
+	* Modified some device descriptions absolute paths, in the
+	tests/regression/
+	* Added the SYNC_STRING in some tests that now threats with Control
+	Point's device discovery
+
+2006-05-03  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Modified tests/regression/test_cp_notify2.py to use a real
+	variable name
+	* Added tests/regression/test_cp_badrequest.py
+	* Modified tests/regression/cp_subscribe.c to include a device
+	listener
+	* Modified tests/regression/Makefile.am to run
+	tests/regression/test_cp_badrequest.py
+
+2006-05-03  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Fixed compiler warnings from stack code.
+
+2006-05-03  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Modified tests/regression/test_cp_notify2.py to send a dummy
+	property in the notify message
+	* Added some suppressions to tests/regression/suppressions
+
+2006-05-03  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Modified cg_upnp_usn_getudn to always initialize undBuf
+	(fixes bug #28087)
+
+2006-05-03  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Modified cg_socket_recv to zero ancillaryBuf before using it
+	(fixes bug #28086)
+
+2006-05-03  Visa Smolander <visa.smolander@nokia.com>
+	* Fixed a problem in debian/control --> now deb -packages
+	  can be installed with S+ Application manager
+
+2006-05-02  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Modified tests/regression/test.py to don't use the subprocess
+	module
+
+2006-05-02  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Modified tests/regression/Makefile.am to disable http proxies
+	during test run
+	* Modified the regression tests to automate the waiting for port
+	availability
+
+2006-05-02  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Removed the duplicated
+	cg_upnp_controlpoint_geteventsubcallbackurl implementation from
+	ccontrolpoint_event.c
+
+2006-05-01  Rosfran Borges <rosfran.borges@indt.org.br>
+	* Changes in the NOTIFY message manipulation for the python test
+	scripts (sending SSDP - multicast)
+	* More UPnP network stress tests python scripts added to the SVN, checking
+	them with the --enable-coverage
+
+2006-04-28  Rosfran Borges <rosfran.borges@indt.org.br>
+	* Added some of the UPnP network stress tests python scripts, to be used with the
+	--enable-coverage, on tests/regression/stress
+
+2006-04-28  Rafael Avila de Espindola <rafael.espindola@gmail.com>
+	* Added a small http server in python to make it easier to write some tests
+	* Modified the device add, readd, and remove tests to use the http server
+
+2006-04-27  Rafael Avila de Espindola <rafael.espindola@gmail.com>
+	* Modified the regression tests to factor some common code
+
+2006-04-27  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Fixed thread synchronization problem in duplicate M-SEARCH
+	  filtering code.
+
+2006-04-26  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Changed advertizer thread shutdown routine to not send alive
+	  messages after thread termination has been started, advertizer
+	  thread is now also shut down before byebye is sent.
+
+2006-04-26  Visa Smolander <visa.smolander@nokia.com>
+	* Reset action status code to 0 in case of success (caction_ctrl.c).
+
+2006-04-25  Rafael Avila de Espindola <rafael.espindola@gmail.com>
+	* Added more subscription and notification tests
+
+2006-04-25  Rafael Avila de Espindola <rafael.espindola@gmail.com>
+	* Added some tests with invalid subscription requests
+
+2006-04-25  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Fixed bug 25169 Lease time value (on Cache-Control header) doesn't propagate to 
+	  child-devices (Patch by Rosfran Borges)
+
+2006-04-25  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Fixed bug 26058 cg_upnp_controlpoint_search() returns no value
+
+2006-04-25  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Applied patch which enables building object files into other than
+	  source directory.
+
+2006-04-25  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Fixed HTTP client thread deletion routine (threads were deleted twice)
+
+2006-04-24  Rafael Avila de Espindola <rafael.espindola@gmail.com>
+	* Modified the regression tests synchronization process to be more robust
+
+2006-04-24  Rafael Avila de Espindola <rafael.espindola@gmail.com>
+	* Added  tests/regression/test_subscribe.py
+	* Added  tests/regression/test_bad_request.py
+	* Modified tests/regression/Makefile.am to run the new tests
+
+2006-04-24  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Fixed bug 24013 Memory leak by not freeing the data before the thread 
+	  is destroyed.
+	* Fixed bug 24014 Memory leak on cssdp_server.c:143 of clinkc.
+	* Removed obsoleted 8bit characters from debian/control.
+
+2006-04-15 Theo Beisch
+	* \include\cybergarage\upnp\cservice.h
+        * changed timeout to use subscriber object
+          when used by ControlPoint
+          modified execution data accordingly
+
+2006-04-13 Theo Beisch
+	* \include\cybergarage\net\csocket.h
+        * added WSAGetLastError support
+        * changed socket_cleanup to return
+          value to enable final Winsock close
+
+2006-04-10  Rafael Avila de Espindola <rafael.espindola@gmail.com>
+	* Added tests/regression/test_bad_action.py
+
+2006-04-11  Visa Smolander <visa.smolander@nokia.com>
+	* Fixed test data 21, 43 and 52.
+
+2006-04-11  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Fixed bug 25014 Absolute url handling is broken.
+
+2006-04-10  Rafael Avila de Espindola <rafael.espindola@gmail.com>
+	* Changed tests/regression/test.py and tests/regression/Makefile.am to work
+	inside scratchbox
+
+2006-04-07  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Added --enable-configure-warnings to configure script and
+	  enabling them as default.
+
+2006-04-07  Rosfran Lins Borges <rosfran.borges@indt.org.br>
+	* Added some tests scripts for multiple embedded devices in tests/regression/
+
+2006-04-06  Rafael Avila de Espindola <rafael.espindola@gmail.com>
+	* Added an action handler to tests/regression/mini_service.c
+	* Changed the request url in tests/regression/test_exec_action.py
+
+2006-04-06  Rafael Avila de Espindola <rafael.espindola@gmail.com>
+	* Changed tests/regression/coverage.py to work with cvs gcov
+
+2006-04-06 Theo Beisch
+	* \src\cybergarage\upnp\event\cnotify_request.c
+        * avoid NULL ptr on root node of request
+
+2006-04-05  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Fixed bug 25456 cg_xml_nodelist_clear used instead of cg_xml_nodelist_delete 
+	  in clinkc.
+	* Fixed bug 24866 memory leak in cg_upnp_argumentlist_delete in clinkc
+	  (patch by Rafael Espindola)
+
+2006-04-05  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Fixed bug 25296 buffer overflow in cg_net_uri_isescapedstring.
+	* Fixed bug 25193 HTTP server in device closes persistent connections
+	  too early.
+
+2006-04-05 Theo Beisch
+	* \src\cybergarage\http\chttp_packet.c
+        * LONGLONG macro for cg_http_packet_setheaderlonglong
+        * changed 'no contentlength' read to use the provided inbuffer
+          (HUGE performance fix, MUCH less reallocs)
+
+2006-04-04 Theo Beisch
+	* \include\cybergarage\upnp\cupnp_limit.h
+        * changed max notifycount to 32bit (per UPnP spec)
+
+2006-04-04 Theo Beisch
+	* \src\cybergarage\upnp\cservice.c
+        * use subscription object for service
+          subscription timeout instead of process data
+        * some changes for CP subscription support
+
+2006-04-04 Theo Beisch
+	* \src\cybergarage\upnp\event\csubscription_request.c
+        * changed HOST header creation to destHost:port format
+
+2006-04-04 Theo Beisch
+	* \src\cybergarage\upnp\event\csubscriber.c
+        * subscriber renew does not reset notifyCount
+        * subscriber clear does reset notifyCount
+        * expiry check is by [s] (removed 1000 factor)
+
+2006-04-04  Visa Smolander <visa.smolander@nokia.com>
+	* Fixed test data 41 and 5. Added test data 1
+
+2006-04-03  Rafael Avila de Espindola <rafael.espindola@gmail.com>
+	* Added the tests/regression directory
+
+2006-04-03  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Added query handlers for multipleembedded test application.
+	  (This fixes issue found in testing "1. Multiple embedded devices 
+	  support ID 26144 - action invoke query fails on embedded devices")
+
+2006-04-03  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Changed clog to use strdup instead of cg_strdup. (cg_strdup uses
+	  clog api...)
+
+2006-04-03 Theo Beisch
+	* \include\cybergarage\http\chttp.h
+        * added (CgHttpHeaderList) cast (see below)
+        * added LONGLONG macro for platform independence
+        * some re-sorting of get/set macros (see below)
+
+2006-04-03 Theo Beisch
+	* \src\cybergarage\upnp\ccontrolpoint_http_server.c
+        * fixed crash from illegal event message (NULL proplist)
+        * lots of checks on event notify message per UPnP spec
+
+2006-04-03 Theo Beisch
+	* \include\cybergarage\upnp\cdevice.h
+        * Added cg_upnp_device_getservicebysid
+        * changed leasetime and timer to type CgSysTime
+        * added cg_upnp_device_waitforlock (nonblocking)
+
+2006-04-02 Theo Beisch
+	* \include\cybergarage\upnp\ccontrolpoint.h
+        * added support for resubscriber
+          and device disposer
+        * added cg_upnp_controlpoint_getservicebysid
+        * added cg_upnp_controlpoint_waitforlock
+
+2006-04-01 Theo Beisch
+	* \include\cybergarage\util\cmutex.h
+        * Added MutexList for debug with DEBUG_LOCKS
+        * Added cg_mutex_waitforlock(CgMutex mutex, long t)
+          todo / fixmelater : (for now mapped to cg_mutex_lock
+          for all non WIN32 OS * needs to be updated)
+
+2006-04-01 Theo Beisch
+	* \src\cybergarage\http\chttp_server.c
+        * added removal for HTTPCLIENT thread at clientthread termination
+        * fixmelater: some (maybe temp) DEBUG options
+
+2006-03-31  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Fixed bug 25324 Not all malloc return values are checked in clinkc code
+
+2006-03-31  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Fixed bug 25130 clinkc defines cg_strdup but uses strdup in some
+	  places (patch by Rafael Espindola)
+	* Fixed bug 24865 memory leak in cg_socket_recv in clinkc (pathc
+	  by Rafael Espindola)
+
+2006-03-31 Theo Beisch
+	* \src\cybergarage\soap\csoap_request.c
+        * fixed memory leak in destructor
+
+2006-03-30 Theo Beisch
+	* \src\cybergarage\upnp\cdevice.c
+        * added some DEBUG configuration options
+
+2006-03-30 Theo Beisch
+	* \src\cybergarage\soap\csoap_response.c
+        * fixed memory leak in destructor
+
+2006-03-30 Theo Beisch
+	* \include\cybergarage\typedef.h
+        * changed config.h position
+
+2006-03-30  Visa Smolander <visa.smolander@nokia.com>
+	* Fixed bug 24558 (30 second timeout to action responses)
+	* Modified the connection establishment timeout from 5 to 2 sec
+
+2006-03-30  Visa Smolander <visa.smolander@nokia.com>
+	* Fixed bug 24653 (Handling subscription expiration in devices)
+
+2006-03-30  Visa Smolander <visa.smolander@nokia.com>
+	* Fixed bug 24654 (Unsubscribe with SID, NT and CALLBACK)
+	* Fixed bug 24601 (Subscribe with SID, NT and CALLBACK)
+	* Fixed bug 24603 (Empty CALLBACK in subscribe)
+	* Fixed bug 24648 (SUBSCRIBE NT != upnp:event)
+	* Fixed bug 24651 (Resubscribe with SID, NT and CALLBACK and correct SID)
+	* Fixed test data 26/c
+
+2006-03-30  Visa Smolander <visa.smolander@nokia.com>
+	* Fixed bug 24665 (Unknown XML elements in action invokes)
+	* Fixed test data 46/a
+
+2006-03-30 Theo Beisch
+	* \src\cybergarage\xml\cxml_parser_expat.c
+        * ignore whitespace character data (in search of memory...)
+        * added DEBUG_XML configurations
+
+2006-03-30 Theo Beisch
+	* \src\cybergarage\http\chttp_persistent_connection.c
+        * added DEBUG_LOCKS configuration for debugging
+
+2006-03-30 Theo Beisch
+	* \src\cybergarage\upnp\caction_list.c
+        * fixed memory leak in destructor
+
+2006-03-30 Theo Beisch
+	* \src\cybergarage\upnp\callowedvalue_list.c
+        * fixed memory leak in destructor
+
+2006-03-30 Theo Beisch
+	* \src\cybergarage\upnp\cargument_list.c
+        * fixed memory leak in destructor
+
+2006-03-30 Theo Beisch
+	* \src\cybergarage\upnp\cicon_list.c
+        * fixed memory leak in destructor
+
+2006-03-30 Theo Beisch
+	* \src\cybergarage\upnp\ccontrolpoint_disposer.c
+        * now also lock device before delete (controlpoint too)
+        * changed strategy to timeout if devices are locked and
+          retry quicker (more graceful behavior)
+        * changed delete from list / obsolete cloneList by stepping
+          back one device in outer list before actual device removal
+
+2006-03-29  Visa Smolander <visa.smolander@nokia.com>
+	* Added ipchanged feature to eventapp
+	* Fixed test data 50/a
+
+2006-03-29 Theo Beisch
+	* \src\cybergarage\http\chttp_request.c
+        * fixed cg_http_request_read for FALSE return value
+          in case body read fails
+
+2006-03-28 Theo Beisch
+	* \src\cybergarage\util\cmutex.c
+        * added DEBUG_LOCKS configurations
+        * added cg_mutex_waitforlock(CgMutex mutex, long t)
+          for non blocking operations
+
+2006-03-28  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Added the --enable-mudflap-debug option to configure
+
+2006-03-28  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Fixed bug 24591 (Device doesn't filter duplicate M-SEARCH messages.)
+
+2006-03-28 Theo Beisch
+	* \include\cybergarage\upnp\event\cevent.h
+        * modified cg_upnp_eventlistenerlist_clear to use
+          default destructor in clist
+        * added cg_upnp_event_subscription_request_hasnt
+        * changed _subscription function signature to use (service)
+          instead of (remoteAddress)
+
+2006-03-27 Theo Beisch
+	* \src\cybergarage\upnp\ccontrolpoint.c
+        * added init for controlpoint->eventListeners
+        * SSDP: discard packets with localhost if received from
+          non loopback interface (Twonkyserver) (see comments below)
+          todo/fixmelater: IPV6 support ??
+
+2006-03-27  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Fixed bug 24673 - persistent connection cache was not initialized
+	  at device startup.
+
+2006-03-24 Theo Beisch
+	* \src\cybergarage\upnp\ccontrolpoint_event.c
+        * introduced DEBUG_EVENTSUBSCRIPTION
+
+2006-03-24  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Fixed couple of while(true); errors from ipchanged 
+	  (low level) routines.
+
+2006-03-24  Rafael Avila de Espindola <rafael.espindola@indt.org.br>
+	* Added the --enable-coverage option to configure
+
+2006-03-24  Visa Smolander <visa.smolander@nokia.com>
+	* Added ipchanged feature to multiplecp
+
+2006-03-24  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Fixed (Bugzilla) bugs: 24100, 24386, 24662, (24663), 24664
+	* Fixed bug when device responded to M-SEARH, embedded
+	  devices were not correctly looped through.
+	* Rolled back M-SEARCH response changes from 6240 revision. For some 
+	  reason this caused stack to loop forever when sending ssdp:all M-SEARCH.
+
+2006-03-23 Theo Beisch
+	* \include\cybergarage\net\cinterface.h
+        * added localhost constants
+	  
+2006-03-23  Visa Smolander <visa.smolander@nokia.com>
+	* Added/fixed test data for cases 24, 54 and 19.
+	
+2006-03-22  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Added and corrected test data.
+
+2006-03-21 Theo Beisch
+	* \src\cybergarage\net\csocket.c
+        * changed cg_socket_cleanup() to return socketCnt so
+          that open socketCnt cleanup can be done on application
+          exit (one WSACleanup per WSAStartup / WS2 API) * probably a
+          temporary solution but it works in cases of threads
+          that don't retire properly on exit
+
+2006-03-21  Heikki Junnila <ext-heikki.junnila@nokia.com>
+	* Changed cupnp.h to be generated from cupnp.h.in so that the
+	  file always contains the latest version number from configure.in
+	* Removed CLOG_DEBUG_STACK from chttp.h which caused an error during
+	  compile.
+	* Removed maemo packages from debian/control and added libcurl3-dev
+	  and libxml2-dev to clinkc-dev dependencies
+	* Created release 1.0-19
+
+2006-03-21 Theo Beisch (WIN32)
+	* \src\cybergarage\upnp\ccontrolpoint.c
+        * added cg_socket_cleanup for each WSAStartup to _stop method
+
+2006-03-20 Theo Beisch
+	* \include\cybergarage\upnp\event\cnotify.h
+        * added cg_upnp_event_notify_request_hasnt & _hasnts & _hassid
+
+2006-03-20 Theo Beisch
+	* \src\cybergarage\upnp\cdevice_advertiser.c
+        * added NULL check on advertiser_stop
+
+2006-03-20 Theo Beisch
+	* \src\cybergarage\upnp\ccontrolpoint_resubscriber.c
+        * added cg_upnp_controlpoint_resubscriberdelete(thread)
+          (delete also stops the thread so using delete() only is ok)
+
+2006-03-20 Theo Beisch
+	* \src\cybergarage\util\cstring_function.c
+        * WINCE support
+        * added cg_strtrimwhite() * trims all whitespace, not just ' '
+
+2006-03-20 Theo Beisch
+	* \include\cybergarage\util\cthread.h
+        * added thread->deletePending and thread->selfDelete (WINCE only)
+          so that a thread can delete its own cg_thread context when truly
+          finished (as cg_thread_stop is not reliable under WINCE)
+        * added cg_threadlist_remove
+
+2006-03-19 Theo Beisch
+	* \src\cybergarage\util\clist.c
+        * Added NULL check for CG_LIST_DESTRUCTORFUNC
+
+2006-03-19 Theo Beisch
+	* \src\cybergarage\upnp\ccontrolpoint_disposer.c
+        * added free(ClondeDevList) upon thread finish
+        * added cg_upnp_controlpoint_disposerdelete(thread)
+          (delete also stops the thread so using delete() only is ok)
+
+2006-03-19 Theo Beisch
+	* \src\cybergarage\io\cfile.c
+        * WINCE support (still untested)
+
+2006-03-15  Aapo Makela
+	* Included patch attached to Bugzilla. Fixes: NB#24202
+
+2006-03-14  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* M-SEARCH response delay changed to spread response packets more
+	  evenly and to guarantee that all response packets leave before
+	  time specified in MX record.
+	* Added missing description file for multipleroot test application.
+	* Fixes for test data (76a, 67a, 68a)
+	* Added general service description file.
+
+2006-03-13  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Exended multiplecp to allow controlling of embedded devices.
+
+2006-03-10  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Fixed ancillary data parsing routine to check the message type
+	  before fetching the data.
+	* Modified interface id -> ip address mapping routines to give
+	  valid ip address if interface id can't be found from the interface
+	  list.
+
+2006-03-09  Aapo Makela <aapo.makela@nokia.com>
+	* Fixed small memory leak according to patch by Rafaelo Espindola
+
+2006-03-07  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Bug fixes for tests 28884, 29625, 29629
+	* Fixed eventapp to correctly set the cache value.
+
+2006-03-07  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Support for setting local address based on UDP packet incoming
+	  interface finalized.
+	* Changed setting of socket id to use setter function instead of directly
+	  manipulating the id value.
+
+2006-03-03 Theo Beisch
+	* \src\cybergarage\xml\cxml_node.c
+        * added NULL check for Cg-objects in destructor
+          added NULL check to cg_xml_node_getchildnodevalue
+
+2006-03-03  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Removed old command line parsing routines from eventapp.
+
+2006-03-03  Aapo Makela <aapo.makela@nokia.com>
+	* Removed unsubscribing in controlpoint_stop because of performance 
+	  problems (in case we don't have network access any more).
+
+2006-03-03  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Added more debug printouts to stack.
+	* Added commandline option parsing to eventapp.
+
+2006-03-03  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Experimental support for setting local address by using
+	  ancillary data from udp packets.
+	* TTL fix for NOTIFY messages.
+	* HTTP response fix (now content length header is always included).
+
+2006-03-01 Theo Beisch
+	* \include\cybergarage\util\cstring.h
+        * introduced LONGLONG macro
+        * added cg_strtrimwhite() to trim all
+          leading and trailing non-printable chars
+
+2006-02-27  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Changed multiplecp application to install correctly into bin.
+
+2006-02-13  Heikki Junnila <ext-heikki.junnila@nokia.com>
+	* Removed comments from doxygen rules in top Makefile.am
+
+2006-02-24  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* TTL bug fixed
+	* Two new log levels and debug prints for function entry
+	  (and leaving) points.
+	* "--enable-clog-debug*" options default to "no"
+
+2006-02-21  Satoshi Konno <skonno@cybergarage.org>
+	* Changed httpRequestRecieved() not to ignore HEAD requests.
+
+2006-02-21  Visa Smolander <visa.smolander@nokia.com>
+	* Fixed SOAP encoding definition to "encodingStyle" in csoap.h
+
+2006-02-14  Aapo Makela <aapo.makela@nokia.com>
+	* Fixed to send right URLBase as a device.
+
+2006-02-13  Heikki Junnila <ext-heikki.junnila@nokia.com>
+	* Fixed action invoke to work with devices, which have path in URLBase.
+
+2006-02-13  Aapo Makela <aapo.makela@nokia.com>
+	* Fixed HTTP server client thread removal.
+
+2006-02-13 Theo Beisch
+	* \include\cybergarage\util\cthread.h
+        * added WINCE support
+
+2006-02-13 Theo Beisch
+	* \src\cybergarage\util\cmutex.c
+        * WINCE support
+
+2006-02-13 Theo Beisch
+	* \src\cybergarage\upnp\ssdp\cssdp_server_list.c
+        * cg_upnp_ssdp_serverlist_open now returns FALSE
+          if no interface had successful open
+
+2006-02-13 Theo Beisch
+	* \src\cybergarage\http\chttp_server_list.c
+        * modified to fail only if all ports failed
+
+2006-02-13 Theo Beisch
+	* \src\cybergarage\upnp\ssdp\cssdp_response_server_list.c
+        * cg_upnp_ssdpresponse_serverlist_open now returns true if
+          at least a single open was successfull (WINCE support)
+
+2006-02-13 Theo Beisch
+	* \src\cybergarage\net\cinterface_function.c
+        * added WINCE support
+
+2006-02-12 Theo Beisch
+	* \src\cybergarage\upnp\event\csubscription.c
+        * changed time(NULL) to cg_getcurrentsystemtime()
+
+2006-02-12 Theo Beisch
+	* \include\cybergarage\upnp\ssdp\cssdp.h
+        * added cg_upnp_ssdprequest_hascachecontrol
+
+2006-02-13 Theo Beisch
+	* \src\cybergarage\upnp\cservice.c
+        * added subscriber cache control support
+
+2006-02-12 Theo Beisch
+	* \src\cybergarage\upnp\ssdp\cssdp_packet.c
+        * added leasetime support
+
+2006-02-12 Theo Beisch
+	* \src\cybergarage\util\cthread.c
+        * added WINCE support
+
+2006-02-12 Theo Beisch
+	* \include\cybergarage\upnp\ssdp\cssdp_server.h
+        * added leasetime support
+
+2006-02-12 Theo Beisch
+	* \src\cybergarage\upnp\cupnp_function.c
+        * changed time(NULL) to cg_getcurrentsystemtime()
+
+2006-02-06  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Corrected test data (76)
+	* Added test data for test 5
+
+2006-02-06  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Added new log/debug interface and removed old cdebug interface.
+	* Changed stack and applications to use new debug interface.
+	* Added configure options for new debug interface.
+	* Added test data for tests 19, 50, 52, 67, 76
+
+2006-02-03  Visa Smolander <visa.smolander@nokia.com>
+	* Added the CG_HTTP_USE_PERSISTENT_CONNECTIONS configure 
+	  option to configure.in and made it enabled by default.
+
+2006-01-31  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Added some data for test cases under tests/test_data.
+	* Also included a script which concatenates all test data
+	  descriptions into one big document.
+
+2006-01-30  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Fixed a bug: NOTIFY messages were changed into post messages at
+	  csoap_request.c:cg_soap_request_post(), I guess this is not needed
+	  since the default http request type for soap message is POST.
+
+2006-01-30  Heikki Junnila <ext-heikki.junnila@nokia.com>
+	* Fixed top Makefile.am to include all necessary files under debian
+	  as well as Doxyfile.
+
+2006-01-30  Aapo Makela <aapo.makela@nokia.com>
+	* Fixed to compile stack by default in optimized CP and
+	  use anyaddr modes (in debian/rules).
+	* Fixed compiling with optimized CP mode enabled.
+	* Fixed segmentation fault when stopping control point	
+
+2006-01-30  Heikki Junnila <ext-heikki.junnila@nokia.com>
+	* Added new packages clinkcmaemo-tests and clinkc-tests
+	* Built release 1.0-15
+
+2006-01-30  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Changed XMLdesrcription test app to use new API and to accept
+	  file spesifications etc. from command line. It is not tested
+	  yet so it could be broken.
+
+2006-01-27  Aapo Makela <aapo.makela@nokia.com>
+	* Fixed control point to remove cached devices when stopped and 
+	  notify also appropriate listeners.
+
+2006-01-26  Visa Smolander <visa.smolander@nokia.com>
+	* Added a test application which can load any XML device and 
+	  service description
+
+2006-01-26  Heikki Junnila <ext-heikki.junnila@nokia.com>
+	* Changed cg_upnp_controlpoint_expirationhandler() to use
+	  cg_upnp_controlpoint_removedevicebyssdppacket() instead of just
+	  cg_upnp_device_remove() so that the control point's device listener
+	  gets called.
+	* Added control point unlock before _removedevicebyssdppacket() and
+	  lock after the call.o
+
+2006-01-26  Heikki Junnila <ext-heikki.junnila@nokia.com>
+	* Changed cg_http_statuscode2reasonphrase() to use static const chars
+	  instead of local variables.
+
+2006-01-26 Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Extended multiplecp app to cover test cases 11. "Indication to user
+	  about service/device unavailability ID 28790" and 12. "Indication to
+	  user about subscription unavailability ID 28792". 
+
+2006-01-26 Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* New test application (multiplecp). Initially creates two
+	  controlpoints and later these control points can be used separately
+	  from UI.
+
+2006-01-26 Aapo Makela <aapo.makela@nokia.com>
+	* Added searching for a service from device based on service ID.
+
+2006-01-12 Theo Beisch
+	* \src\cybergarage\util\ctime.c
+        * added WINCE support
+
+2006-01-25 Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Added functionality for test 38. Search timing and duplicates ID 29311
+	  it can be done with command "'a' : Do all searches four times in a
+	  loop."
+	* Added command "'o' : Control (multiple actions)" to upnpdump, this can be 
+	  used when stress testing devices. (Sends action requests in a loop.)
+	* Modified eventapp to allow multiple events to be generated in busy
+	  loop.
+
+2006-01-25  Aapo Makela <aapo.makela@nokia.com>
+	* Added IP-changed notify functionality for control point.
+	* Many small fixes
+
+2006-01-25  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Extended multipleroot test program with one more rootdevice, it was
+	  decided that this would then be enough to execute test 9. Responding
+	  with random delay to a discovery request ID 28787.
+
+2006-01-25  Mikael Saarenpaa <ext-mikael.saarenpaa@nokia.com>
+	* Extended eventapp test program to include three testcases: 45. GENA
+	  event byte limit ID 29429, 44. SOAP response byte limit ID 29427 and 
+	  43. SOAP request byte limit ID 29426
+
+2006-01-25  Heikki Junnila <ext-heikki.junnila@nokia.com>
+	* Fixed three bugs that were caused by the removal of CgString.freeFlag
+	  in csoap_request.c csoap_response.c and chttp_packet.c.
+	  -> Changed all of them to use cg_*_*_appendncontent().
+	* Removed CG_HTTP_SUPPORT_NO_CONTENTLENGTH_REQUEST checking because it
+	  is not an optional feature, but a necessary fix.
+
+2006-01-24  Heikki Junnila <ext-heikki.junnila@nokia.com>
+	* Added commas between build dependencies in debian/control
+	* Build 1.0-14
+
+2006-01-24  Heikki Junnila <ext-heikki.junnila@nokia.com>
+	* Changed cg_string_naddvalue to do a realloc every time. Otherwise it 
+	  will never free its memory unless cg_string_clear is called (and it 
+	  is called quite rarely unless the string is being deleted).
+	* Removed freeFlag from struct CgString and changed cg_string_replace
+	  to use cg_string_setvalue instead of cg_string_setpointervalue
+	  because it would consume huge amounts of memory over time.
+
+2006-01-24  Heikki Junnila <ext-heikki.junnila@nokia.com>
+	* Changed the control point's device listener callback prototype
+	  to use UDN instead of CgUpnpDevice* and also to pass a status
+	  enum describing a bit more what will be done to the device.
+
+2006-01-24  Aapo Makela <aapo.makela@nokia.com>
+	* Changed to limit requested subscription time.
+	* Fixed device not to send more than 10 SSDPs in 200ms.
+
+2006-01-24  Heikki Junnila <ext-heikki.junnila@nokia.com>
+	* When a device advertises from a new location, new device (and 
+	  service) description documents are reloaded from the new location.
+
+2006-01-23  Aapo Makela <aapo.makela@nokia.com>
+	* Changed to handle multiple devices on one machine.
+	* Fixed device HTTP server to answer 404 Invalid Var for invalid 
+	  query invokes.
+	* Fixed some macros.
+
+2006-01-20  Aapo Makela <aapo.makela@nokia.com>
+	* Added HTTP/1.1 request validity checking for HTTP server
+	* Added general socket timeout functionality (cg_socket_settimeout)
+	* Added Chunked Transfer Encoding support for reading HTTP packets
+	* Added asynchronous expiration handling for devices and 
+	  subscriptions
+	* Added HTTP HEAD-method support (required by HTTP/1.1 spec)
+	* Added devicelistener support
+	* Fixed control point to unsubscribe all subscribed services when	
+	  stopped.
+	* Fixed to handle escaped URIs when receiving HTTP requests
+	* Fixed not to crash when receiving malformed HTTP request
+	* Fixed to handle NOT FOUND case for GET-method
+	* Fixed to retry SOAP POST with M-POST (required by UPnP spec)
+	* Fixed to unsubscribe and subscribe when event is missed
+
+2006-01-20  Heikki Junnila <hjunnila@users.sf.net>
+	* Removed xml2-config from configure.in
+	* Changed libxml2 and libcurl presence checks to use AC_CHECK_LIB
+
+2006-01-16  Heikki Junnila <hjunnila@users.sf.net>
+	* Added HTTP-header parsing for curl
+	* Added state variable updating thru events
+	* Added NULL checks to cg_strcasecmp, cg_streq, cg_strcaseeq and
+	  cg_strtrim
+	* Changed event key to unsigned int instead of long to better
+ 	  fulfill specifications
+
+2006-01-15  Satoshi Konno <skonno@cybergarage.org>
+	* Thanks for Tobias.Gansen
+	* Changed cg_net_gethostinterfaces() not to bind the MAC address interface on QNX platform.
+
+2006-01-12  Heikki Junnila <hjunnila@users.sf.net>
+	* Added API comments to csubscriber.[c|h]
+	* Added API comments to ceventlistener_list.c
+	* Fixed a typo: cg_http_request_isnotiryrequest ->
+	  cg_http_request_isnotifyrequest
+	* Fixed a typo: cg_upnp_controlpoint_httprequestrecieved ->
+	  cg_upnp_controlpoint_httprequestreceived
+
+2006-01-12 Theo Beisch
+	* \src\cybergarage\upnp\event\csubscriber.c
+        * modified time() to come from util/ctime
+          for WINCE OS support
+
+2006-01-11  Heikki Junnila <hjunnila@users.sf.net>
+	* Added device type parsing functions:
+	  cg_upnp_devicetype_getidentifier, _geturn, _getdevice,_gettype and
+	  _getversion
+	* Added cg_upnp_device_getdevicebytype(),
+		cg_upnp_device_getdevicebyexacttype(),
+		cg_upnp_controlpoint_getdevicebytype() and
+		cg_upnp_controlpoint_getdevicebyexacttype()
+	  to enable searching for devices with/without version information.
+	* Removed *_getdevicebyname() and *_device_isname() functions because
+	  UPnP specs don't specify UDN, type nor friendly name as being the
+	  device's "name" attribute.
+	* Added cg_upnp_controlpoint_getdevicebyudn() and
+	  cg_upnp_device_getdevicebyudn() functions to make up for the loss
+	  of *_getdevicebyname()
+	* Removed *_getservicebyname() and *_service_isname() functions and
+	  changed them to *_getservicebyexacttype in tests & samples.
+	* Removed the automatic search from cg_upnp_controlpoint_start().
+
+2006-01-10  Heikki Junnila <hjunnila@users.sf.net>
+	* Renamed cg_upnp_device_getservicebyname to
+	  cg_upnp_device_getservicebyexacttype and created a compatibility
+	  macro for cg_upnp_device_getservicebyname
+	* Added cg_upnp_servicetype_getschematype()
+	* Fixed existing cg_upnp_servicetype_ functions to accept
+	  1-character strings as well.
+
+2006-01-09  Heikki Junnila <hjunnila@users.sf.net>
+	* Added service type parsing functions:
+	  cg_upnp_servicetype_getidentifier, _geturn, _getservice,_gettype and
+	  _getversion
+	* Added cg_upnp_device_getservicebytype() to enable searching for
+	  services without version information.
+
+2006-01-04  Heikki Junnila <hjunnila@users.sf.net>
+	* AC_ARG_WITH's option-if-set was used incorrectly in
+	  configure.in. Fixed.
+	* Added a rule to ./makefile.am which automatically creates doxygen
+	  documentation for clinkc-dev*.deb (only html)
+
+2006-01-03  Heikki Junnila <hjunnila@users.sf.net>
+	* Added configure option for CG_HTTP_SUPPORT_NO_CONTENTLENGTH_REQUEST. 
+	* Set configure defaults: libcurl=yes, libxml2=yes, libtool=yes,
+				  nolength_http=yes.
+	* Changed configure option descriptions to use AS_HELP_STRING.
+	* Changed debian/rules not to include the aforementioned options
+	  (i.e. configure is using the defaults in debian package creation)
+	* Created new release 1.0-8 for testing.
+
+2006-01-03  Visa Smolander <vsmoland@users.sf.net>
+	* Added MX value configurability to upnpdump
+
+2006-01-03  Visa Smolander <vsmoland@users.sf.net>
+	* Fixed chttp_request.c to add content to other than just POST requests
+	* Changed cg_http_response_issuccessful to accept all 2xx codes as
+	  successful
+
+2005-12-30  Heikki Junnila <hjunnila@users.sf.net>
+	* chttp_request:c:334 had a newline after #ifdef without "\". Fixed.
+
+2005-12-29  Visa Smolander <vsmoland@users.sf.net>
+	* Added CACHE-CONTROL command line parameter to clock sample device
+	  (for testing purposes).
+
+2005-12-28  Aapo Makela <makelaa@users.sf.net>
+	* Fixed CURL transfer to timeout, if connection is disconnected.
+
+2005-12-14  Heikki Junnila <hjunnila@users.sf.net>
+	* Fixed cg_upnp_controlpoint_removedevicebyssdppacket() to use
+	  cg_upnp_device_delete() instead of cg_upnp_device_remove().
+
+2005-12-14  Aapo Makela <aapo.makela@nokia.com>
+	* Made starting the control point more robus (tries many server ports)
+	  Fixes bug 1353803.
+	* Fixed memory leak when failing ssdp response serverlist open
+	* Fixed http server list open to fail, if opening a port fails
+
+2005-12-07  Heikki Junnila <ext-heikki.junnila@nokia.com>
+	* Two changes to support char data that is not zero-terminated:
+	  1. Changed cg_string_length() to return str->valueSize instead
+	     of strlen(str->value).
+	  2. Changed cg_string_naddvalue() to use memcpy instead of strncat.
+
+2005-12-07  Iain simpson <iain.simpson@nokia.com>
+	* Added MX header validity checking so device will no longer respond
+	  to an M-SEARCH request if it is empty or a non-integer.
+	  Fix in file cdevice_ssdp_server.c
+
+2006-01-15  Satoshi Konno <skonno@cybergarage.org>
+	* Changed cg_socket_tosockaddrinfo() not to use the AI_NUMERICHOST option.
+
+2005-12-02  Aapo Makela <aapo.makela@nokia.com>
+	* Added CG_HTTP_USE_PERSISTENT_CONNECTIONS define to have 
+	  persistent HTTP-connections support with libcurl (if server 
+	  supports it).
+	* Fixed MAN header set bug in Control Point (double quotes for 
+	  discover)
+
+2005-12-02  Heikki Junnila <ext-heikki.junnila@nokia.com>
+	* Fixed a typo in curl.h and curi.h that was looking for a member
+	  declared in "urip" from struct CgNetURL, while it should be "uri"
+
+2005-12-01  Aapo Makela <aapo.makela@nokia.com>
+	* Added show timings statistics also to libcurl routine
+	* Fixed to have Multicast TTL as specified in UPnP DA 1.0.1
+	  specification (Multicast TTL 4).
+	* Added CG_NET_USE_ANYADDR to use INADDR_ANY as network 
+	  interface instead of using one socket for each interface 
+	  excplicitly.
+
+2005-11-25  Heikki Junnila <ext-heikki.junnila@nokia.com>
+        * Removed argumentInList and argumentOutList from caction.[h|c]
+          because they were not used anywhere thus hogging unnecessary
+          memory.
+
+2005-11-22  Heikki Junnila <ext-heikki.junnila@nokia.com>
+	* Changed XML_LIBS and XML_CFLAGS in configure.in to use
+	  'pkg-config libxml-2.0' instead of xml2-config. This requires
+	  (at least in maemo) that PKG_CONFIG_PATH environment variable
+	  points to a directory containing the "pkgconfig" directory.
+	  PKG_CONFIG_PATH=/usr/lib should work in most cases.
+
+2005-11-18  Heikki Junnila <ext-heikki.junnila@nokia.com>
+	* Fixed an indefinite freezing problem with curl_easy_perform 
+          (which can be caused by, for example, an unreachable proxy server
+	  set to the environment variable http_proxy)
+
+2005-11-18  Satoshi Konno <skonno@cybergarage.org>
+	* Added some logging functions such as cg_debug_setoutputtype() and cg_debug_message().
+
+2005-11-18  Aapo M�kel�E<aapo.makela@nokia.com>
+	* Fixed many variable names (dev => childDev) in 
+	  cg_upnp_device_* functions.
+	* Changed libxml2 parser to unescape XML default entities
+	* Fixed to compile without optimized CP mode.
+
+2005-11-16  Aapo M�kel�E<aapo.makela@nokia.com>
+	* Modified posix threads to be JOINABLE instead of DETATCHED in 
+	  order to make threading more robust. Replaced detatch (in 
+	  thread stopping) with join.
+	* Changed libxml2 parser to use SAX implementation instead of DOM
+	  (approx. 50-100% speed increase)
+
+2005-11-15  Aapo M�kel�E<aapo.makela@nokia.com>
+	* Added eventlistener_list, which enables to have multiple event 
+	  listeners registered for a control point.
+	* Added optional "optimized-cp-mode", in which service 
+	  descriptions are loaded only when they are required.
+	* Added locking to service parsing process.
+	* Some minor fixes to configuration files and macro naming
+
+2005-11-11  Satoshi Konno <skonno@cybergarage.org>
+	* Added cg_longlong2str() and cg_str2longlong().
+	* Added cg_http_packet_setheaderlonglong() and cg_http_packet_getheaderlonglong().
+	* Extended cg_http_packet_setcontentlength() and cg_http_packet_getcontentlength() to 64bit
+	  when the compiler is supported C99 or the platform is WIN32.
+
+2005-11-10  Aapo M�kel�E<aapo.makela@nokia.com>
+	* Fixed cg_upnp_device_getdevicebyname() not to loop forever
+	* Changed cg_upnp_controlpoint_createdevicefromssdppacket to use cg_upnp_controlpoint_getdevicebyname() again
+
+2005-11-09  Aapo M�kel�E<aapo.makela@nokia.com>
+	* Fix to use both path and query parts of URI in HTTP request URI
+	* Added fixing of broken event and control URLs
+	* Changed cg_upnp_controlpoint_createdevicefromssdppacket to not to call cg_upnp_getdevicebyname (which jams to infinite loop sometimes)
+
+2005-11-03  Heikki Junnila <ext-heikki.junnila@nokia.com>
+	* Updated configure and make scripts to use libcurl
+
+2005-10-31  Heikki Junnila for Aapo M�kel�E Visa Smolander and Iain Simpson
+	* Removed all automatically generated files (Makefile.in, config/*, autom4te.cache/*, configure, etc...)
+	* Changed "<" to "<=" in cg_upnp_control_isqueryrequest()
+	* cg_http_packet_sethost(): "port" was an excess parameter for s(n)printf when port <= 0. Removed the parameter.
+	* cg_net_getmodifierhosturl set the tag begin mark "<" before port while it must come before "http://"
+	* cg_socket_getrawtype and cg_socket_getprototype: changed sock->type to socket->type to use the macro parameter correctly.
+	* cg_upnp_device_getdevicebyname: Changed dev to childDev in for-loop
+	* cg_upnp_action_post: If action post was unsuccessful, put the error message to the action response
+	* cg_upnp_control_action_request_createactionnode: Don't include output args in request
+	* cg_upnp_event_subscription_request_setservice: changed eventSubURLStr[1] to [0]
+	* PosixThreadProc: Added a signal handler to block all signals to posix threads
+	* cg_net_uri_set: Accepts URI (as a path), which doesn't have a slash.
+	* cg_upnp_device_byebyefrom & _announcefrom: Added missing advertisement and byebye messages
+	* cg_upnp_ssdpresponse_setext and cg_upnp_ssdpresponse_setserver added to cssdp.h
+	* Added comments to some headers (cdevice.h and util/*)
+	* Added performance measurement functionality for XML parsers under SHOW_TIMINGS macro (not enabled by default)
+	* cg_upnp_device_ssdpmessagereceived: Corrected response to MSearch message for all ST (search target) types.
+	* upnpdump.c: Added some M-SEARCH sending actions
+	* clock_device.c: Removed :schemas: from clock service description
+	* Added libtool support to configure.in
+	* Added debian package creation support to configure.in and Makefile.am
+	* cg_upnp_ssdpresponse_serverlist_open returns FALSE immediately if port opening fails
+	* Fixed a memory leak problem in the http client thread.
+
+2005-10-13  Satoshi Konno <skonno@cybergarage.org>
+
+	* v1.1
+	* Added cg_upnp_controlpoint_setuserdata() and cg_upnp_controlpoint_getuserdatga().
+	* Fixed some bugs to parser the name spaces using libxml2.
+	* Changed the configure to run 'make install' normally.
+	* Changed cg_thread_start() to sedt the flag at first.
+	* Fixed cg_upnp_control_soap_response_createfaultresponsenode() to set the namespace attribute in the response <UPnPError> node.
+
+2005-08-25 Satoshi Konno <skonno@cybergarage.org>
+
+	* The first release.
