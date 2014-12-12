@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <CyberLink/CGUpnpAvServer.h>
 
-
+/**
+ *  @brief 詳細画面
+ */
 @interface DetailViewController : UIViewController <CGUpnpAvServerDelegate>
 
 @property (strong, nonatomic) id detailItem;
