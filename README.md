@@ -11,7 +11,7 @@ Copyright (c) 2005-2011, Theo Beisch
 Collectively the Copyright Owners  
 All rights reserved.  
 
-##License  
+## License  
 The MIT License (MIT)  
 
 Copyright (c) 2013 Furuyama Takeshi
